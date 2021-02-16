@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Router from './router';
+import Router from './pages';
 
 function App() {
   return (
@@ -20,9 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <div>
         <Router/>
-      </div>
     </div>
   );
 }

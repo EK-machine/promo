@@ -1,26 +1,26 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Home from './home';
-import Comment from './comment';
-import Error from './error';
+import HomePage from './home-page';
+import CommentPage from './comment-page';
+import PageNotFound from './page-not-found';
 
-const ReactRouterSetup = () => {
+const PromoRouter = () => {
     return (
       <Router>
         <Switch>
           <Route exact path="/">
-            <Home/>
+            <HomePage />
           </Route>
           <Route exact path="/comment">
-            <Comment/>
+            <CommentPage />
           </Route>
           <Route path="*">
-            <Error/>
+            <PageNotFound />
           </Route>
         </Switch>
       </Router>    
     );    
 };
 
-export default ReactRouterSetup;
+export default PromoRouter;
