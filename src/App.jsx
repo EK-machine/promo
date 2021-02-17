@@ -4,6 +4,11 @@ import './App.css';
 import React from 'react';
 import Router from './pages';
 import styled from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faCheckSquare, faCoffee);
 
 function App() {
   return (
@@ -21,7 +26,6 @@ function App() {
         >
           CI/CD Works!
         </a>
-        
       </header>
       <Router />
     </div>
