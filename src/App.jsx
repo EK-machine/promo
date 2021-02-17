@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
@@ -17,10 +18,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          CI/CD Works!
         </a>
       </header>
-        <Router/>
+      <Router />
     </div>
   );
 }
