@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import HomePage from './home-page';
-import CommentPage from './comment-page';
-import PageNotFound from './page-not-found';
+import HomePage from './HomePage';
+import CommentPage from './CommentPage';
+import PageNotFound from './PageNotFound';
 
 const PromoRouter = () => (
   <Router>
