@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import HomePage from './HomePage';
 import CommentPage from './CommentPage';
-import PageNotFound from './PageNotFound';
+import NotFoundPage from './NotFoundPage';
 
-const PromoRouter = () => (
+const PagesContainer = () => (
   <Router>
     <Switch>
       <Route exact path="/">
@@ -15,10 +15,10 @@ const PromoRouter = () => (
         <CommentPage />
       </Route>
       <Route path="*">
-        <PageNotFound />
+        <NotFoundPage />
       </Route>
     </Switch>
   </Router>
 );
 
-export default PromoRouter;
+export default PagesContainer;
