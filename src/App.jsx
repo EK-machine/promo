@@ -3,15 +3,16 @@ import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import PageContainer from './pages/PagesContainer';
+import Sidebar from './sidebar/Sidebar';
 
 library.add(fab, faCheckSquare, faCoffee);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -24,7 +25,8 @@ function App() {
         >
           CI/CD Works!
         </a>
-      </header>
+      </header> */}
+      <Sidebar />
       <PageContainer />
     </div>
   );
