@@ -24,7 +24,7 @@ code {
   height: 100%;
 }
 
-.sidebar-toggle {
+.sidebar .sidebar-toggle {
   margin: 10px 0;
   padding: 0;
   background-color: rgb(187, 187, 187);
@@ -33,19 +33,24 @@ code {
   cursor: pointer;
 }
 
-.sidebar-button-data {
+.sidebar .sidebar-button-data {
   margin: 0;
   list-style: none;
   color: rgb(41, 41, 41);
   padding: 0;
 }
 
-.sidebar-button-data li {
+.sidebar .sidebar-button-data li {
   margin: 0 0 10px 0;
 }
 
-.sidebar-button-data a {
+.sidebar .sidebar-button-data a {
   color: rgb(41, 41, 41);
   text-align: left;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.sidebar .sidebar-button-data a .text {
+  display: none;
 }

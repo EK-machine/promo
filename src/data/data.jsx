@@ -6,13 +6,13 @@ export const sidebarButtonData = [
   {
     id: 1,
     url: '/',
-    text: 'HOME',
+    text: 'home',
     icon: <FontAwesomeIcon icon={faHome} />,
   },
   {
     id: 2,
     url: '/comment',
-    text: 'COMMETS',
+    text: 'comment',
     icon: <FontAwesomeIcon icon={faCommentAlt} />,
   },
 ];
