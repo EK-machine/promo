@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { sidebarButtonData } from '../data/data.jsx';
+import { sidebarButtonData } from './sidebarButtonData';
 
 const Sidebar = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Sidebar = () => {
           const { id, url, text, icon } = buttonData;
           return (
             <li key={id}>
-              <a href={url}>
+              <Link to={url}>
                 {icon}{' '}
                 <span
                   className="text"
@@ -25,7 +26,7 @@ const Sidebar = () => {
                 >
                   {text}
                 </span>
-              </a>
+              </Link>
             </li>
           );
         })}
