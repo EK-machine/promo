@@ -12,6 +12,38 @@ code {
     monospace;
 }
 
+.header {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  background-color: rgb(150, 141, 141);
+  align-items: center;
+  min-height: 10vh;
+}
+
+.header .header-logo {
+  color: azure;
+  font-size: 24px;
+}
+
+.header-nav-bar {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+ul .header-link-is-active {
+  font-weight: bold;
+}
+
+ul .header-link {
+  text-decoration: none;
+  color: azure;
+  font-size: 15px;
+}
+
 .sidebar {
   border-right: 1px solid black;
   position: absolute;

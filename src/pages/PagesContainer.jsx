@@ -1,24 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Sidebar from '../components/sidebar/Sidebar';
+import Header from '../components/Header';
 
 import HomePage from './HomePage';
 import CommentPage from './CommentPage';
 import NotFoundPage from './NotFoundPage';
 
 const PagesContainer = () => (
-  <Router>
+  <BrowserRouter>
+    <Header />
+    <Sidebar />
     <Switch>
-      <Route exact path="/">
-        <HomePage />
-      </Route>
-      <Route exact path="/comment">
-        <CommentPage />
-      </Route>
-      <Route path="*">
-        <NotFoundPage />
-      </Route>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/comment" component={CommentPage} />
+      <Route path="*" component={NotFoundPage} />
     </Switch>
-  </Router>
+  </BrowserRouter>
 );
 
 export default PagesContainer;
