@@ -21,12 +21,26 @@ code {
   min-height: 10vh;
 }
 
-.header .header-logo {
-  color: azure;
-  font-size: 24px;
+.header__logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-nav-bar {
+.header__logo-img {
+  color: azure;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.header__logo-text {
+  color: azure;
+  font-size: 24px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.header__navbar {
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -34,14 +48,17 @@ code {
   list-style: none;
 }
 
-ul .header-link-is-active {
-  font-weight: bold;
+.header-link__is-active {
+  font-weight: bolder;
+  border-bottom: 3px solid azure;
 }
 
-ul .header-link {
+.header__link {
   text-decoration: none;
   color: azure;
   font-size: 15px;
+  text-transform: uppercase;
+  transition: 0.2s;
 }
 
 .sidebar {
@@ -52,37 +69,60 @@ ul .header-link {
   background-color: rgb(187, 187, 187);
   color: rgb(41, 41, 41);
   text-align: left;
-  padding: 0px 10px;
   height: 100%;
 }
 
-.sidebar .sidebar-toggle {
-  margin: 10px 0;
-  padding: 0;
+.sidebar__toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 28px;
+  padding: 0px 10px 0px 12px;
   background-color: rgb(187, 187, 187);
   border: currentColor;
   outline: none;
   cursor: pointer;
+  width: 100%;
 }
 
-.sidebar .sidebar-button-data {
+.sidebar__toggle:hover {
+  background-color: rgb(150, 141, 141);
+}
+
+.sidebar__button-container {
   margin: 0;
   list-style: none;
   color: rgb(41, 41, 41);
   padding: 0;
 }
 
-.sidebar .sidebar-button-data li {
-  margin: 0 0 10px 0;
+.sidebar__button-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 28px;
+  padding: 0px 10px;
+  cursor: pointer;
+  width: 18px;
+  overflow: hidden;
+  transition-duration: 0.5s;
 }
 
-.sidebar .sidebar-button-data a {
+.sidebar__button-link:hover {
+  background-color: rgb(150, 141, 141);
+}
+
+.sidebar__button-open {
+  width: 110px;
+}
+
+.sidebar__button-logo {
+  padding-right: 15px;
+}
+
+.sidebar__button-container a {
   color: rgb(41, 41, 41);
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.sidebar .sidebar-button-data a .text {
-  display: none;
 }

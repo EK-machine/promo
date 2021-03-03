@@ -1,18 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { faFireAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Header = () => (
   <div className="header">
-    <FontAwesomeIcon icon={faFireAlt} className="header-logo" />
-    <ul className="header-nav-bar">
+    <div className="header__logo-container">
+      <FontAwesomeIcon icon={faCode} className="header__logo-img" />
+      <p className="header__logo-text">promo</p>
+    </div>
+
+    <ul className="header__navbar">
       <li>
         <NavLink
           to="/"
           exact
-          activeClassName="header-link-is-active"
-          className="header-link"
+          activeClassName="header-link__is-active"
+          className="header__link"
         >
           Home
         </NavLink>
@@ -20,8 +24,8 @@ const Header = () => (
       <li>
         <NavLink
           to="/comment"
-          activeClassName="header-link-is-active"
-          className="header-link"
+          activeClassName="header-link__is-active"
+          className="header__link"
         >
           Comments
         </NavLink>
