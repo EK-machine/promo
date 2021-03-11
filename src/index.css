@@ -19,7 +19,5 @@ code {
 :root {
   --background-color: #42389d;
   --background-hover-color: #362f78;
-  --active-color: #eaebf0;
-  --sidebar-text-color: #a1a7b1;
-  /* --text-color: rgb(41, 41, 41); */
+  --active-color: #fff;
 }

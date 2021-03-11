@@ -14,14 +14,14 @@ const sidebarButtonData = [
   {
     id: 1,
     url: '/',
-    text: 'home',
-    icon: <FontAwesomeIcon icon={faHome} />,
+    text: 'Home',
+    icon: faHome,
   },
   {
     id: 2,
     url: '/comment',
-    text: 'comment',
-    icon: <FontAwesomeIcon icon={faCommentAlt} />,
+    text: 'Comment',
+    icon: faCommentAlt,
   },
 ];
 
@@ -37,9 +37,10 @@ function Sidebar() {
   return (
     <div className={sidebarButtonClasses}>
       <button onClick={toggleSidebar} type="button" className="sidebar__toggle">
-        <div className="sidebar__icon">
-          <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
-        </div>
+        <FontAwesomeIcon
+          className="sidebar__icon"
+          icon={isOpen ? faTimes : faBars}
+        />
       </button>
       <ul className="sidebar__button-container">
         {sidebarButtonData.map(({ id, url, text, icon }) => (
@@ -51,7 +52,7 @@ function Sidebar() {
                 className="sidebar__button-link"
                 activeClassName="sidebar__active-link"
               >
-                <div className="sidebar__icon">{icon}</div>
+                <FontAwesomeIcon className="sidebar__icon" icon={icon} />
                 <p>{text}</p>
               </NavLink>
             </li>
