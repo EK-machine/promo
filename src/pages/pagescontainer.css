@@ -1,0 +1,31 @@
+.grid__container {
+  display: grid;
+  grid-template-areas: 'sidebar main-content';
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  width: 100vw;
+  grid-gap: 5px;
+  margin: 0px;
+}
+
+/* @media all and (max-width: 575px) {
+  .grid__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+  }
+
+  .grid__sidebar {
+    width: 100vw;
+  }
+} */
+
+.grid__sidebar {
+  grid-area: sidebar;
+}
+
+.grid__main-content {
+  grid-area: main-content;
+  text-align: center;
+}

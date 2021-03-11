@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
+import './sidebar.css';
 import {
   faBars,
   faTimes,
@@ -26,17 +27,19 @@ const sidebarButtonData = [
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleSidebar = () => setIsOpen(!isOpen);
+
   const sidebarButtonClasses = classNames('sidebar', {
     'sidebar__is-open': isOpen,
   });
+
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
   return (
     <div className={sidebarButtonClasses}>
       <button onClick={toggleSidebar} type="button" className="sidebar__toggle">
-        <FontAwesomeIcon
-          icon={isOpen ? faTimes : faBars}
-          className="sidebar__toggle-button"
-        />
+        <div className="sidebar__icon">
+          <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
+        </div>
       </button>
       <ul className="sidebar__button-container">
         {sidebarButtonData.map(({ id, url, text, icon }) => (
@@ -48,7 +51,7 @@ function Sidebar() {
                 className="sidebar__button-link"
                 activeClassName="sidebar__active-link"
               >
-                <div className="sidebar__button-logo">{icon}</div>
+                <div className="sidebar__icon">{icon}</div>
                 <p>{text}</p>
               </NavLink>
             </li>
