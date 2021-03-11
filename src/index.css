@@ -17,8 +17,9 @@ code {
 }
 
 :root {
-  --background-color: rgb(187, 187, 187);
-  --background-hover-color: rgb(150, 141, 141);
-  --active-color: rgb(216, 158, 71);
+  --background-color: #42389d;
+  --background-hover-color: #362f78;
+  --active-color: #eaebf0;
+  --sidebar-text-color: #a1a7b1;
   /* --text-color: rgb(41, 41, 41); */
 }
