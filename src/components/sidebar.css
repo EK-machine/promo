@@ -8,7 +8,7 @@
   overflow: hidden;
   width: 50px;
   transition-duration: 200ms;
-  padding: 5px 5px 0 5px;
+  padding: 5px;
 }
 
 .sidebar__is-open {
@@ -40,7 +40,6 @@
 
 .sidebar__button-container {
   display: flex;
-  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
   margin: 0;
@@ -81,10 +80,10 @@
 }
 
 .sidebar__icon {
-  font-size: 20px;
-  margin: 0 15px;
   display: flex;
   justify-content: center;
-  min-width: 20px;
-  max-width: 20px;
+  align-items: center;
+  font-size: 20px;
+  min-width: 50px;
+  height: 50px;
 }
