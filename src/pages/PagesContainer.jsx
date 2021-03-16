@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
-import './pagescontainer.css';
+import './pages.css';
 import HomePage from './HomePage';
 import CommentPage from './CommentPage';
 import NotFoundPage from './NotFoundPage';
