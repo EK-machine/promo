@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
   background-color: var(--background-color);
-  color: var(--sidebar-text-color);
+  color: var(--active-color);
   text-align: left;
   height: 100%;
   overflow: hidden;
