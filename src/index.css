@@ -3,13 +3,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .App {
@@ -17,7 +10,8 @@ code {
 }
 
 :root {
-  --background-color: #42389d;
-  --background-hover-color: #362f78;
-  --active-color: #fff;
+  --main-background-color: #91e5f6;
+  --background-color: #59a5d8;
+  --background-hover-color: #386fa4;
+  --active-color: #0b2230;
 }
