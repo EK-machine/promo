@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
 import './pagescontainer.css';
 import HomePage from './HomePage';
 import CommentPage from './CommentPage';
@@ -10,6 +11,9 @@ function PagesContainer() {
   return (
     <div className="grid__container">
       <BrowserRouter>
+        <div className="grid__header">
+          <Header />
+        </div>
         <div className="grid__sidebar">
           <Sidebar />
         </div>
