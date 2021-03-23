@@ -48,6 +48,7 @@
 
 .home__avatar {
   background-color: var(--main-background-color);
+  border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -285,6 +286,7 @@
   }
   100% {
     opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -295,6 +297,7 @@
   }
   100% {
     opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -305,6 +308,7 @@
   }
   100% {
     opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -315,6 +319,7 @@
   }
   100% {
     opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
