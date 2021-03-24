@@ -9,6 +9,22 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Header() {
+  document.addEventListener('onDOMContentLoaded', () => {
+    const options = {
+      root: null,
+      rootMargin: '-10px, 0px, -600px, 0px',
+      threshold: 0.05,
+    };
+    function beTouchingTop(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('header__container-small_active');
+      }
+    }
+    const observer = new IntersectionObserver(beTouchingTop, options);
+    const hcm = document.querySelector('.header__container-small');
+    observer.observe(hcm);
+  });
+
   return (
     <div className="header__container">
       <section className="header__item header__img-container">
@@ -72,14 +88,15 @@ function Header() {
           </a>
         </div>
       </section>
-      <section className="header__item header__languages-container">
+      <div className="header__item header__languages-container">
         <button type="button" className="header__language-btn">
           EN
         </button>
         <button type="button" className="header__language-btn">
           RU
         </button>
-      </section>
+      </div>
+      <div className="header__container-small">fafafafafa</div>
     </div>
   );
 }
