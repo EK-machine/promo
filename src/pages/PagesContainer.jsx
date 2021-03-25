@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
+import Preheader from '../components/Preheader';
 import Header from '../components/Header';
 import './pagescontainer.css';
 import HomePage from './HomePage';
@@ -9,13 +10,16 @@ import NotFoundPage from './NotFoundPage';
 
 function PagesContainer() {
   return (
-    <div className="grid__container">
-      <BrowserRouter>
-        <div className="grid__header">
-          <Header />
+    <BrowserRouter>
+      <div className="grid__container">
+        <div className="grid__preheader">
+          <Preheader />
         </div>
         <div className="grid__sidebar">
           <Sidebar />
+        </div>
+        <div className="grid__header">
+          <Header />
         </div>
         <div className="grid__main-content">
           <Switch>
@@ -24,8 +28,8 @@ function PagesContainer() {
             <Route path="*" component={NotFoundPage} />
           </Switch>
         </div>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
