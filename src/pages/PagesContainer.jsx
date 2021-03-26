@@ -12,21 +12,23 @@ function PagesContainer() {
   return (
     <BrowserRouter>
       <div className="grid__container">
-        <div className="grid__preheader">
+        <div className="grid__upper-content">
           <Preheader />
         </div>
-        <div className="grid__sidebar">
-          <Sidebar />
-        </div>
-        <div className="grid__header">
-          <Header />
-        </div>
-        <div className="grid__main-content">
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/comment" component={CommentPage} />
-            <Route path="*" component={NotFoundPage} />
-          </Switch>
+        <div className="grid__lower-content">
+          <div className="grid__header">
+            <Header />
+          </div>
+          <div className="grid__sidebar">
+            <Sidebar />
+          </div>
+          <div className="grid__main-content">
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/comment" component={CommentPage} />
+              <Route path="*" component={NotFoundPage} />
+            </Switch>
+          </div>
         </div>
       </div>
     </BrowserRouter>
