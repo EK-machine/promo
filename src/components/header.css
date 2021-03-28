@@ -15,6 +15,19 @@
   justify-content: space-between;
 }
 
+.header__opacity-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+}
+/*вот тут вот*/
+.header__opacity-container_visible {
+  opacity: 1;
+}
+/*вот тут вот*/
+
 .header__avatar-name-container {
   order: -1;
   display: flex;
