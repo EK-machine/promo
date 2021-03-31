@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import classNames from 'classnames';
 import { useIntersection } from 'react-use';
 import './header.css';
@@ -11,7 +11,6 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef(null);
   const intersection = useIntersection(headerRef, {
     root: null,
@@ -19,24 +18,15 @@ function Header() {
     threshold: 1,
   });
 
-  const headerClasses = classNames('header__opacity-container', {
-    'header__opacity-container_visible': isOpen,
-  });
-  const showHeader = () => {
-    setIsOpen(true);
-  };
-  const hideHeader = () => {
-    setIsOpen(false);
-  };
+  let headerClasses = classNames('header__opacity-container');
 
   if (intersection && intersection.intersectionRatio < 1) {
-    useEffect(() => {
-      hideHeader();
-    });
+    headerClasses = classNames('header__opacity-container');
   } else {
-    useEffect(() => {
-      showHeader();
-    });
+    headerClasses = classNames(
+      'header__opacity-container',
+      'header__opacity-container_visible',
+    );
   }
 
   return (
