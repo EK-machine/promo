@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import classNames from 'classnames';
 import { useIntersection } from 'react-use';
 import './header.css';
 import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -10,30 +11,37 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef(null);
   const intersection = useIntersection(headerRef, {
     root: null,
-    rootMargin: '0px 0px -500px 0px',
+    rootMargin: '0px 0px -550px 0px',
     threshold: 1,
   });
 
-  const showHeader = (element) => {
-    console.log(element.classList);
+  const headerClasses = classNames('header__opacity-container', {
+    'header__opacity-container_visible': isOpen,
+  });
+  const showHeader = () => {
+    setIsOpen(true);
   };
-
-  const hideHeader = (element) => {
-    console.log(element.classList);
+  const hideHeader = () => {
+    setIsOpen(false);
   };
 
   if (intersection && intersection.intersectionRatio < 1) {
-    hideHeader('.header__opacity-container');
+    useEffect(() => {
+      hideHeader();
+    });
   } else {
-    showHeader('.header__opacity-container');
+    useEffect(() => {
+      showHeader();
+    });
   }
 
   return (
     <div ref={headerRef} className="header__container">
-      <div className="header__opacity-container">
+      <div className={headerClasses}>
         <div className="header__avatar-name-container">
           <div className="header__avatar-container">
             <img
