@@ -17,6 +17,11 @@
   height: 100vh;
   position: sticky;
   top: 0px;
+  opacity: 0;
+}
+
+.preheader__container_visible {
+  opacity: 1;
 }
 
 .preheader__img-container {

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import classNames from 'classnames';
+import { useIntersection } from 'react-use';
 import './preheader.css';
 import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
@@ -9,8 +11,24 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Preheader() {
+  const preheaderRef = useRef(null);
+  const intersection = useIntersection(preheaderRef, {
+    root: null,
+    rootMargin: '0px 0px -300px 0px',
+    threshold: 0.35,
+  });
+
+  const isPreheaderVisible =
+    intersection && intersection.intersectionRatio > 0.35;
+
+  const preheaderClasses = isPreheaderVisible
+    ? classNames('preheader__container', 'preheader__container_visible')
+    : classNames('header__opacity-container');
+
+  classNames('preheader__container');
+
   return (
-    <div className="preheader__container">
+    <div ref={preheaderRef} className={preheaderClasses}>
       <section className="preheader__item preheader__img-container">
         <img
           className="preheader__avatar"
