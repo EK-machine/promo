@@ -10,6 +10,8 @@ body {
 }
 
 :root {
+  --preheader-backggound-color: #528a6c;
+  --preheader-backggound-hover-color: #5b9c79;
   --main-background-color: #91e5f6;
   --background-color: #5298c7;
   --background-hover-color: #386fa4;
