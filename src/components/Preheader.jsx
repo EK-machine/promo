@@ -31,15 +31,15 @@ function Preheader() {
   return (
     <div ref={preheaderRef} className="preheader__container">
       <div className={preheaderClasses}>
-        <section className="preheader__img-container">1</section>
+        <section className="preheader__img-container" />
         <section className="preheader__contacts-container">
           <div className="preheader__bio-container">
-            <h1 className="preheader__name">
+            <h1 className="preheader__bio-name">
               Evgenij
               <br />
               Kalabukhin
             </h1>
-            <p className="preheader__paragraph">
+            <p className="preheader__bio-paragraph">
               Minsk
               <br />
               Belarus
