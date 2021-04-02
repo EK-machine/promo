@@ -3,11 +3,18 @@
   padding: 5px 15px;
   background-image: linear-gradient(
     to bottom,
-    #59a5d8,
-    #57a2d4,
-    #559ecf,
-    #549bcb,
-    #5298c7
+    #4a613d,
+    #4a613f,
+    #4a6141,
+    #4a6143,
+    #4a6145,
+    #4a6147,
+    #4a6149,
+    #4a614b,
+    #4a614d,
+    #4a614f,
+    #4a6150,
+    #4a6152
   );
   display: flex;
   flex-direction: row;
