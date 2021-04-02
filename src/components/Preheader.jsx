@@ -2,13 +2,13 @@ import React, { useRef } from 'react';
 import classNames from 'classnames';
 import { useIntersection } from 'react-use';
 import './preheader.css';
-import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {
-  faLinkedinIn,
-  faTelegramPlane,
-  faSkype,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faLinkedinIn,
+//   faTelegramPlane,
+//   faSkype,
+// } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Preheader() {
   const preheaderRef = useRef(null);
@@ -31,7 +31,24 @@ function Preheader() {
   return (
     <div ref={preheaderRef} className="preheader__container">
       <div className={preheaderClasses}>
-        <section className="preheader__item preheader__img-container">
+        <section className="preheader__img-container">1</section>
+        <section className="preheader__contacts-container">
+          <div className="preheader__bio-container">
+            <h1 className="preheader__name">
+              Evgenij
+              <br />
+              Kalabukhin
+            </h1>
+            <p className="preheader__paragraph">
+              Minsk
+              <br />
+              Belarus
+            </p>
+          </div>
+          2
+        </section>
+
+        {/* <section className="preheader__item preheader__img-container">
           <img
             className="preheader__avatar"
             src="/images/avatar.jpg"
@@ -99,7 +116,7 @@ function Preheader() {
           <button type="button" className="preheader__language-btn">
             RU
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
