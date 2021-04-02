@@ -25,6 +25,8 @@ const sidebarButtonData = [
   },
 ];
 
+// I want it to be like this
+
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 

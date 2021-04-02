@@ -15,19 +15,19 @@ function Header() {
   const intersection = useIntersection(headerRef, {
     root: null,
     rootMargin: '0px 0px -550px 0px',
-    threshold: 1,
+    threshold: 0.95,
   });
 
-  let headerClasses = classNames('header__opacity-container');
+  const isHeaderVisible = intersection && intersection.intersectionRatio > 0.95;
 
-  if (intersection && intersection.intersectionRatio < 1) {
-    headerClasses = classNames('header__opacity-container');
-  } else {
-    headerClasses = classNames(
-      'header__opacity-container',
-      'header__opacity-container_visible',
-    );
-  }
+  const headerClasses = isHeaderVisible
+    ? classNames(
+        'header__opacity-container',
+        'header__opacity-container_visible',
+      )
+    : classNames('header__opacity-container');
+
+  classNames('header__opacity-container');
 
   return (
     <div ref={headerRef} className="header__container">
