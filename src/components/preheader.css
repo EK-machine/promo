@@ -17,10 +17,13 @@
   height: 100vh;
   position: sticky;
   top: 0px;
+}
+
+.preheader__opacity-container {
   opacity: 0;
 }
 
-.preheader__container_visible {
+.preheader__opacity-container_visible {
   opacity: 1;
 }
 
