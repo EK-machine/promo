@@ -5,10 +5,6 @@
   color: var(--active-color);
   height: 100vh;
   top: 0px;
-}
-
-.preheader__opacity-container_visible {
-  opacity: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,7 +32,7 @@
   transition: transform 0.4s ease-in-out;
 }
 
-.preheader__img-down {
+.preheader__img_down {
   opacity: 0.1;
   transform: translate(0, 100%);
   width: 100%;
@@ -49,10 +45,10 @@
   flex-shrink: 4;
   order: 0;
   height: 100vh;
-
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 .preheader__contacts-container_buttons {
@@ -87,6 +83,9 @@
   background-color: var(--preheader-backggound-color);
   color: var(--active-color);
   box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .preheader__contact-link:hover {
@@ -95,12 +94,8 @@
   box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
   text-decoration: none;
   color: var(--active-color);
-  font-size: 1.2rem;
-  background-color: var(--preheader-backggound-hover-color);
-}
-
-.preheader__contact-link:hover {
   font-size: 1.4rem;
+  background-color: var(--preheader-backggound-hover-color);
 }
 
 .preheader__contact-link_text {
@@ -110,6 +105,23 @@
 
 .preheader__contact-link:hover .preheader__contact-link_text {
   display: block;
+}
+
+.preheader__contact-link_down {
+  min-height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--preheader-backggound-color);
+  color: var(--active-color);
+  box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
+  opacity: 0;
+  transform: translate(0, 1000%);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .preheader__contacts-container_languages {
@@ -135,6 +147,9 @@
   text-align: center;
   vertical-align: middle;
   box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .preheader__language-btn:last-child {
@@ -145,6 +160,21 @@
   background-color: var(--preheader-backggound-hover-color);
   cursor: pointer;
   font-weight: bold;
+}
+
+.preheader__language-btn_down {
+  background-color: var(--preheader-backggound-color);
+  margin-right: 5px;
+  outline: none;
+  border: none;
+  width: 40px;
+  width: 30px;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
+  transform: translate(0, 1000%);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .preheader__bio-container {
