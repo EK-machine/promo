@@ -21,26 +21,23 @@ function Preheader() {
   const isPreheaderVisible =
     intersection && intersection.intersectionRatio > 0.35;
 
-  const preheaderOpacityClasses = isPreheaderVisible
-    ? classNames(
-        'preheader__opacity-container',
-        'preheader__opacity-container_visible',
-      )
-    : classNames('preheader__opacity-container');
+  // const preheaderOpacityClasses = isPreheaderVisible
+  //   ? classNames(
+  //       'preheader__opacity-container',
+  //       'preheader__opacity-container_visible',
+  //     )
+  //   : classNames('preheader__opacity-container');
 
-  // const preheaderImgClasses = isPreheaderVisible
-  // ? classNames(
-  //     'preheader__opacity-container',
-  //     'preheader__opacity-container_visible',
-  //   )
-  // : classNames('preheader__opacity-container');
+  const preheaderImgClasses = isPreheaderVisible
+    ? classNames('preheader__img')
+    : classNames('preheader__img-down');
 
   return (
     <div ref={preheaderRef} className="preheader__container">
-      <div className={preheaderOpacityClasses}>
+      <div className="preheader__opacity-container_visible">
         <section className="preheader__img-container">
           <img
-            className="preheader__img"
+            className={preheaderImgClasses}
             src="/images/avatar.jpg"
             alt="EK-face"
           />
