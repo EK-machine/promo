@@ -14,11 +14,11 @@ function Header() {
   const headerRef = useRef(null);
   const intersection = useIntersection(headerRef, {
     root: null,
-    rootMargin: '0px 0px -550px 0px',
-    threshold: 0.95,
+    rootMargin: '0px 0px -400px 0px',
+    threshold: 0.7,
   });
 
-  const isHeaderVisible = intersection && intersection.intersectionRatio > 0.95;
+  const isHeaderVisible = intersection && intersection.intersectionRatio > 0.7;
 
   const headerClasses = isHeaderVisible
     ? classNames(

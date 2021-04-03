@@ -21,13 +21,6 @@ function Preheader() {
   const isPreheaderVisible =
     intersection && intersection.intersectionRatio > 0.35;
 
-  // const preheaderOpacityClasses = isPreheaderVisible
-  //   ? classNames(
-  //       'preheader__opacity-container',
-  //       'preheader__opacity-container_visible',
-  //     )
-  //   : classNames('preheader__opacity-container');
-
   const preheaderImgClasses = isPreheaderVisible
     ? classNames('preheader__img')
     : classNames('preheader__img-down');
