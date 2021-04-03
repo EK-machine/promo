@@ -10,6 +10,7 @@
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  overflow: hidden;
 }
 
 .preheader__img-container {
@@ -29,10 +30,10 @@
   transform: translate(0, 0);
   width: 100%;
   height: 100vh;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-.preheader__img_down {
+.preheader__img_unvisible {
   opacity: 0.1;
   transform: translate(0, 100%);
   width: 100%;
@@ -72,6 +73,7 @@
 }
 
 .preheader__contact-link {
+  font-size: 16px;
   min-height: 100px;
   min-width: 100px;
   border-radius: 50%;
@@ -85,7 +87,9 @@
   box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
   opacity: 1;
   transform: translate(0, 0);
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out,
+    min-height 0.4s ease-in-out, min-width 0.4s ease-in-out,
+    font-size 0.4s ease-in-out;
 }
 
 .preheader__contact-link:hover {
@@ -107,7 +111,7 @@
   display: block;
 }
 
-.preheader__contact-link_down {
+.preheader__contact-link_unvisible {
   min-height: 100px;
   min-width: 100px;
   border-radius: 50%;
@@ -162,7 +166,7 @@
   font-weight: bold;
 }
 
-.preheader__language-btn_down {
+.preheader__language-btn_unvisible {
   background-color: var(--preheader-backggound-color);
   margin-right: 5px;
   outline: none;
@@ -173,7 +177,8 @@
   text-align: center;
   vertical-align: middle;
   box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
-  transform: translate(0, 1000%);
+  transform: translate(0, 10000%);
+  opacity: 0;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
@@ -186,7 +191,6 @@
   height: 200px;
   padding: 10px;
   border-radius: 50%;
-  box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,6 +199,15 @@
 
 .preheader__bio-name {
   margin-bottom: 5px;
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.preheader__bio-name_unvisible {
+  transform: translate(-500px, 1000%);
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .preheader__bio-paragraph {

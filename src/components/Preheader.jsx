@@ -23,15 +23,19 @@ function Preheader() {
 
   const preheaderImgClasses = isPreheaderVisible
     ? classNames('preheader__img')
-    : classNames('preheader__img_down');
+    : classNames('preheader__img_unvisible');
+
+  const preheaderNameClasses = isPreheaderVisible
+    ? classNames('preheader__bio-name')
+    : classNames('preheader__bio-name_unvisible');
 
   const preheaderLinkClasses = isPreheaderVisible
     ? classNames('preheader__contact-link')
-    : classNames('preheader__contact-link_down');
+    : classNames('preheader__contact-link_unvisible');
 
   const preheaderLanguageClasses = isPreheaderVisible
     ? classNames('preheader__language-btn')
-    : classNames('preheader__language-btn_down');
+    : classNames('preheader__language-btn_unvisible');
 
   return (
     <div ref={preheaderRef} className="preheader__container">
@@ -44,7 +48,7 @@ function Preheader() {
       </section>
       <section className="preheader__contacts-container">
         <div className="preheader__bio-container">
-          <h1 className="preheader__bio-name">
+          <h1 className={preheaderNameClasses}>
             Evgenij
             <br />
             Kalabukhin
