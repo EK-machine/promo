@@ -69,6 +69,9 @@ function Preheader() {
                 icon={faPhoneAlt}
               />
               <p className="preheader__contact-link_text">Call now</p>
+              <span className="preheader__contact-link_tooltip-bottom">
+                +375-29-28-22-532
+              </span>
             </a>
           </div>
           <div className="preheader__contact-item" />
@@ -84,6 +87,9 @@ function Preheader() {
                 icon={faEnvelope}
               />
               <p className="preheader__contact-link_text">E-mail</p>
+              <span className="preheader__contact-link_tooltip-bottom">
+                coocooroozza@gmail.com
+              </span>
             </a>
           </div>
           <div className="preheader__contact-item" />
@@ -99,6 +105,9 @@ function Preheader() {
                 icon={faSkype}
               />
               <p className="preheader__contact-link_text">Skype</p>
+              <span className="preheader__contact-link_tooltip-left">
+                evgenij.kalabukhin
+              </span>
             </a>
           </div>
           <div className="preheader__contact-item" />
@@ -112,6 +121,9 @@ function Preheader() {
                 icon={faTelegramPlane}
               />
               <p className="preheader__contact-link_text">Telegram</p>
+              <span className="preheader__contact-link_tooltip-top">
+                @EK_machine
+              </span>
             </a>
           </div>
           <div className="preheader__contact-item" />
@@ -122,6 +134,9 @@ function Preheader() {
                 icon={faLinkedinIn}
               />
               <p className="preheader__contact-link_text">Linkedin</p>
+              <span className="preheader__contact-link_tooltip-top">
+                to be filled later
+              </span>
             </a>
           </div>
           <div className="preheader__contact-item" />
