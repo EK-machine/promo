@@ -55,25 +55,28 @@ function Header() {
       <div className="header__contacts-container">
         <div className="header__contact-list">
           <div className="header__contact-item">
-            <a className={headerLinkClasses} href="#">
+            <a className={headerLinkClasses} href="tel:+37529-28-22-532">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faPhoneAlt}
               />
-              <p className="header__contact-link_text">Phone</p>
+              <p className="header__contact-link_text">Call now</p>
             </a>
           </div>
           <div className="header__contact-item">
-            <a className={headerLinkClasses} href="#">
+            <a
+              className={headerLinkClasses}
+              href="mailto:coocooroozza@gmail.com"
+            >
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faEnvelope}
               />
-              <p className="header__contact-link_text">Mail</p>
+              <p className="header__contact-link_text">E-mail</p>
             </a>
           </div>
           <div className="header__contact-item">
-            <a className={headerLinkClasses} href="#">
+            <a className={headerLinkClasses} href="callto:evgenij.kalabukhin">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faSkype}
@@ -82,7 +85,10 @@ function Header() {
             </a>
           </div>
           <div className="header__contact-item">
-            <a className={headerLinkClasses} href="#">
+            <a
+              className={headerLinkClasses}
+              href="https://telegram.me/EK_machine"
+            >
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faTelegramPlane}

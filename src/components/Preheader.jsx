@@ -47,45 +47,53 @@ function Preheader() {
         />
       </section>
       <section className="preheader__contacts-container">
-        <div className="preheader__bio-container">
-          <h1 className={preheaderNameClasses}>
-            Evgenij
-            <br />
-            Kalabukhin
-          </h1>
-          <p className="preheader__bio-paragraph">
-            Minsk
-            <br />
-            Belarus
-          </p>
+        <div className="preheader__bio-container_centering">
+          <div className="preheader__bio-container">
+            <h1 className={preheaderNameClasses}>
+              Evgenij
+              <br />
+              Kalabukhin
+            </h1>
+            <p className="preheader__bio-paragraph">
+              Minsk
+              <br />
+              Belarus
+            </p>
+          </div>
         </div>
         <div className="preheader__contacts-container_buttons">
           <div className="preheader__contact-item">
-            <a className={preheaderLinkClasses} href="#">
+            <a className={preheaderLinkClasses} href="tel:+37529-28-22-532">
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faPhoneAlt}
               />
-              <p className="preheader__contact-link_text">Phone</p>
+              <p className="preheader__contact-link_text">Call now</p>
             </a>
           </div>
           <div className="preheader__contact-item" />
           <div className="preheader__contact-item" />
           <div className="preheader__contact-item" />
           <div className="preheader__contact-item">
-            <a className={preheaderLinkClasses} href="#">
+            <a
+              className={preheaderLinkClasses}
+              href="mailto:coocooroozza@gmail.com"
+            >
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faEnvelope}
               />
-              <p className="preheader__contact-link_text">Mail</p>
+              <p className="preheader__contact-link_text">E-mail</p>
             </a>
           </div>
           <div className="preheader__contact-item" />
           <div className="preheader__contact-item" />
           <div className="preheader__contact-item" />
           <div className="preheader__contact-item">
-            <a className={preheaderLinkClasses} href="#">
+            <a
+              className={preheaderLinkClasses}
+              href="callto:evgenij.kalabukhin"
+            >
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faSkype}
@@ -95,7 +103,10 @@ function Preheader() {
           </div>
           <div className="preheader__contact-item" />
           <div className="preheader__contact-item">
-            <a className={preheaderLinkClasses} href="#">
+            <a
+              className={preheaderLinkClasses}
+              href="https://telegram.me/EK_machine"
+            >
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faTelegramPlane}
