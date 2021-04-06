@@ -53,8 +53,8 @@ function Header() {
         </div>
       </div>
       <div className="header__contacts-container">
-        <ul className="header__contact-list">
-          <li className="header__contact-item">
+        <div className="header__contact-list">
+          <div className="header__contact-item">
             <a className={headerLinkClasses} href="#">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
@@ -62,8 +62,8 @@ function Header() {
               />
               <p className="header__contact-link_text">Phone</p>
             </a>
-          </li>
-          <li className="header__contact-item">
+          </div>
+          <div className="header__contact-item">
             <a className={headerLinkClasses} href="#">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
@@ -71,8 +71,8 @@ function Header() {
               />
               <p className="header__contact-link_text">Mail</p>
             </a>
-          </li>
-          <li className="header__contact-item">
+          </div>
+          <div className="header__contact-item">
             <a className={headerLinkClasses} href="#">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
@@ -80,8 +80,8 @@ function Header() {
               />
               <p className="header__contact-link_text">Skype</p>
             </a>
-          </li>
-          <li className="header__contact-item">
+          </div>
+          <div className="header__contact-item">
             <a className={headerLinkClasses} href="#">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
@@ -89,8 +89,8 @@ function Header() {
               />
               <p className="header__contact-link_text">Telegram</p>
             </a>
-          </li>
-          <li className="header__contact-item">
+          </div>
+          <div className="header__contact-item">
             <a className={headerLinkClasses} href="#">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
@@ -98,8 +98,8 @@ function Header() {
               />
               <p className="header__contact-link_text">Linkedin</p>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
       <div className="header__lang-container">
         <button type="button" className={headerLanguageClasses}>

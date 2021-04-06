@@ -73,11 +73,10 @@
 }
 
 .header__contact-list {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  grid-gap: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .header__contact-item {
@@ -85,6 +84,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 5px;
+}
+
+.header__contact-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
 }
 
 .header__contact-link {
