@@ -14,39 +14,54 @@ function Preheader() {
   const preheaderRef = useRef(null);
   const intersection = useIntersection(preheaderRef, {
     root: null,
-    rootMargin: '0px 0px -10% 0px',
-    threshold: 0.43,
+    rootMargin: '0px 0px -300px 0px',
+    threshold: 0.35,
   });
 
-  const isPreheaderInViewport =
-    intersection && intersection.intersectionRatio > 0.43;
+  const isPreheaderVisible =
+    intersection && intersection.intersectionRatio > 0.35;
 
-  const preheaderClasses = isPreheaderInViewport
-    ? classNames(
-        'preheader__opacity-container',
-        'preheader__opacity-container_shown',
-      )
-    : classNames('preheader__opacity-container');
+  const preheaderImgClasses = isPreheaderVisible
+    ? classNames('preheader__img')
+    : classNames('preheader__img_unvisible');
+
+  const preheaderNameClasses = isPreheaderVisible
+    ? classNames('preheader__bio-name')
+    : classNames('preheader__bio-name_unvisible');
+
+  const preheaderLinkClasses = isPreheaderVisible
+    ? classNames('preheader__contact-link')
+    : classNames('preheader__contact-link_unvisible');
+
+  const preheaderLanguageClasses = isPreheaderVisible
+    ? classNames('preheader__language-btn')
+    : classNames('preheader__language-btn_unvisible');
 
   return (
     <div ref={preheaderRef} className="preheader__container">
-      <div className={preheaderClasses}>
-        <div className="preheader__img-container">1</div>
-        <div className="preheader__item preheader__bio-container">
-          <h1 className="preheader__name">
+      <section className="preheader__img-container">
+        <img
+          className={preheaderImgClasses}
+          src="/images/avatar.jpg"
+          alt="EK-face"
+        />
+      </section>
+      <section className="preheader__contacts-container">
+        <div className="preheader__bio-container">
+          <h1 className={preheaderNameClasses}>
             Evgenij
             <br />
             Kalabukhin
           </h1>
-          <p className="preheader__paragraph">
+          <p className="preheader__bio-paragraph">
             Minsk
             <br />
             Belarus
           </p>
         </div>
-        <div className="preheader__item preheader__contacts-container">
-          <div className="preheader__contact-item preheader__contact-phone">
-            <a className="preheader__contact-link" href="#">
+        <div className="preheader__contacts-container_buttons">
+          <div className="preheader__contact-item">
+            <a className={preheaderLinkClasses} href="#">
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faPhoneAlt}
@@ -54,8 +69,11 @@ function Preheader() {
               <p className="preheader__contact-link_text">Phone</p>
             </a>
           </div>
-          <div className="preheader__contact-item preheader__contact-mail">
-            <a className="preheader__contact-link" href="#">
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item">
+            <a className={preheaderLinkClasses} href="#">
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faEnvelope}
@@ -63,8 +81,11 @@ function Preheader() {
               <p className="preheader__contact-link_text">Mail</p>
             </a>
           </div>
-          <div className="preheader__contact-item preheader__contact-skype">
-            <a className="preheader__contact-link" href="#">
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item">
+            <a className={preheaderLinkClasses} href="#">
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faSkype}
@@ -72,8 +93,9 @@ function Preheader() {
               <p className="preheader__contact-link_text">Skype</p>
             </a>
           </div>
-          <div className="preheader__contact-item preheader__contact-telegram">
-            <a className="preheader__contact-link" href="#">
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item">
+            <a className={preheaderLinkClasses} href="#">
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faTelegramPlane}
@@ -81,8 +103,9 @@ function Preheader() {
               <p className="preheader__contact-link_text">Telegram</p>
             </a>
           </div>
-          <div className="preheader__contact-item preheader__contact-linkedin">
-            <a className="preheader__contact-link" href="#">
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item">
+            <a className={preheaderLinkClasses} href="#">
               <FontAwesomeIcon
                 className="preheader__contact-link_icon"
                 icon={faLinkedinIn}
@@ -90,17 +113,18 @@ function Preheader() {
               <p className="preheader__contact-link_text">Linkedin</p>
             </a>
           </div>
+          <div className="preheader__contact-item" />
+          <div className="preheader__contact-item" />
         </div>
-        {/*
-        <div className="preheader__item preheader__languages-container">
-          <button type="button" className="preheader__language-btn">
+        <div className="preheader__contacts-container_languages">
+          <button type="button" className={preheaderLanguageClasses}>
             EN
           </button>
-          <button type="button" className="preheader__language-btn">
+          <button type="button" className={preheaderLanguageClasses}>
             RU
           </button>
-        </div> */}
-      </div>
+        </div>
+      </section>
     </div>
   );
 }
