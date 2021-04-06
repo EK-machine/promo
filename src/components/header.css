@@ -13,7 +13,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-top: 8px ridge #3d6650;
 }
 
@@ -92,6 +92,7 @@
   min-height: 100px;
   min-width: 100px;
   border-radius: 50%;
+  /* border: 1px solid var(--active-color); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,7 +100,7 @@
   cursor: pointer;
   background-color: var(--preheader-backggound-color);
   color: var(--active-color);
-  box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
+  box-shadow: 5px 10px 20px #a0acac inset;
   opacity: 1;
   transform: translate(0, 0);
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out,
@@ -108,13 +109,16 @@
 }
 
 .header__contact-link:hover {
-  min-height: 150px;
-  min-width: 150px;
+  min-height: 120px;
+  min-width: 120px;
   box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
   text-decoration: none;
   color: var(--active-color);
   font-size: 1.4rem;
   background-color: var(--preheader-backggound-hover-color);
+  transition: box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out,
+    font-size 0.4s ease-in-out, min-height 0.4s ease-in-out,
+    min-width 0.4s ease-in-out;
 }
 
 .header__contact-link_text {
@@ -130,6 +134,7 @@
   min-height: 100px;
   min-width: 100px;
   border-radius: 50%;
+  /* border: 1px solid var(--active-color); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -188,6 +193,7 @@
   width: 30px;
   border-radius: 5px;
   text-align: center;
+  opacity: 0;
   vertical-align: middle;
   box-shadow: 5px 10px 8px #202321, 5px 10px 20px #a0acac inset;
   transform: translate(0, -1000%);
