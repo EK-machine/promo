@@ -327,7 +327,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 10px 0px 8px #202321, 10px 0px 20px #a0acac inset;
+  box-shadow: 10px 0px 8px #202321, 10px 0px 20px #a0acac inset,
+    -10px 0px 20px #202321 inset;
 }
 
 .preheader__bio-container {
