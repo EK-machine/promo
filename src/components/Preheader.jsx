@@ -1,5 +1,7 @@
 import React from 'react';
 import './preheader.css';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Preheader() {
   const scrollPreheaderToBottom = () =>
@@ -20,7 +22,7 @@ function Preheader() {
         <div className="preheader__background preheader__background-7" />
         <div className="preheader__bio-container">
           <div className="preheader__bio-centering">
-            <h1 className="preheader__bio-name">
+            <h1 className="preheader__bio-name preheader__bio-name_unvisible">
               Evgenij <br />
               Kalabukhin
             </h1>
@@ -35,7 +37,11 @@ function Preheader() {
             type="button"
             onClick={scrollPreheaderToBottom}
           >
-            1
+            {/* <img src="preheader_down_arrow.png" alt="move down arrow" /> */}
+            <FontAwesomeIcon
+              className="preheader__scroll-button_icon"
+              icon={faChevronDown}
+            />
           </button>
         </div>
       </section>
