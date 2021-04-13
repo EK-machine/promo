@@ -27,8 +27,7 @@
   position: relative;
   height: 90%;
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  overflow: hidden;
 }
 
 .preheader__background {
@@ -37,156 +36,106 @@
   background-image: url('./preheader_back.jpg');
   background-size: cover;
   background-position: center;
+  position: absolute;
 }
 
 .preheader__background-1 {
   order: -1;
-  animation: bg1GrowShrink 16s ease-in-out infinite;
-}
-
-@keyframes bg1GrowShrink {
-  0% {
-    flex-basis: 20%;
-  }
-  25% {
-    flex-basis: 22%;
-  }
-  50% {
-    flex-basis: 20%;
-  }
-  75% {
-    flex-basis: 18%;
-  }
-  100% {
-    flex-basis: 20%;
-  }
+  left: -2%;
+  animation: bgLeftToRight 16s ease-in-out infinite;
+  width: 24%;
+  z-index: 7;
 }
 
 .preheader__background-2 {
-  filter: blur(1px) hue-rotate(5deg);
+  filter: blur(1px) hue-rotate(5deg) brightness(95%);
   order: 0;
-  animation: bg2GrowShrink 16s ease-in-out infinite;
-}
-
-@keyframes bg2GrowShrink {
-  0% {
-    flex-basis: 18%;
-  }
-  25% {
-    flex-basis: 16%;
-  }
-  50% {
-    flex-basis: 18%;
-  }
-  75% {
-    flex-basis: 20%;
-  }
-  100% {
-    flex-basis: 18%;
-  }
+  left: 20%;
+  animation: bgRightToLeft 16s ease-in-out infinite;
+  width: 22%;
+  z-index: 6;
 }
 
 .preheader__background-3 {
-  filter: blur(2px) hue-rotate(10deg);
+  filter: blur(2px) hue-rotate(10deg) brightness(90%);
   order: 1;
-  animation: bg3GrowShrink 16s ease-in-out infinite;
-}
-
-@keyframes bg3GrowShrink {
-  0% {
-    flex-basis: 16%;
-  }
-  25% {
-    flex-basis: 18%;
-  }
-  50% {
-    flex-basis: 16%;
-  }
-  75% {
-    flex-basis: 14%;
-  }
-  100% {
-    flex-basis: 16%;
-  }
+  left: 38%;
+  animation: bgLeftToRight 16s ease-in-out infinite;
+  width: 20%;
+  z-index: 5;
 }
 
 .preheader__background-4 {
-  filter: blur(3px) hue-rotate(15deg);
+  filter: blur(3px) hue-rotate(15deg) brightness(85%);
   order: 2;
-  animation: bg4GrowShrink 16s ease-in-out infinite;
-}
-
-@keyframes bg4GrowShrink {
-  0% {
-    flex-basis: 14%;
-  }
-  25% {
-    flex-basis: 12%;
-  }
-  50% {
-    flex-basis: 14%;
-  }
-  75% {
-    flex-basis: 16%;
-  }
-  100% {
-    flex-basis: 14%;
-  }
+  left: 54%;
+  animation: bgRightToLeft 16s ease-in-out infinite;
+  width: 18%;
+  z-index: 4;
 }
 
 .preheader__background-5 {
-  filter: blur(4px) hue-rotate(20deg);
+  filter: blur(4px) hue-rotate(20deg) brightness(80%);
   order: 3;
-  animation: bg5GrowShrink 16s ease-in-out infinite;
-}
-
-@keyframes bg5GrowShrink {
-  0% {
-    flex-basis: 12%;
-  }
-  25% {
-    flex-basis: 14%;
-  }
-  50% {
-    flex-basis: 12%;
-  }
-  75% {
-    flex-basis: 10%;
-  }
-  100% {
-    flex-basis: 12%;
-  }
+  left: 68%;
+  animation: bgLeftToRight 16s ease-in-out infinite;
+  width: 16%;
+  z-index: 3;
 }
 
 .preheader__background-6 {
-  filter: blur(5px) hue-rotate(25deg);
+  filter: blur(5px) hue-rotate(25deg) brightness(75%);
   order: 4;
-  flex-basis: 11%;
-  animation: bg6GrowShrink 16s ease-in-out infinite;
-}
-
-@keyframes bg6GrowShrink {
-  0% {
-    flex-basis: 11%;
-  }
-  25% {
-    flex-basis: 9%;
-  }
-  50% {
-    flex-basis: 11%;
-  }
-  75% {
-    flex-basis: 13%;
-  }
-  100% {
-    flex-basis: 11%;
-  }
+  left: 80%;
+  animation: bgRightToLeft 16s ease-in-out infinite;
+  width: 15%;
+  z-index: 2;
 }
 
 .preheader__background-7 {
-  filter: blur(6px) hue-rotate(30deg);
+  filter: blur(6px) hue-rotate(30deg) brightness(70%);
   order: 5;
   flex-basis: 9%;
+  left: 91%;
+  animation: bgLeftToRight 16s ease-in-out infinite;
+  width: 13%;
+  z-index: 1;
+}
+
+@keyframes bgLeftToRight {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(2%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bgRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-2%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .preheader__bio-container {
@@ -198,6 +147,7 @@
   justify-content: flex-start;
   align-items: center;
   transform: translateX(50%);
+  z-index: 8;
 }
 
 .preheader__bio-centering {
@@ -210,13 +160,13 @@
 .preheader__bio-name {
   text-align: start;
   margin: 5px 0;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   color: white;
 }
 
 .preheader__bio-paragraph {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
 }
 
@@ -228,6 +178,7 @@
   justify-content: center;
   align-items: flex-end;
   transform: translateY(-30px);
+  z-index: 8;
 }
 
 .preheader__scroll-button {

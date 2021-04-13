@@ -7,6 +7,7 @@ import {
   faLinkedinIn,
   faTelegramPlane,
   faSkype,
+  faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -28,13 +29,9 @@ function Header() {
     ? classNames('header__name')
     : classNames('header__name_unvisible');
 
-  const headerLinkClasses = isHeaderVisible
-    ? classNames('header__contact-link')
-    : classNames('header__contact-link_unvisible');
-
-  const headerLanguageClasses = isHeaderVisible
-    ? classNames('header__language-btn')
-    : classNames('header__language-btn_unvisible');
+  // const headerLinkClasses = isHeaderVisible
+  //   ? classNames('header__contact-link')
+  //   : classNames('header__contact-link_unvisible');
 
   return (
     <div ref={headerRef} className="header__container">
@@ -55,66 +52,75 @@ function Header() {
       <div className="header__contacts-container">
         <div className="header__contact-list">
           <div className="header__contact-item">
-            <a className={headerLinkClasses} href="tel:+37529-28-22-532">
+            <a className="header__contact-link" href="tel:+37529-28-22-532">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faPhoneAlt}
               />
-              <p className="header__contact-link_text">Call now</p>
             </a>
           </div>
           <div className="header__contact-item">
             <a
-              className={headerLinkClasses}
+              className="header__contact-link"
               href="mailto:coocooroozza@gmail.com"
             >
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faEnvelope}
               />
-              <p className="header__contact-link_text">E-mail</p>
-            </a>
-          </div>
-          <div className="header__contact-item">
-            <a className={headerLinkClasses} href="callto:evgenij.kalabukhin">
-              <FontAwesomeIcon
-                className="header__contact-link_icon"
-                icon={faSkype}
-              />
-              <p className="header__contact-link_text">Skype</p>
             </a>
           </div>
           <div className="header__contact-item">
             <a
-              className={headerLinkClasses}
+              className="header__contact-link"
+              href="callto:evgenij.kalabukhin"
+            >
+              <FontAwesomeIcon
+                className="header__contact-link_icon"
+                icon={faSkype}
+              />
+            </a>
+          </div>
+          <div className="header__contact-item">
+            <a
+              className="header__contact-link"
               href="https://telegram.me/EK_machine"
             >
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faTelegramPlane}
               />
-              <p className="header__contact-link_text">Telegram</p>
             </a>
           </div>
           <div className="header__contact-item">
-            <a className={headerLinkClasses} href="#">
+            <a
+              className="header__contact-link"
+              href="https://github.com/EK-machine"
+            >
+              <FontAwesomeIcon
+                className="header__contact-link_icon"
+                icon={faGithub}
+              />
+            </a>
+          </div>
+          <div className="header__contact-item">
+            <a className="header__contact-link" href="#">
               <FontAwesomeIcon
                 className="header__contact-link_icon"
                 icon={faLinkedinIn}
               />
-              <p className="header__contact-link_text">Linkedin</p>
             </a>
           </div>
         </div>
       </div>
-      <div className="header__lang-container">
-        <button type="button" className={headerLanguageClasses}>
+      {/* <div className="header__lang-container">
+        <button type="button" className="header__language-btn">
           EN
         </button>
-        <button type="button" className={headerLanguageClasses}>
+        <button type="button" className="header__language-btn">
           RU
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
