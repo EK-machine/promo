@@ -108,15 +108,17 @@
   cursor: pointer;
   color: var(--active-color);
   opacity: 0.8;
-  transition: font-size 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  border-radius: 8px;
+  transition: font-size 0.4s ease-in-out, opacity 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
 }
 
 .header__contact-link:hover {
   font-size: 36px;
   background-color: var(--sidebar-background-hover-color);
-  border-radius: 8px;
   opacity: 1;
-  transition: font-size 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: font-size 0.4s ease-in-out, opacity 0.4s ease-in-out,
+    background-color 0.4s ease-in-out;
 }
 /* 
 .header__lang-container {
