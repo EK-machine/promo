@@ -39,7 +39,7 @@ function Preheader() {
   const preheaderRef = useRef(null);
   const intersection = useIntersection(preheaderRef, {
     root: null,
-    rootMargin: '0px 0px -400px 0px',
+    rootMargin: '0px 0px -260px 0px',
     threshold: 0.1,
   });
 
