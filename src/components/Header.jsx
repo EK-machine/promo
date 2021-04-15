@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useIntersection } from 'react-use';
 import './header.css';
 import ContactButtons from './Contactbuttons';
@@ -22,10 +25,6 @@ function Header() {
     ? classNames('header__name')
     : classNames('header__name_unvisible');
 
-  // const headerLinkClasses = isHeaderVisible
-  //   ? classNames('header__contact-link')
-  //   : classNames('header__contact-link_unvisible');
-
   return (
     <div ref={headerRef} className="header__container">
       <div className="header__avatar-name-container">
@@ -35,6 +34,14 @@ function Header() {
             src="/images/avatar.jpg"
             alt="EK face"
           />
+          <div className="header__start-link_container">
+            <Link exact to="/" className="header__start-link">
+              <FontAwesomeIcon
+                className="header__start-link_icon"
+                icon={faChevronUp}
+              />
+            </Link>
+          </div>
         </div>
         <div className="header__name-container">
           <h1 className={headerNameClasses}>
@@ -45,14 +52,6 @@ function Header() {
       <div className="header__contacts-container">
         <ContactButtons />
       </div>
-      {/* <div className="header__lang-container">
-        <button type="button" className="header__language-btn">
-          EN
-        </button>
-        <button type="button" className="header__language-btn">
-          RU
-        </button>
-      </div> */}
     </div>
   );
 }

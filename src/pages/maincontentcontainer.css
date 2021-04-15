@@ -1,16 +1,4 @@
-::-webkit-scrollbar {
-  display: none;
-}
-
-.grid__start-container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  margin: 0px;
-}
-
-/* .grid__main-container {
+.grid__main-container {
   display: grid;
   height: 100vh;
   grid-template-areas:
@@ -33,4 +21,4 @@
   grid-area: main-content;
   text-align: center;
   overflow-y: scroll;
-} */
+}

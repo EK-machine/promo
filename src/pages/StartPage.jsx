@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './startpage.css';
+import { NavLink, Route, Switch } from 'react-router-dom';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactButtons from '../components/Contactbuttons';
+import MainContentContainer from './MainContentContainer';
 
 const startpageBackgroundParts = [
   {
@@ -36,39 +37,42 @@ const startpageBackgroundParts = [
   },
 ];
 
-const url = '/';
-
 function StartPage() {
   return (
-    <div className="startpage__container">
-      <section className="startpage__content-container">
-        <div className="startpage__contacts-container">
-          <ContactButtons />
-        </div>
-        {startpageBackgroundParts.map(({ id, classNo }) => (
-          <div key={id} className={classNo} />
-        ))}
-        <div className="startpage__bio-container">
-          <div className="startpage__bio-centering">
-            <h1 className="startpage__bio-name">
-              Evgenij <br />
-              Kalabukhin
-            </h1>
-            <p className="startpage__bio-paragraph">
-              Junior Front-end Developer
-            </p>
+    <Switch>
+      <div className="startpage__container">
+        <section className="startpage__content-container">
+          <div className="startpage__contacts-container">
+            <ContactButtons />
           </div>
+          {startpageBackgroundParts.map(({ id, classNo }) => (
+            <div key={id} className={classNo} />
+          ))}
+          <div className="startpage__bio-container">
+            <div className="startpage__bio-centering">
+              <h1 className="startpage__bio-name">
+                Evgenij <br />
+                Kalabukhin
+              </h1>
+              <p className="startpage__bio-paragraph">
+                Junior Front-end Developer
+              </p>
+            </div>
+          </div>
+          <div className="startpage__button-container">
+            <NavLink to="/main" className="startpage__arrow-down_link">
+              <FontAwesomeIcon
+                className="startpage__arrow-down_icon"
+                icon={faChevronDown}
+              />
+            </NavLink>
+          </div>
+        </section>
+        <div>
+          <Route eaxct path="/main" component={MainContentContainer} />
         </div>
-        <div className="startpage__button-container">
-          <Link exact to={url} className="startpage__scroll-button">
-            <FontAwesomeIcon
-              className="startpage__scroll-button_icon"
-              icon={faChevronDown}
-            />
-          </Link>
-        </div>
-      </section>
-    </div>
+      </div>
+    </Switch>
   );
 }
 

@@ -196,7 +196,7 @@
   z-index: 8;
 }
 
-.startpage__scroll-button {
+.startpage__arrow-down_link {
   background: none;
   border: none;
   padding: 0;
@@ -204,18 +204,18 @@
   outline: none;
 }
 
-.startpage__scroll-button_icon {
+.startpage__arrow-down_icon {
   color: #fff;
   min-height: 50px;
   min-width: 100px;
   transform: scale(4, 1);
 }
 
-.startpage__scroll-button_icon:hover {
-  animation: scroll-button-hover 1s ease-in-out infinite;
+.startpage__arrow-down_icon:hover {
+  animation: down-button-hover 1s ease-in-out infinite;
 }
 
-@keyframes scroll-button-hover {
+@keyframes down-button-hover {
   0% {
     transform: scale(4, 1) translateY(0px);
   }
