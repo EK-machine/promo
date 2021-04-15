@@ -1,24 +1,8 @@
-.grid__container {
-  display: grid;
-  grid-template-areas:
-    'up'
-    'down';
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  margin: 0px;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
-.grid__upper-content {
-  grid-area: up;
-  height: 100vh;
-}
-
-.grid__lower-content {
-  grid-area: down;
+.grid__main-container {
   display: grid;
   height: 100vh;
   grid-template-areas:

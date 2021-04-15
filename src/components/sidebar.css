@@ -30,14 +30,14 @@
   color: var(--active-color);
   border-radius: 8px;
   opacity: 0.6;
-  transition: opacity 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .sidebar__toggle:hover {
   background-color: var(--sidebar-background-hover-color);
   color: var(--active-color);
   opacity: 1;
-  transition: opacity 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .sidebar__button-container {
@@ -69,13 +69,13 @@
   color: var(--active-color);
   border-radius: 8px;
   opacity: 0.6;
-  transition: opacity 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .sidebar__button-link:hover {
   background-color: var(--sidebar-background-hover-color);
   opacity: 1;
-  transition: opacity 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .sidebar__active-link {

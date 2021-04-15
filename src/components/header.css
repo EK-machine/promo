@@ -13,7 +13,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-top: 8px ridge #3d6650;
   overflow: hidden;
 }
 
@@ -41,7 +40,7 @@
   display: block;
   transform: translate(0, 10px);
   opacity: 1;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .header__avatar_unvisible {
@@ -49,7 +48,7 @@
   display: block;
   transform: translate(-100%, 10px);
   opacity: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .header__name {
@@ -58,7 +57,7 @@
   margin: 0px;
   transform: translate(0, 0);
   opacity: 1;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .header__name_unvisible {
@@ -66,14 +65,16 @@
   text-align: start;
   transform: translate(0, -100%);
   opacity: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .header__contacts-container {
   order: 0;
   flex-basis: 60%;
+  display: flex;
+  justify-content: flex-end;
 }
-
+/* 
 .header__contact-list {
   display: grid;
   grid-gap: auto;
@@ -119,7 +120,7 @@
   opacity: 1;
   transition: font-size 0.4s ease-in-out, opacity 0.4s ease-in-out,
     background-color 0.4s ease-in-out;
-}
+} */
 /* 
 .header__lang-container {
   height: 100%;

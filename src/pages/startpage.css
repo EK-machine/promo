@@ -1,4 +1,4 @@
-.preheader__container {
+.startpage__container {
   margin: 0;
   padding: 0;
   background-image: linear-gradient(
@@ -23,23 +23,30 @@
   align-items: center;
 }
 
-.preheader__content-container {
+.startpage__content-container {
   position: relative;
   height: 90%;
   width: 100%;
   overflow: hidden;
 }
 
-.preheader__background {
+.startpage__contacts-container {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 9;
+}
+
+.startpage__background {
   height: 100%;
   width: 100%;
-  background-image: url('./preheader_back.jpg');
+  background-image: url('../components/preheader_back.jpg');
   background-size: cover;
   background-position: center;
   position: absolute;
 }
 
-.preheader__background-1 {
+.startpage__background-1 {
   order: -1;
   left: -2%;
   animation: bgLeftToRight 16s ease-in-out infinite;
@@ -47,8 +54,8 @@
   z-index: 7;
 }
 
-.preheader__background-2 {
-  filter: blur(1px) hue-rotate(5deg) brightness(95%);
+.startpage__background-2 {
+  filter: blur(1px) hue-rotate(5deg) brightness(90%);
   order: 0;
   left: 20%;
   animation: bgRightToLeft 16s ease-in-out infinite;
@@ -56,8 +63,8 @@
   z-index: 6;
 }
 
-.preheader__background-3 {
-  filter: blur(2px) hue-rotate(10deg) brightness(90%);
+.startpage__background-3 {
+  filter: blur(2px) hue-rotate(10deg) brightness(80%);
   order: 1;
   left: 38%;
   animation: bgLeftToRight 16s ease-in-out infinite;
@@ -65,8 +72,8 @@
   z-index: 5;
 }
 
-.preheader__background-4 {
-  filter: blur(3px) hue-rotate(15deg) brightness(85%);
+.startpage__background-4 {
+  filter: blur(3px) hue-rotate(15deg) brightness(70%);
   order: 2;
   left: 54%;
   animation: bgRightToLeft 16s ease-in-out infinite;
@@ -74,8 +81,8 @@
   z-index: 4;
 }
 
-.preheader__background-5 {
-  filter: blur(4px) hue-rotate(20deg) brightness(80%);
+.startpage__background-5 {
+  filter: blur(4px) hue-rotate(20deg) brightness(60%);
   order: 3;
   left: 68%;
   animation: bgLeftToRight 16s ease-in-out infinite;
@@ -83,8 +90,8 @@
   z-index: 3;
 }
 
-.preheader__background-6 {
-  filter: blur(5px) hue-rotate(25deg) brightness(75%);
+.startpage__background-6 {
+  filter: blur(5px) hue-rotate(25deg) brightness(50%);
   order: 4;
   left: 80%;
   animation: bgRightToLeft 16s ease-in-out infinite;
@@ -92,8 +99,8 @@
   z-index: 2;
 }
 
-.preheader__background-7 {
-  filter: blur(6px) hue-rotate(30deg) brightness(70%);
+.startpage__background-7 {
+  filter: blur(6px) hue-rotate(30deg) brightness(40%);
   order: 5;
   flex-basis: 9%;
   left: 91%;
@@ -138,39 +145,47 @@
   }
 }
 
-.preheader__bio-container {
+.startpage__bio-container {
   position: absolute;
+  left: 15px;
+  bottom: 15px;
   height: 100%;
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  transform: translateX(50%);
+  align-items: flex-end;
   z-index: 8;
 }
 
-.preheader__bio-centering {
+.startpage__bio-centering {
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  background-color: black;
+  opacity: 0.5;
 }
 
-.preheader__bio-name {
+.startpage__bio-name {
   text-align: start;
   margin: 5px 0;
   font-size: 4.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
   color: white;
 }
 
-.preheader__bio-paragraph {
+.startpage__bio-paragraph {
   margin: 0;
   font-size: 2.5rem;
+  font-weight: 100;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
-.preheader__button-container {
+.startpage__button-container {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -181,7 +196,7 @@
   z-index: 8;
 }
 
-.preheader__scroll-button {
+.startpage__scroll-button {
   background: none;
   border: none;
   padding: 0;
@@ -189,14 +204,14 @@
   outline: none;
 }
 
-.preheader__scroll-button_icon {
+.startpage__scroll-button_icon {
   color: #fff;
   min-height: 50px;
   min-width: 100px;
   transform: scale(4, 1);
 }
 
-.preheader__scroll-button_icon:hover {
+.startpage__scroll-button_icon:hover {
   animation: scroll-button-hover 1s ease-in-out infinite;
 }
 
