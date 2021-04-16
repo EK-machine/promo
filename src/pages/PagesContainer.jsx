@@ -1,22 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import StartPage from './StartPage';
-import NotFoundPage from './NotFoundPage';
 import './pagescontainer.css';
+import MainContentContainer from './MainContentContainer';
 
 function PagesContainer() {
   return (
-    <BrowserRouter>
+    <div className="grid__start-container">
       <Switch>
-        <div className="grid__start-container">
-          <StartPage />
-        </div>
-        <div>
-          <Route exact path="/" component={StartPage} />
-          <Route path="*" component={NotFoundPage} />
-        </div>
+        <Route exact path="/" component={StartPage} />
       </Switch>
-    </BrowserRouter>
+      <Switch>
+        <Route path="/main" component={MainContentContainer} />
+      </Switch>
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 function HomePage() {
   return (
     <>
-      <h1>homepage</h1>
+      <h1>Homepage</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
         perspiciatis molestias sapiente repudiandae iure! Quo architecto
