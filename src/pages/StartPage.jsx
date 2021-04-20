@@ -66,6 +66,15 @@ function StartPage() {
           </Link>
         </div>
       </section>
+      {/* <div className="startpage__sills-container">
+        <div className="startpage__skills-centering">
+          <p className="startpage__skills-paragraph">SKILLS</p>
+          <p className="startpage__skills-paragraph">HTML</p>
+          <p className="startpage__skills-paragraph">CSS</p>
+          <p className="startpage__skills-paragraph">JavaScript</p>
+          <p className="startpage__skills-paragraph">REACT</p>
+        </div>
+      </div> */}
     </div>
   );
 }

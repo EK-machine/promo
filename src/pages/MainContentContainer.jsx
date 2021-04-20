@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import './maincontentcontainer.css';
 import HomePage from './HomePage';
 import CommentPage from './CommentPage';
-import NotFoundPage from './NotFoundPage';
+// import NotFoundPage from './NotFoundPage';
 
 function MainContentContainer() {
   return (
@@ -20,7 +20,7 @@ function MainContentContainer() {
         <Switch>
           <Route path="/main/home" component={HomePage} />
           <Route path="/main/comment" component={CommentPage} />
-          <Route path="/main/*" component={NotFoundPage} />
+          {/* <Route path="/main/*" component={NotFoundPage} /> */}
         </Switch>
       </div>
     </div>
