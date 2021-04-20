@@ -2,6 +2,12 @@ import React from 'react';
 import './startpage.css';
 import { Link } from 'react-router-dom';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHtml5,
+  faCss3Alt,
+  faJsSquare,
+  faReact,
+} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactButtons from '../components/Contactbuttons';
 
@@ -65,16 +71,55 @@ function StartPage() {
             />
           </Link>
         </div>
-      </section>
-      {/* <div className="startpage__sills-container">
-        <div className="startpage__skills-centering">
-          <p className="startpage__skills-paragraph">SKILLS</p>
-          <p className="startpage__skills-paragraph">HTML</p>
-          <p className="startpage__skills-paragraph">CSS</p>
-          <p className="startpage__skills-paragraph">JavaScript</p>
-          <p className="startpage__skills-paragraph">REACT</p>
+        <div className="startpage__skills-container">
+          <div className="startpage__skills-list">
+            <div className="startpage__skills-chip_item">
+              <div className="startpage__skills-chip_icon-container">
+                <FontAwesomeIcon
+                  className="startpage__skills-chip_icon"
+                  icon={faHtml5}
+                />
+              </div>
+              <div className="startpage__skills-chip_text-container">
+                <p className="startpage__skills-chip_paragraph">HTML</p>
+              </div>
+            </div>
+            <div className="startpage__skills-chip_item">
+              <div className="startpage__skills-chip_icon-container">
+                <FontAwesomeIcon
+                  className="startpage__skills-chip_icon"
+                  icon={faCss3Alt}
+                />
+              </div>
+              <div className="startpage__skills-chip_text-container">
+                <p className="startpage__skills-chip_paragraph">CSS</p>
+              </div>
+            </div>
+            <div className="startpage__skills-chip_item">
+              <div className="startpage__skills-chip_icon-container">
+                <FontAwesomeIcon
+                  className="startpage__skills-chip_icon"
+                  icon={faJsSquare}
+                />
+              </div>
+              <div className="startpage__skills-chip_text-container">
+                <p className="startpage__skills-chip_paragraph">JavaScript</p>
+              </div>
+            </div>
+            <div className="startpage__skills-chip_item">
+              <div className="startpage__skills-chip_icon-container">
+                <FontAwesomeIcon
+                  className="startpage__skills-chip_icon"
+                  icon={faReact}
+                />
+              </div>
+              <div className="startpage__skills-chip_text-container">
+                <p className="startpage__skills-chip_paragraph">REACT</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div> */}
+      </section>
     </div>
   );
 }
