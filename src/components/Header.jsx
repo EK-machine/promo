@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
-import ContactButtons from './Contactbuttons';
+import ContactButtons from './ContactButtons';
 
 function Header() {
   return (
@@ -11,11 +11,13 @@ function Header() {
       <div className="header__avatar-name-container">
         <div className="header__avatar-container">
           <Link exact to="/" className="header__avatar-link">
-            <img
-              className="header__avatar"
-              src="/images/avatar.jpg"
-              alt="EK face"
-            />
+            <div className="header__avatar-img_container">
+              <img
+                className="header__avatar"
+                src="/images/avatar.jpg"
+                alt="EK face"
+              />
+            </div>
             <FontAwesomeIcon
               className="header__avatar-link_icon"
               icon={faChevronUp}

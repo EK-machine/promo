@@ -4,7 +4,7 @@
   background-color: var(--sidebar-background-color);
   color: var(--sidebar-text-color);
   text-align: left;
-  height: 98%;
+  height: 100%;
   overflow: hidden;
   width: 50px;
   transition-duration: 200ms;

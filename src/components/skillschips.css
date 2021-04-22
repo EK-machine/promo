@@ -1,0 +1,52 @@
+.skills-chip_item {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.skills-chip_item:last-child {
+  margin-bottom: 0px;
+}
+
+.skills-chip_icon-container {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-chip_icon {
+  color: #fff;
+  padding: 0;
+  transition: font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.skills-chip_text-container {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-chip_paragraph {
+  color: #fff;
+  padding: 0;
+  transition: font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.skills-chip_item:hover .skills-chip_icon,
+.skills-chip_item:hover .skills-chip_paragraph {
+  font-size: 130%;
+  font-weight: bold;
+  transition: font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}

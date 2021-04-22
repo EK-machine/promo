@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import PageContainer from './pages/PagesContainer';
+import PagesContainer from './pages/PagesContainer';
 
 function App() {
   return (
     <BrowserRouter>
-      <PageContainer />
+      <PagesContainer />
     </BrowserRouter>
   );
 }

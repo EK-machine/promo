@@ -9,28 +9,3 @@
   grid-template-rows: 1fr;
   margin: 0px;
 }
-
-/* .grid__main-container {
-  display: grid;
-  height: 100vh;
-  grid-template-areas:
-    'header header'
-    'sidebar main-content';
-  grid-template-columns: auto 5fr;
-  grid-template-rows: auto 1fr;
-  margin: 0px;
-}
-
-.grid__header {
-  grid-area: header;
-}
-
-.grid__sidebar {
-  grid-area: sidebar;
-}
-
-.grid__main-content {
-  grid-area: main-content;
-  text-align: center;
-  overflow-y: scroll;
-} */
