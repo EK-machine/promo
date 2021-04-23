@@ -8,41 +8,26 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const skillsChipsArr = [
+  { icon: faHtml5, text: 'HTML', id: 1 },
+  { icon: faCss3Alt, text: 'CSS', id: 2 },
+  { icon: faJsSquare, text: 'JavaScript', id: 3 },
+  { icon: faReact, text: 'REACT', id: 4 },
+];
+
 function SkillsChips() {
   return (
     <div className="skills-list">
-      <div className="skills-chip_item">
-        <div className="skills-chip_icon-container">
-          <FontAwesomeIcon className="skills-chip_icon" icon={faHtml5} />
+      {skillsChipsArr.map(({ icon, text, id }) => (
+        <div key={id} className="skills-chip_item">
+          <div className="skills-chip_icon-container">
+            <FontAwesomeIcon className="skills-chip_icon" icon={icon} />
+          </div>
+          <div className="skills-chip_text-container">
+            <p className="skills-chip_paragraph">{text}</p>
+          </div>
         </div>
-        <div className="skills-chip_text-container">
-          <p className="skills-chip_paragraph">HTML</p>
-        </div>
-      </div>
-      <div className="skills-chip_item">
-        <div className="skills-chip_icon-container">
-          <FontAwesomeIcon className="skills-chip_icon" icon={faCss3Alt} />
-        </div>
-        <div className="skills-chip_text-container">
-          <p className="skills-chip_paragraph">CSS</p>
-        </div>
-      </div>
-      <div className="skills-chip_item">
-        <div className="skills-chip_icon-container">
-          <FontAwesomeIcon className="skills-chip_icon" icon={faJsSquare} />
-        </div>
-        <div className="skills-chip_text-container">
-          <p className="skills-chip_paragraph">JavaScript</p>
-        </div>
-      </div>
-      <div className="skills-chip_item">
-        <div className="skills-chip_icon-container">
-          <FontAwesomeIcon className="skills-chip_icon" icon={faReact} />
-        </div>
-        <div className="skills-chip_text-container">
-          <p className="skills-chip_paragraph">REACT</p>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
