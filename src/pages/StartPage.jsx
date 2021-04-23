@@ -10,7 +10,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 // } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SkillsChips from '../components/SkillsChips';
-import ContactButtons from '../components/ContactButtons.jsx';
+import ContactButtons from '../components/ContactButtons';
 
 // const startpageBackgroundParts = [
 //   {

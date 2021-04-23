@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './header.css';
-import ContactButtons from './ContactButtons.jsx';
+import ContactButtons from './ContactButtons';
 
 function Header() {
   return (
