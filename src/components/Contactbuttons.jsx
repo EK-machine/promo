@@ -9,6 +9,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// comment
+
 function ContactButtons() {
   return (
     <div className="contacts__list">
