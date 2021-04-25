@@ -1,14 +1,15 @@
 import React from 'react';
-// import './chip.css';
+import './chip.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function Chip(props) {
+function Chip({ index, icon, text }) {
   return (
-    <div key={props.index} className="skills-chip_item">
-      <div className="skills-chip_icon-container">
-        <FontAwesomeIcon className="skills-chip_icon" icon={props.icon} />
+    <div key={index} className="chip_item">
+      <div className="chip_icon-container">
+        <FontAwesomeIcon className="chip_icon" icon={icon} />
       </div>
-      <div className="skills-chip_text-container">
-        <p className="skills-chip_paragraph">{props.text}</p>
+      <div className="chip_text-container">
+        <p className="chip_paragraph">{text}</p>
       </div>
     </div>
   );
