@@ -2,8 +2,15 @@ import React from 'react';
 import './startpage.css';
 import { Link } from 'react-router-dom';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faHtml5,
+//   faCss3Alt,
+//   faJsSquare,
+//   faReact,
+// } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SkillsChips from '../components/SkillsChips';
+// import Chip from '../components/Chip';
 import ContactButtons from '../components/ContactButtons';
 
 const startpageBackgroundParts = [
@@ -15,6 +22,13 @@ const startpageBackgroundParts = [
   'startpage__background startpage__background-6',
   'startpage__background startpage__background-7',
 ];
+
+// const skillsChipsArr = [
+//   { icon: faHtml5, text: 'HTML' },
+//   { icon: faCss3Alt, text: 'CSS' },
+//   { icon: faJsSquare, text: 'JavaScript' },
+//   { icon: faReact, text: 'REACT' },
+// ];
 
 function StartPage() {
   return (
@@ -48,6 +62,10 @@ function StartPage() {
           </Link>
         </div>
         <div className="startpage__skills-container">
+          {/* {skillsChipsArr.map(({ icon, text }, index) => (
+            <Chip icon={icon} text={text} id={index} />
+          ))} */}
+
           <SkillsChips />
         </div>
       </section>
