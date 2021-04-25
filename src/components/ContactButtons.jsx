@@ -21,8 +21,9 @@ const contactButtonsArr = [
 function ContactButtons() {
   return (
     <div className="contacts__list">
-      {contactButtonsArr.map(({ href, icon, id }) => (
-        <div key={id} className="contacts__item">
+      {contactButtonsArr.map(({ href, icon }, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <div key={index} className="contacts__item">
           <a className="contacts__link" href={href}>
             <FontAwesomeIcon className="contacts__link_icon" icon={icon} />
           </a>
