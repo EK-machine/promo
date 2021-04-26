@@ -2,9 +2,9 @@ import React from 'react';
 import './chip.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function Chip({ index, icon, text }) {
+function Chip({ icon, text }) {
   return (
-    <div key={index} className="chip_item">
+    <div className="chip_item">
       <div className="chip_icon-container">
         <FontAwesomeIcon className="chip_icon" icon={icon} />
       </div>

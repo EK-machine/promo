@@ -3,10 +3,10 @@
   height: 50px;
   display: flex;
   flex-direction: row;
-  border: 1px solid #fff;
+  border: 1px solid var(--active-text-color);
   border-radius: 25px;
   box-sizing: border-box;
-  color: #fff;
+  color: var(--active-text-color);
   margin-bottom: 15px;
 }
 
@@ -17,7 +17,7 @@
 .chip_icon-container {
   width: 50px;
   height: 50px;
-  border: 1px solid #fff;
+  border: 1px solid var(--active-text-color);
   border-radius: 25px;
   box-sizing: border-box;
   display: flex;
@@ -26,9 +26,11 @@
 }
 
 .chip_icon {
-  color: #fff;
+  color: var(--active-text-color);
   padding: 0;
-  transition: font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  font-size: 20px;
+  transform: scale(0.8);
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 }
 
 .chip_text-container {
@@ -39,14 +41,16 @@
 }
 
 .chip_paragraph {
-  color: #fff;
+  color: var(--active-text-color);
   padding: 0;
-  transition: font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  font-size: 20px;
+  transform: scale(0.8);
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 }
 
 .chip_item:hover .chip_icon,
 .chip_item:hover .chip_paragraph {
-  font-size: 130%;
   font-weight: bold;
-  transition: font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 }

@@ -13,7 +13,8 @@
 }
 
 .contacts__link {
-  font-size: 20px;
+  font-size: 36px;
+  transform: scale(0.55);
   min-height: 60px;
   min-width: 60px;
   display: flex;
@@ -21,13 +22,13 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #fff;
+  color: var(--active-text-color);
   opacity: 0.8;
-  transition: font-size 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 .contacts__link:hover {
-  font-size: 36px;
+  transform: scale(1);
   opacity: 1;
-  transition: font-size 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
