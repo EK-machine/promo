@@ -12,13 +12,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const sidebarButtonData = [
   {
-    id: 1,
     url: '/main/home',
     text: 'Home',
     icon: faHome,
   },
   {
-    id: 2,
     url: '/main/comment',
     text: 'Comment',
     icon: faCommentAlt,
@@ -42,9 +40,9 @@ function Sidebar() {
         </div>
       </button>
       <ul className="sidebar__button-container">
-        {sidebarButtonData.map(({ id, url, text, icon }) => (
+        {sidebarButtonData.map(({ url, text, icon }) => (
           <>
-            <li key={id} className="sidebar__button-item">
+            <li key={text} className="sidebar__button-item">
               <NavLink
                 exact
                 to={url}
