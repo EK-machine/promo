@@ -15,7 +15,7 @@ const contactButtonsArr = [
   { href: 'callto:evgenij.kalabukhin', icon: faSkype },
   { href: 'https://telegram.me/EK_machine', icon: faTelegramPlane },
   { href: 'https://github.com/EK-machine', icon: faGithub },
-  { href: '#', icon: faLinkedinIn, id: 6 },
+  { href: '#', icon: faLinkedinIn },
 ];
 
 function ContactButtons() {

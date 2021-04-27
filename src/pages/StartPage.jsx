@@ -37,9 +37,8 @@ function StartPage() {
           <ContactButtons />
         </div>
 
-        {startpageBackgroundParts.map((v, i) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <div key={i} className={v} />
+        {startpageBackgroundParts.map((classes) => (
+          <div key={classes} className={classes} />
         ))}
         <div className="startpage__bio-container">
           <div className="startpage__bio-centering">
@@ -62,8 +61,8 @@ function StartPage() {
         </div>
         <div className="startpage__skills-container">
           <div className="startpage__skills-list">
-            {skillsChipsArr.map(({ icon, text }, index) => (
-              <Chip icon={icon} text={text} id={index} />
+            {skillsChipsArr.map(({ icon, text }) => (
+              <Chip icon={icon} text={text} key={text} />
             ))}
           </div>
         </div>
