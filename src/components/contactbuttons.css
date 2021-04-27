@@ -1,0 +1,34 @@
+.contacts__list {
+  display: flex;
+  flex-direction: row;
+  width: 420px;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.contacts__link {
+  font-size: 36px;
+  transform: scale(0.55);
+  min-height: 60px;
+  min-width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--active-text-color);
+  opacity: 0.8;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.contacts__link:hover {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}

@@ -1,0 +1,43 @@
+.notgoundpage__container {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right,
+    #264032,
+    #2e4d3c,
+    #365b47,
+    #3e6952,
+    #47775d,
+    #4f8066,
+    #578a6e,
+    #5f9377,
+    #689a7f,
+    #71a087,
+    #7ba78f,
+    #84ae97
+  );
+  height: 100%;
+  color: var(--active-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.notgoundpage__link {
+  padding: 5px;
+  border: 1px solid var(--active-color);
+  border-radius: 8px;
+  color: var(--active-color);
+  outline: none;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.notgoundpage__link:hover {
+  background-color: var(--sidebar-background-hover-color);
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
