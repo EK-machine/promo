@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import PagesContainer from './pages/PagesContainer';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <PagesContainer />
-    </div>
+    </BrowserRouter>
   );
 }
 

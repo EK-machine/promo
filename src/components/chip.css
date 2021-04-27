@@ -1,0 +1,56 @@
+.chip_item {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid var(--active-text-color);
+  border-radius: 25px;
+  box-sizing: border-box;
+  color: var(--active-text-color);
+  margin-bottom: 15px;
+}
+
+.chip_item:last-child {
+  margin-bottom: 0px;
+}
+
+.chip_icon-container {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--active-text-color);
+  border-radius: 25px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip_icon {
+  color: var(--active-text-color);
+  padding: 0;
+  font-size: 20px;
+  transform: scale(0.8);
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.chip_text-container {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip_paragraph {
+  color: var(--active-text-color);
+  padding: 0;
+  font-size: 20px;
+  transform: scale(0.8);
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.chip_item:hover .chip_icon,
+.chip_item:hover .chip_paragraph {
+  font-weight: bold;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}

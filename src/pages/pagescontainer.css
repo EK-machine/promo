@@ -1,17 +1,11 @@
-.grid__container {
+::-webkit-scrollbar {
+  display: none;
+}
+
+.grid__start-container {
   display: grid;
-  grid-template-areas: 'sidebar main-content';
-  grid-template-columns: auto 5fr;
-  grid-template-rows: 1fr;
   height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   margin: 0px;
-}
-
-.grid__sidebar {
-  grid-area: sidebar;
-}
-
-.grid__main-content {
-  grid-area: main-content;
-  text-align: center;
 }

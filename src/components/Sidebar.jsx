@@ -13,13 +13,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const sidebarButtonData = [
   {
     id: 1,
-    url: '/',
+    url: '/main/home',
     text: 'Home',
     icon: faHome,
   },
   {
     id: 2,
-    url: '/comment',
+    url: '/main/comment',
     text: 'Comment',
     icon: faCommentAlt,
   },
