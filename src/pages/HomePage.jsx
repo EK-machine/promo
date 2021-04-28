@@ -1,16 +1,18 @@
 import React from 'react';
 import './homepage.css';
-import {
-  faHtml5,
-  faCss3Alt,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {
+//   faHtml5,
+//   faCss3Alt,
+//   faJsSquare,
+//   faReact,
+// } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function HomePage() {
   return (
     <div className="home__page">
+      <h1>Homepage</h1>
+      {/*
       <div className="home__container">
         <div className="home__main-container home__page-item">
           <div className="home__avatar">
@@ -157,7 +159,6 @@ function HomePage() {
             />
           </div>
         </div>
-        {/*
         <div className="home__experiance-container  home__page-item">
           <h1 className="home__h1">Work experiance</h1>
           <div className="home__experiance-item">
@@ -208,8 +209,8 @@ function HomePage() {
               «RWD» LLC. Position: Client manager.
             </p>
           </div>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
     </div>
   );
 }

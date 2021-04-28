@@ -1,0 +1,22 @@
+.comment__page {
+  background-color: var(--main-background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--comment-page-background-color);
+}
+
+.comment__container {
+  display: flex;
+  flex-direction: column;
+  width: 980px;
+  /* границы сделаны для видимости и будут удалены */
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.comment__filter-input {
+  margin-left: 5px;
+}

@@ -1,0 +1,14 @@
+.star__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star__input {
+  display: none;
+}
+
+.star__icon {
+  cursor: pointer;
+  transition: color 200ms;
+}
