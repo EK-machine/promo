@@ -3,34 +3,41 @@ import './starrate.css';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const colors = {
+  gold: '#ffd700',
+  grey: '#a9a9a9',
+};
+
 function StarRate() {
-  const [isRated, setIsRated] = useState(null);
-  const [isHovered, setIsHovered] = useState(null);
+  const [isRated, setIsRated] = useState(0);
+  const [isHovered, setIsHovered] = useState(0);
+  const handleClick = (rate) => {
+    setIsRated(rate);
+  };
+  const handleMouseOver = (rate) => {
+    setIsHovered(rate);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(0);
+  };
+  const stars = [1, 2, 3, 4, 5];
 
   return (
     <div className="star__container">
-      {[...Array(5)].map((star, ind) => {
-        const ratingValue = ind + 1;
-        return (
-          <label>
-            <input
-              id="star__rate-item"
-              className="star__input"
-              type="radio"
-              name="rating"
-              value={ratingValue}
-              onClick={() => setIsRated(ratingValue)}
-            />
-            <FontAwesomeIcon
-              className="star__icon"
-              color={ratingValue <= (isHovered || isRated) ? 'gold' : 'grey'}
-              icon={faStar}
-              onMouseEnter={() => setIsHovered(ratingValue)}
-              onMouseLeave={() => setIsHovered(null)}
-            />
-          </label>
-        );
-      })}
+      {stars.map((star, index) => (
+        <FontAwesomeIcon
+          className="star__item"
+          key={star}
+          icon={faStar}
+          color={(isHovered || isRated) > index ? colors.gold : colors.grey}
+          onClick={() => {
+            handleClick(index + 1);
+          }}
+          onMouseOver={() => handleMouseOver(index + 1)}
+          onMouseLeave={() => handleMouseLeave()}
+        />
+      ))}
     </div>
   );
 }
