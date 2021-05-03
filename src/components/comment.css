@@ -1,0 +1,26 @@
+.comment__item-container {
+  border: 1px solid var(--active-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 15px;
+  background-image: linear-gradient(
+    to bottom,
+    #528a6c,
+    #5d9477,
+    #699e81,
+    #74a98c,
+    #80b397
+  );
+  box-shadow: 8px 8px 8px 0px rgba(7, 24, 9, 0.5) inset;
+  margin-bottom: 5px;
+}
+
+.comment__item_title-container,
+.comment__item_text-container {
+  margin-bottom: 5px;
+}
+
+.comment__item_rating-container {
+  display: flex;
+  justify-content: flex-end;
+}

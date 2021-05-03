@@ -17,7 +17,6 @@ function StarRate() {
   const handleMouseOver = (rate) => {
     setIsHovered(rate);
   };
-
   const handleMouseLeave = () => {
     setIsHovered(0);
   };

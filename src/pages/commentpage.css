@@ -12,9 +12,14 @@
   display: flex;
   flex-direction: column;
   width: 980px;
-  /* границы сделаны для видимости и будут удалены */
-  border: 1px solid red;
-  box-sizing: border-box;
+}
+
+.comment__section {
+  margin-bottom: 10px;
+}
+
+.comment__section:last-child {
+  margin-bottom: 0px;
 }
 
 .comment__filter-input {

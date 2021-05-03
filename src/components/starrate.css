@@ -7,4 +7,5 @@
 .star__item {
   cursor: pointer;
   transition: 200ms;
+  margin-right: 2px;
 }
