@@ -1,16 +1,17 @@
 import React from 'react';
 import './comment.css';
 import StarRate from './StarRate';
-import MyText from './MyText';
+import MyTextTitle from './MyTextTitle';
+import MyTextParagraph from './MyTextParagraph';
 
-function Comment() {
+function Comment({ title, text }) {
   return (
     <div className="comment__item-container">
       <div className="comment__item_title-container">
-        <MyText />
+        <MyTextTitle title={title} />
       </div>
       <div className="comment__item_text-container">
-        <MyText />
+        <MyTextParagraph text={text} />
       </div>
       <div className="comment__item_rating-container">
         <StarRate />

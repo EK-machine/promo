@@ -2,6 +2,26 @@ import React from 'react';
 import './commentpage.css';
 import Comment from '../components/Comment';
 
+const commentsArr = [
+  {
+    title: 'Comment one title',
+    text: 'Comment one text Comment one text Comment one text Comment one',
+  },
+  {
+    title: 'Comment two title',
+    text: 'Comment two text Comment two text Comment two text Comment two',
+  },
+  {
+    title: 'Comment three title',
+    text:
+      'Comment three text Comment three text Comment three text Comment three',
+  },
+  {
+    title: 'Comment four title',
+    text: 'Comment four text Comment four text Comment four text Comment four',
+  },
+];
+
 function CommentPage() {
   return (
     <div className="comment__page">
@@ -26,7 +46,9 @@ function CommentPage() {
           </form>
         </section>
         <section className="comment__section comment__comments-section">
-          <Comment />
+          {commentsArr.map(({ title, text }) => (
+            <Comment key={title} title={title} text={text} />
+          ))}
         </section>
       </div>
     </div>

@@ -22,6 +22,14 @@
   margin-bottom: 0px;
 }
 
+.comment__comments-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .comment__filter-input {
   margin-left: 5px;
 }
