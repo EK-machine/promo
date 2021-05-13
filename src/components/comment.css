@@ -1,5 +1,5 @@
 .comment__item-container {
-  width: 300px;
+  width: 100%;
   border: 1px solid var(--active-color);
   border-radius: 8px;
   box-sizing: border-box;
@@ -19,6 +19,45 @@
 .comment__item_title-container,
 .comment__item_text-container {
   margin-bottom: 5px;
+}
+
+.comment__title {
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.comment__text {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.comment__text_is-hidden {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  /* white-space: nowrap;
+  text-overflow: ellipsis; */
+}
+
+.comment__text_is-shown {
+  display: inline-block;
+  white-space: pre-wrap;
+  overflow: visible;
+}
+
+.comment__show-text_btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  color: rgb(49, 49, 49);
+  cursor: pointer;
+  margin: 0 0 10px 0;
+  cursor: pointer;
 }
 
 .comment__item_rating-container {

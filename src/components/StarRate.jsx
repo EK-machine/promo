@@ -2,15 +2,11 @@ import React, { useState } from 'react';
 import './starrate.css';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames';
 
-const colors = {
-  gold: '#ffd700',
-  grey: '#a9a9a9',
-};
-
-function StarRate() {
-  const [isRated, setIsRated] = useState(0);
-  const [isHovered, setIsHovered] = useState(0);
+function StarRate({ viewOnly, rated }) {
+  const [isRated, setIsRated] = useState(rated);
+  const [isHovered, setIsHovered] = useState(rated);
   const handleClick = (rate) => {
     setIsRated(rate);
   };
@@ -26,10 +22,17 @@ function StarRate() {
     <div className="star__container">
       {stars.map((star, index) => (
         <FontAwesomeIcon
-          className="star__item"
+          className={
+            (isHovered || isRated) > index
+              ? classNames('star__item star__item-gold', {
+                  'star__rating-disabled': viewOnly,
+                })
+              : classNames('star__item star__item-grey', {
+                  'star__rating-disabled': viewOnly,
+                })
+          }
           key={star}
           icon={faStar}
-          color={(isHovered || isRated) > index ? colors.gold : colors.grey}
           onClick={() => {
             handleClick(index + 1);
           }}
