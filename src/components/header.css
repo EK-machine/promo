@@ -100,3 +100,37 @@
   display: flex;
   justify-content: flex-end;
 }
+
+@media only screen and (max-width: 510px) {
+  .header__name {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header__avatar-container {
+    margin-right: 5px;
+  }
+
+  .header__name {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header__name {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .header__container {
+    padding: 5px 5px;
+  }
+}
+
+@media only screen and (max-width: 344px) {
+  .header__avatar-container {
+    width: 46px;
+  }
+}

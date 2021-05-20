@@ -308,12 +308,6 @@
   }
 }
 
-/* 1220px
-992px
-768px
-480px
-320px */
-
 @media only screen and (max-width: 1220px) {
   .startpage__bio-name {
     font-size: 3.9rem;
@@ -372,6 +366,28 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .startpage__background-4,
+  .startpage__background-5,
+  .startpage__background-6,
+  .startpage__background-7 {
+    display: none;
+  }
+
+  .startpage__background-1 {
+    left: -2%;
+    width: 37%;
+  }
+
+  .startpage__background-2 {
+    left: 33%;
+    width: 37%;
+  }
+
+  .startpage__background-3 {
+    left: 66%;
+    width: 37%;
+  }
+
   .startpage__bio-container {
     bottom: 180px;
     left: 0;
