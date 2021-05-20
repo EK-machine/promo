@@ -54,3 +54,51 @@
   transform: scale(1);
   transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 }
+
+@media only screen and (max-width: 768px) {
+  .chip_item {
+    width: 150px;
+    margin: 0 5px 15px 0;
+  }
+
+  .chip_text-container {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .chip_item {
+    width: 135px;
+    margin: 0 5px 15px 0;
+  }
+
+  .chip_text-container {
+    width: 85px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .chip_item {
+    width: 130px;
+    margin: 0 5px 15px 0;
+  }
+
+  .chip_text-container {
+    width: 80px;
+  }
+
+  .chip_paragraph {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 275px) {
+  .chip_item {
+    width: 50px;
+    margin: 0 5px 15px 0;
+  }
+
+  .chip_text-container {
+    display: none;
+  }
+}
