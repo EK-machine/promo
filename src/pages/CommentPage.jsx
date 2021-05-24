@@ -6,7 +6,8 @@ const commentsArr = [
   {
     title:
       'Comment one title Comment one title Comment one title Comment one title',
-    text: 'Comment one text Comment one text Comment one text Comment one text',
+    text:
+      'Comment one text Comment one text Comment one text Comment one text ',
     rated: 1,
     viewOnly: true,
   },
