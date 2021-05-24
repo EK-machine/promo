@@ -11,6 +11,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Chip from '../components/Chip';
 import ContactButtons from '../components/ContactButtons';
+import StartPopUp from '../components/StartPopUp';
 
 const startpageBackgroundParts = [
   'startpage__background startpage__background-1',
@@ -32,6 +33,7 @@ const skillsChipsArr = [
 function StartPage() {
   return (
     <div className="startpage__container">
+      <StartPopUp />
       <section className="startpage__content-container">
         <div className="startpage__contacts-container">
           <ContactButtons />
