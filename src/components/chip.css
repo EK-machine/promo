@@ -1,5 +1,5 @@
 .chip_item {
-  width: 200px;
+  width: 180px;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -34,7 +34,7 @@
 }
 
 .chip_text-container {
-  width: 150px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,36 +66,49 @@
   }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 600px) {
   .chip_item {
-    width: 135px;
-    margin: 0 5px 15px 0;
+    width: 115px;
+    margin: 0 5px 5px 0;
+  }
+
+  .chip_item:last-child {
+    margin: 0 0 5px 0;
   }
 
   .chip_text-container {
-    width: 85px;
+    width: 65px;
+  }
+
+  .chip_paragraph {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .chip_item {
+    width: 154px;
+    margin: 0 5px 5px 0;
+  }
+
+  .chip_item:last-child {
+    margin: 0 0 5px 0;
+  }
+
+  .chip_text-container {
+    width: 104px;
+  }
+
+  .chip_icon,
+  .chip_paragraph {
+    font-size: 20px;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .chip_item {
-    width: 130px;
-    margin: 0 5px 15px 0;
-  }
-
-  .chip_text-container {
-    width: 80px;
-  }
-
-  .chip_paragraph {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 275px) {
-  .chip_item {
     width: 50px;
-    margin: 0 5px 15px 0;
+    margin: 5px;
   }
 
   .chip_text-container {
