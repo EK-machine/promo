@@ -29,7 +29,6 @@
   width: 100%;
   overflow: hidden;
 }
-/*окончание стилизации контейнера и начало фона*/
 
 .startpage__background {
   height: 100%;
@@ -139,8 +138,6 @@
   }
 }
 
-/*окончание стилизации фона и начало верха*/
-
 .startpage__contacts-container {
   position: absolute;
   z-index: 8;
@@ -151,8 +148,6 @@
   display: flex;
   justify-content: flex-end;
 }
-
-/*окончание стилизации верха и начало низа*/
 
 .startpage__content-lower {
   position: absolute;
@@ -166,8 +161,6 @@
 }
 
 .startpage__bio-container {
-  border: 1px solid red;
-  box-sizing: border-box;
   order: 1;
   flex-basis: 45%;
   display: flex;
@@ -203,8 +196,6 @@
 }
 
 .startpage__button-container {
-  border: 1px solid green;
-  box-sizing: border-box;
   order: 2;
   flex-basis: 10%;
   min-width: 200px;
@@ -251,8 +242,6 @@
 }
 
 .startpage__skills-container {
-  border: 1px solid blue;
-  box-sizing: border-box;
   order: 2;
   flex-basis: 45%;
   overflow: hidden;
@@ -289,8 +278,6 @@
   }
 
   .startpage__button-container {
-    border: 1px solid green;
-    box-sizing: border-box;
     order: 2;
     flex-basis: 10%;
     min-width: 150px;
@@ -361,8 +348,6 @@
 
   .startpage__bio-name {
     font-size: 2.3rem;
-    border: 1px solid orange;
-    box-sizing: border-box;
     margin: 0;
   }
 
@@ -375,13 +360,9 @@
     width: auto;
     justify-self: flex-end;
     font-size: 1.6rem;
-    border: 1px solid hotpink;
-    box-sizing: border-box;
   }
 
   .startpage__skills-container {
-    border: 1px solid blue;
-    box-sizing: border-box;
     order: 2;
     display: flex;
     flex-direction: row;
@@ -391,8 +372,6 @@
   }
 
   .startpage__button-container {
-    border: 1px solid green;
-    box-sizing: border-box;
     width: 100%;
     order: 3;
   }
