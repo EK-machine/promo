@@ -4,24 +4,32 @@ import './startpopup.css';
 function StartPopUp() {
   const [isOpen, setIsOpen] = useState(false);
   const popUpRef = useRef();
+  const closePopUp = () => {
+    setIsOpen(false);
+  };
   useEffect(() => {
     const popped = sessionStorage.getItem('popUpStatus');
     if (!popped) {
       setIsOpen(true);
-      sessionStorage.setItem('popUpStatus', 'statused');
+      sessionStorage.setItem('popUpStatus', 'visited');
     }
   }, []);
 
-  const closePopUp = () => {
-    setIsOpen(false);
-  };
+  useEffect(() => {
+    const close = (e) => {
+      if (e.keyCode === 27) {
+        closePopUp();
+      }
+    };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, []);
+
   const clickOutsidePopUp = (e) => {
     if (popUpRef.current === e.target) {
       setIsOpen(false);
     }
   };
-
-  // function clickESCKey() {}
 
   if (!isOpen) return null;
 
@@ -29,6 +37,7 @@ function StartPopUp() {
     <div
       ref={popUpRef}
       onClick={clickOutsidePopUp}
+      onKeyDown={clickOutsidePopUp}
       className="popUp__container"
     >
       <div className="popUp__centering">
