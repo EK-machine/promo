@@ -1,10 +1,9 @@
-const url = 'https://zhekah-promo-backend.herokuapp.com/reviews';
+const URL = 'https://zhekah-promo-backend.herokuapp.com/reviews';
 
 const reviewService = {
   getAll: function getAll() {
-    fetch(url)
+    return fetch(URL)
       .then((response) => response.json())
-      .then((result) => console.log(result))
       .catch((e) => console.log(e));
   },
 };

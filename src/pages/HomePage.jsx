@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import reviewService from '../components/serverService.js';
 
 function HomePage() {
-  reviewService.getAll();
+  useEffect(() => {
+    reviewService.getAll().then((result) => {
+      console.log(result);
+    });
+  }, []);
   return (
     <>
       <h1>Homepage</h1>
