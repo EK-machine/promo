@@ -1,28 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './startpopup.css';
 
 function StartPopUp() {
-  const [isOpened, setIsOpened] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const popUpRef = useRef();
   useEffect(() => {
     const popped = sessionStorage.getItem('popUpStatus');
     if (!popped) {
-      setIsOpened(true);
+      setIsOpen(true);
       sessionStorage.setItem('popUpStatus', 'statused');
     }
   }, []);
 
-  if (!isOpened) return null;
+  const closePopUp = () => {
+    setIsOpen(false);
+  };
+  const clickOutsidePopUp = (e) => {
+    if (popUpRef.current === e.target) {
+      setIsOpen(false);
+    }
+  };
+
+  // function clickESCKey() {}
+
+  if (!isOpen) return null;
 
   return (
-    <div className="popUp__container">
+    <div
+      ref={popUpRef}
+      onClick={clickOutsidePopUp}
+      className="popUp__container"
+    >
       <div className="popUp__centering">
         <div className="popUp__message-close_container">
           <button
-            onClick={() => setIsOpened(false)}
+            onClick={closePopUp}
             className="popUp__message-close_button"
             type="button"
           >
-            close
+            X
           </button>
         </div>
         <div className="popUp__message-text_container">
