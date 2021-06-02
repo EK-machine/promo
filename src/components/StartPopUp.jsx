@@ -4,7 +4,7 @@ import './startpopup.css';
 function StartPopUp() {
   const [isOpen, setIsOpen] = useState(false);
   const popUpRef = useRef();
-  const ESCKEYCODE = 27;
+  const ESC_KEY_CODE = 27;
 
   useEffect(() => {
     const popped = sessionStorage.getItem('popUpStatus');
@@ -24,7 +24,7 @@ function StartPopUp() {
   };
 
   const closeOnEscKeyPress = (e) => {
-    if (e.keyCode === ESCKEYCODE) {
+    if (e.keyCode === ESC_KEY_CODE) {
       closePopUp();
     }
   };
