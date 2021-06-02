@@ -4,9 +4,7 @@ import './startpopup.css';
 function StartPopUp() {
   const [isOpen, setIsOpen] = useState(false);
   const popUpRef = useRef();
-  const closePopUp = () => {
-    setIsOpen(false);
-  };
+
   useEffect(() => {
     const popped = sessionStorage.getItem('popUpStatus');
     if (!popped) {
@@ -17,7 +15,7 @@ function StartPopUp() {
 
   useEffect(() => {
     const close = (e) => {
-      if (e.keyCode === 27) {
+      if (e.keyCode === escKeyCode) {
         closePopUp();
       }
     };
@@ -25,11 +23,17 @@ function StartPopUp() {
     return () => window.removeEventListener('keydown', close);
   }, []);
 
+  const closePopUp = () => {
+    setIsOpen(false);
+  };
+
   const clickOutsidePopUp = (e) => {
     if (popUpRef.current === e.target) {
       setIsOpen(false);
     }
   };
+
+  const escKeyCode = 27;
 
   if (!isOpen) return null;
 
