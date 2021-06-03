@@ -1,7 +1,6 @@
 .comment__page {
-  background-color: var(--main-background-color);
   margin: 0;
-  padding: 0;
+  padding: 10px;
   display: flex;
   justify-content: center;
   background-color: var(--comment-page-background-color);

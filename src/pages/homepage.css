@@ -4,7 +4,6 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   padding: 5px;
-  background-color: var(--main-background-color);
   display: flex;
   justify-content: center;
   height: 100%;

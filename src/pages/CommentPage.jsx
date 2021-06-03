@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './commentpage.css';
 import Comment from '../components/Comment';
+import reviewService from '../components/serverService.js';
 
 const commentsArr = [
   {
@@ -40,6 +41,11 @@ const commentsArr = [
 ];
 
 function CommentPage() {
+  useEffect(() => {
+    reviewService.getAll().then((result) => {
+      console.log(result);
+    });
+  }, []);
   return (
     <div className="comment__page">
       <div className="comment__container">
