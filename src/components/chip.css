@@ -1,5 +1,5 @@
 .chip_item {
-  width: 200px;
+  width: 180px;
   height: 50px;
   display: flex;
   flex-direction: row;
@@ -34,7 +34,7 @@
 }
 
 .chip_text-container {
-  width: 150px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,4 +53,65 @@
   font-weight: bold;
   transform: scale(1);
   transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .chip_item {
+    width: 150px;
+    margin: 0 5px 15px 0;
+  }
+
+  .chip_text-container {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .chip_item {
+    width: 115px;
+    margin: 0 5px 5px 0;
+  }
+
+  .chip_item:last-child {
+    margin: 0 0 5px 0;
+  }
+
+  .chip_text-container {
+    width: 65px;
+  }
+
+  .chip_paragraph {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .chip_item {
+    width: 154px;
+    margin: 0 5px 5px 0;
+  }
+
+  .chip_item:last-child {
+    margin: 0 0 5px 0;
+  }
+
+  .chip_text-container {
+    width: 104px;
+  }
+
+  .chip_icon,
+  .chip_paragraph {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .chip_item {
+    width: 50px;
+    margin: 5px;
+  }
+
+  .chip_text-container {
+    display: none;
+  }
 }

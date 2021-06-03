@@ -1,18 +1,16 @@
-import React from 'react';
-import './homepage.css';
-// import {
-//   faHtml5,
-//   faCss3Alt,
-//   faJsSquare,
-//   faReact,
-// } from '@fortawesome/free-brands-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect } from 'react';
+import reviewService from '../components/serverService.js';
 
 function HomePage() {
+  useEffect(() => {
+    reviewService.getAll().then((result) => {
+      console.log(result);
+    });
+  }, []);
   return (
-    <div className="home__page">
+    <>
       <h1>Homepage</h1>
-    </div>
+    </>
   );
 }
 export default HomePage;

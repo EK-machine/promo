@@ -11,6 +11,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Chip from '../components/Chip';
 import ContactButtons from '../components/ContactButtons';
+import StartPopUp from '../components/StartPopUp';
 
 const startpageBackgroundParts = [
   'startpage__background startpage__background-1',
@@ -25,42 +26,42 @@ const startpageBackgroundParts = [
 const skillsChipsArr = [
   { icon: faHtml5, text: 'HTML' },
   { icon: faCss3Alt, text: 'CSS' },
-  { icon: faJsSquare, text: 'JavaScript' },
+  { icon: faJsSquare, text: 'JS' },
   { icon: faReact, text: 'REACT' },
 ];
 
 function StartPage() {
   return (
     <div className="startpage__container">
+      <StartPopUp />
       <section className="startpage__content-container">
-        <div className="startpage__contacts-container">
-          <ContactButtons />
-        </div>
-
         {startpageBackgroundParts.map((classes) => (
           <div key={classes} className={classes} />
         ))}
-        <div className="startpage__bio-container">
-          <div className="startpage__bio-centering">
-            <h1 className="startpage__bio-name">
-              Evgenij <br />
-              Kalabukhin
-            </h1>
-            <p className="startpage__bio-paragraph">
-              Junior Front-end Developer
-            </p>
+        <div className="startpage__contacts-container">
+          <ContactButtons />
+        </div>
+        <div className="startpage__content-lower">
+          <div className="startpage__bio-container">
+            <div className="startpage__bio-centering">
+              <h1 className="startpage__bio-name">
+                Evgenij <br />
+                Kalabukhin
+              </h1>
+              <p className="startpage__bio-paragraph">
+                Junior Front-end Developer
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="startpage__button-container">
-          <Link to="/main/home" className="startpage__arrow-down_link">
-            <FontAwesomeIcon
-              className="startpage__arrow-down_icon"
-              icon={faChevronDown}
-            />
-          </Link>
-        </div>
-        <div className="startpage__skills-container">
-          <div className="startpage__skills-list">
+          <div className="startpage__button-container">
+            <Link to="/main/home" className="startpage__arrow-down_link">
+              <FontAwesomeIcon
+                className="startpage__arrow-down_icon"
+                icon={faChevronDown}
+              />
+            </Link>
+          </div>
+          <div className="startpage__skills-container">
             {skillsChipsArr.map(({ icon, text }) => (
               <Chip icon={icon} text={text} key={text} />
             ))}
