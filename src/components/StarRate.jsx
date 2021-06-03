@@ -4,9 +4,9 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 
-function StarRate({ viewOnly, rated }) {
-  const [isRated, setIsRated] = useState(rated);
-  const [isHovered, setIsHovered] = useState(rated);
+function StarRate({ viewOnly, rating }) {
+  const [isRated, setIsRated] = useState(rating);
+  const [isHovered, setIsHovered] = useState(rating);
   const handleClick = (rate) => {
     setIsRated(rate);
   };
