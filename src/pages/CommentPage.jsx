@@ -1,16 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './commentpage.css';
 import Comment from '../components/Comment';
 import reviewService from '../components/serverService.js';
 
-let commentsArr = [];
-
 function CommentPage() {
+  const [isCommentLoaded, setIsCommentLoaded] = useState([]);
   useEffect(() => {
     reviewService.getAll().then((result) => {
-      commentsArr = result;
-      console.log(commentsArr);
-      return commentsArr;
+      setIsCommentLoaded(result);
+      return isCommentLoaded;
     });
   }, []);
   return (
@@ -20,7 +18,7 @@ function CommentPage() {
           <h1>Please leave a comment below</h1>
         </section>
         <section className="comment__section comment__comments-section">
-          {commentsArr.map(
+          {isCommentLoaded.map(
             ({ summary, text, rating, viewOnly, username, id }) => (
               <Comment
                 key={id}
