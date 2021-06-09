@@ -16,7 +16,11 @@ function CommentPage() {
     <div className="comment__page">
       <div className="comment__container">
         <section className="comment__section comment__title-section">
-          <h1>Please leave a comment below</h1>
+          {isCommentLoaded ? (
+            <h1>Comments:</h1>
+          ) : (
+            <h1>Please wait for comments to be loaded</h1>
+          )}
         </section>
         <section className="comment__section comment__comments-section">
           {isCommentLoaded ? (
