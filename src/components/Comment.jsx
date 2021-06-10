@@ -6,10 +6,13 @@ import TruncatedText from './TruncatedText';
 
 function Comment({ summary, text, rating, viewOnly = true, username }) {
   const [isShown, setIsShown] = useState(false);
+
   const textClasses = classNames('comment__text comment__text_is-hidden', {
     'comment__text comment__text_is-shown': isShown,
   });
+
   const toggleText = () => setIsShown(!isShown);
+
   return (
     <div className="comment__item-container">
       <div className="comment__item_title-container">

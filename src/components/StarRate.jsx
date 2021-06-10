@@ -4,23 +4,28 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 
+const STARS = [1, 2, 3, 4, 5];
+
 function StarRate({ viewOnly, rating }) {
   const [isRated, setIsRated] = useState(rating);
+
   const [isHovered, setIsHovered] = useState(rating);
+
   const handleClick = (rate) => {
     setIsRated(rate);
   };
+
   const handleMouseOver = (rate) => {
     setIsHovered(rate);
   };
+
   const handleMouseLeave = () => {
     setIsHovered(0);
   };
-  const stars = [1, 2, 3, 4, 5];
 
   return (
     <div className="star__container">
-      {stars.map((star, index) => (
+      {STARS.map((star, index) => (
         <FontAwesomeIcon
           className={
             (isHovered || isRated) > index
@@ -37,7 +42,7 @@ function StarRate({ viewOnly, rating }) {
             handleClick(index + 1);
           }}
           onMouseOver={() => handleMouseOver(index + 1)}
-          onMouseLeave={() => handleMouseLeave()}
+          onMouseLeave={handleMouseLeave}
         />
       ))}
     </div>

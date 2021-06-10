@@ -6,10 +6,10 @@ import reviewService from '../components/serverService.js';
 
 function CommentPage() {
   const [isCommentLoaded, setIsCommentLoaded] = useState(false);
+
   useEffect(() => {
     reviewService.getAll().then((result) => {
       setIsCommentLoaded(result);
-      return isCommentLoaded;
     });
   }, []);
   return (
