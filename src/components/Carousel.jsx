@@ -10,60 +10,61 @@ const carouselArr = [
   {
     class: 'carousel__item carousel__education-container',
     title: 'education',
-    textLineOne:
-      // eslint-disable-next-line max-len
-      'Academy of public the aegis of the president of the Republic of Belarus.',
-    textLineTwo: 'Expertise: State regulation of foreign trade.',
-    textLineThree:
+    text: [
+      `Academy of Public Administration under the Aegis of the 
+    President of the Republic of Belarus.`,
+      'Expertise: State regulation of foreign trade.',
       'Qualifications: Economist-manager (full-time education, budget).',
+    ],
   },
 
   {
     class: 'carousel__item carousel__summary-container',
     title: 'summary',
-    textLineOne:
-      // eslint-disable-next-line max-len
-      'More then 9 years of developing and managing complex transport and logistics projects.',
-    textLineTwo:
-      // eslint-disable-next-line max-len
-      'Implementation of project solutions in the field of oversized cargo transportation.',
-    textLineThree: '6 years of sales and purchasing experiance.',
-    textLineFour:
-      // eslint-disable-next-line max-len
-      'Interested in frontend engineering, started to study frontend software development.',
+    text: [
+      `More than 9 years of developing and managing complex 
+    transport and logistics projects.`,
+      `Implementation of project solutions in the field of 
+    oversized cargo transportation.`,
+      '6 years of sales and purchasing experience.',
+      `Interested in frontend engineering, started to study 
+    frontend software development.`,
+    ],
   },
-
   {
     class: 'carousel__item carousel__languages-container',
     title: 'languages',
-    textLineOne: 'Belarusian - Native.',
-    textLineTwo: 'Russian - Native.',
-    textLineThree: 'English - Fluent.',
-    textLineFour: 'German - Intermediate',
+    text: [
+      'Belarusian - Native.',
+      'Russian - Native.',
+      'English - Fluent.',
+      'German - Intermediate',
+    ],
   },
-
   {
     class: 'carousel__item carousel__qualities-container',
     title: 'personal qualities',
-    textLineOne: 'Responsible.',
-    textLineTwo: 'Curiosity and ability to learn quick.',
-    textLineThree: 'Communicative.',
-    textLineFour: 'Stress stable.',
-    textLineFive: 'Organized.',
-    textLineSix: 'Flexible.',
-    textLineSeven: 'Accurate.',
-    textLineEight: 'Critical thinking.',
+    text: [
+      'Responsible.',
+      'Curious and quick-learning.',
+      'Communicative.',
+      'Stress stable.',
+      'Organized.',
+      'Flexible.',
+      'Accurate.',
+      'Critical thinking.',
+    ],
   },
-
   {
     class: 'carousel__item carousel__skills-container',
     title: 'skills',
-    textLineOne: 'HTML.',
-    textLineTwo: 'CSS.',
-    textLineThree: 'JavaScript.',
-    textLineFour: 'REACT.',
+    text: ['HTML.', 'CSS.', 'JavaScript.', 'REACT.'],
   },
 ];
+
+const RIGHT_KEY_CODE = 39;
+
+const LEFT_KEY_CODE = 37;
 
 function Carousel() {
   const [isCurrent, setIsCurrent] = useState(0);
@@ -78,13 +79,13 @@ function Carousel() {
     return () => window.removeEventListener('keydown', previousSlideOnKey);
   }, [isCurrent]);
 
-  function nextSlide() {
+  const nextSlide = () => {
     setIsCurrent(isCurrent === carouselArr.length - 1 ? 0 : isCurrent + 1);
-  }
+  };
 
-  function previousSlide() {
+  const previousSlide = () => {
     setIsCurrent(isCurrent === 0 ? carouselArr.length - 1 : isCurrent - 1);
-  }
+  };
 
   const nextSlideOnKey = (e) => {
     if (e.keyCode === RIGHT_KEY_CODE) {
@@ -97,10 +98,6 @@ function Carousel() {
       previousSlide();
     }
   };
-
-  const RIGHT_KEY_CODE = 39;
-
-  const LEFT_KEY_CODE = 37;
 
   return (
     <div className="carousel__container" onWheel={nextSlide}>
@@ -129,14 +126,11 @@ function Carousel() {
                     : 'carousel__text-background_unvisible'
                 }
               >
-                <p className="carousel__text">{slide.textLineOne}</p>
-                <p className="carousel__text">{slide.textLineTwo}</p>
-                <p className="carousel__text">{slide.textLineThree}</p>
-                <p className="carousel__text">{slide.textLineFour}</p>
-                <p className="carousel__text">{slide.textLineFive}</p>
-                <p className="carousel__text">{slide.textLineSix}</p>
-                <p className="carousel__text">{slide.textLineSeven}</p>
-                <p className="carousel__text">{slide.textLineEight}</p>
+                {slide.text.map((textString, ind) => (
+                  <p className="carousel__text" key={textString[ind]}>
+                    {textString}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
