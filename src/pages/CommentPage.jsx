@@ -6,10 +6,12 @@ import reviewService from '../components/serverService.js';
 
 function CommentPage() {
   const [isCommentLoaded, setIsCommentLoaded] = useState(false);
+  const [isDataFetched, setIsDataFetched] = useState([]);
 
   useEffect(() => {
     reviewService.getAll().then((result) => {
-      setIsCommentLoaded(result);
+      setIsCommentLoaded(true);
+      setIsDataFetched(result);
     });
   }, []);
   return (
@@ -25,7 +27,7 @@ function CommentPage() {
         <section className="comment__section comment__comments-section">
           {isCommentLoaded ? (
             <div className="comment__comments-section_is-loaded">
-              {isCommentLoaded.map(
+              {isDataFetched.map(
                 ({ summary, text, rating, viewOnly, username, id }) => (
                   <Comment
                     key={id}
