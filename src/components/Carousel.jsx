@@ -67,24 +67,32 @@ const RIGHT_KEY_CODE = 39;
 const LEFT_KEY_CODE = 37;
 
 function Carousel() {
-  const [isCurrent, setIsCurrent] = useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   useEffect(() => {
     window.addEventListener('keydown', nextSlideOnKey);
     return () => window.removeEventListener('keydown', nextSlideOnKey);
-  }, [isCurrent]);
+  }, [currentSlideIndex]);
 
   useEffect(() => {
     window.addEventListener('keydown', previousSlideOnKey);
     return () => window.removeEventListener('keydown', previousSlideOnKey);
-  }, [isCurrent]);
+  }, [currentSlideIndex]);
 
   const nextSlide = () => {
-    setIsCurrent(isCurrent === carouselArr.length - 1 ? 0 : isCurrent + 1);
+    if (currentSlideIndex === carouselArr.length - 1) {
+      setCurrentSlideIndex(0);
+    } else {
+      setCurrentSlideIndex((previousSlideIndex) => previousSlideIndex + 1);
+    }
   };
 
   const previousSlide = () => {
-    setIsCurrent(isCurrent === 0 ? carouselArr.length - 1 : isCurrent - 1);
+    if (currentSlideIndex === 0) {
+      setCurrentSlideIndex(carouselArr.length - 1);
+    } else {
+      setCurrentSlideIndex((previousSlideIndex) => previousSlideIndex - 1);
+    }
   };
 
   const nextSlideOnKey = (e) => {
@@ -103,14 +111,16 @@ function Carousel() {
     <div className="carousel__container" onWheel={nextSlide}>
       {carouselArr.map((slide, index) => (
         <div
-          className={isCurrent === index ? 'visibleSlide' : 'unvisibleSlide'}
+          className={
+            currentSlideIndex === index ? 'visibleSlide' : 'unvisibleSlide'
+          }
           key={slide.title}
         >
           <div className={slide.class}>
             <div className="carousel__item_content-left">
               <div
                 className={
-                  isCurrent === index
+                  currentSlideIndex === index
                     ? 'carousel__title-background'
                     : 'carousel__title-background_unvisible'
                 }
@@ -121,7 +131,7 @@ function Carousel() {
             <div className="carousel__item_content-right">
               <div
                 className={
-                  isCurrent === index
+                  currentSlideIndex === index
                     ? 'carousel__text-background'
                     : 'carousel__text-background_unvisible'
                 }
