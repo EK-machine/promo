@@ -80,19 +80,21 @@ function Carousel() {
   }, [currentSlideIndex]);
 
   const nextSlide = () => {
-    if (currentSlideIndex === carouselArr.length - 1) {
-      setCurrentSlideIndex(0);
-    } else {
-      setCurrentSlideIndex((previousSlideIndex) => previousSlideIndex + 1);
-    }
+    setCurrentSlideIndex((previousSlideIndex) => {
+      if (previousSlideIndex === carouselArr.length - 1) {
+        return 0;
+      }
+      return previousSlideIndex + 1;
+    });
   };
 
   const previousSlide = () => {
-    if (currentSlideIndex === 0) {
-      setCurrentSlideIndex(carouselArr.length - 1);
-    } else {
-      setCurrentSlideIndex((previousSlideIndex) => previousSlideIndex - 1);
-    }
+    setCurrentSlideIndex((previousSlideIndex) => {
+      if (previousSlideIndex === 0) {
+        return carouselArr.length - 1;
+      }
+      return previousSlideIndex - 1;
+    });
   };
 
   const nextSlideOnKey = (e) => {
