@@ -1,16 +1,21 @@
-import React, { useEffect } from 'react';
-import reviewService from '../components/serverService.js';
+import React from 'react';
+import './homepage.css';
+import Carousel from '../components/Carousel';
 
 function HomePage() {
-  useEffect(() => {
-    reviewService.getAll().then((result) => {
-      console.log(result);
-    });
-  }, []);
   return (
-    <>
-      <h1>Homepage</h1>
-    </>
+    <div className="home__page">
+      <div className="home__container">
+        <section className="home__title-section">
+          <div className="home__title-background">
+            <h1 className="home__title">about me</h1>
+          </div>
+        </section>
+        <section className="home__content-section">
+          <Carousel />
+        </section>
+      </div>
+    </div>
   );
 }
 export default HomePage;
