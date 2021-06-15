@@ -21,4 +21,5 @@
 .grid__main-content {
   grid-area: main-content;
   text-align: center;
+  overflow-y: scroll;
 }

@@ -1,10 +1,14 @@
 .comment__page {
+  color: var(--active-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--comment-page-background-color);
   margin: 0;
   padding: 0 10px;
   display: flex;
   justify-content: center;
-  background-color: var(--comment-page-background-color);
-  height: 100%;
+  min-height: 100%;
 }
 
 .comment__container {
@@ -13,27 +17,17 @@
   width: 980px;
 }
 
-.comment__section {
-  margin-bottom: 10px;
-}
-
-.comment__section:last-child {
-  margin-bottom: 0px;
-}
-
 .comment__title-section {
-  padding: 10px;
-  background-color: var(--sidebar-background-color);
-  display: inline-block;
-  border-radius: 8px;
-  margin: 15px 0;
-  box-shadow: 8px 8px 8px 0px rgba(7, 24, 9, 0.5);
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+  display: block;
 }
 
 .comment__title {
-  padding: 0px;
-  margin: 0px;
-  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 10px 0;
+  font-size: 2em;
 }
 
 .comment__comments-section {
@@ -42,4 +36,12 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 480px) {
+  .comment__title {
+    padding: 0;
+    margin: 0 0 5px 0;
+  }
 }

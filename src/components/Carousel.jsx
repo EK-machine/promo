@@ -22,10 +22,9 @@ const carouselArr = [
     class: 'carousel__item carousel__summary-container',
     title: 'summary',
     text: [
-      `More than 9 years of developing and managing complex 
-    transport and logistics projects.`,
-      `Implementation of project solutions in the field of 
-    oversized cargo transportation.`,
+      `More than 9 years of developing and managing logistics projects.`,
+      `Implementation of project solutions to 
+    oversized cargo transportations.`,
       '6 years of sales and purchasing experience.',
       `Interested in frontend engineering, started to study 
     frontend software development.`,
@@ -110,7 +109,7 @@ function Carousel() {
   };
 
   return (
-    <div className="carousel__container" onWheel={nextSlide}>
+    <div className="carousel__container">
       {carouselArr.map((slide, index) => (
         <div
           className={

@@ -106,4 +106,9 @@
   .sidebar__toggle {
     display: none;
   }
+
+  .sidebar__button-container {
+    margin: 5px 0 0 0;
+    padding: 0;
+  }
 }

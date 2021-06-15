@@ -4,11 +4,11 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background-color: var(--comment-page-background-color);
-  height: 100%;
   margin: 0;
   padding: 0 10px;
   display: flex;
   justify-content: center;
+  min-height: 100%;
 }
 
 .home__container {
@@ -17,17 +17,22 @@
   width: 980px;
 }
 
-.home__title-section {
-  padding: 10px;
-  background-color: var(--sidebar-background-color);
-  display: inline-block;
-  border-radius: 8px;
-  margin: 15px 0;
-  box-shadow: 8px 8px 8px 0px rgba(7, 24, 9, 0.5);
+.home__title {
+  padding: 0;
+  margin: 0 0 10px 0;
 }
 
-.home__title {
-  padding: 0px;
-  margin: 0px;
-  text-transform: uppercase;
+.home__content-section {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 480px) {
+  .home__title {
+    padding: 0;
+    margin: 0 0 5px 0;
+  }
 }
