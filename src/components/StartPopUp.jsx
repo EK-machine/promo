@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './startpopup.css';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function StartPopUp() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +53,7 @@ function StartPopUp() {
             className="popUp__message-close_button"
             type="button"
           >
-            X
+            <FontAwesomeIcon icon={faTimes} size="2x" />
           </button>
         </div>
         <div className="popUp__message-text_container">
