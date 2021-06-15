@@ -1,6 +1,6 @@
 .grid__main-container {
   display: grid;
-  overflow: hidden;
+  overflow: auto;
   height: 100vh;
   grid-template-areas:
     'header header'
@@ -8,7 +8,6 @@
   grid-template-columns: auto 5fr;
   grid-template-rows: auto 1fr;
   margin: 0px;
-  overflow: hidden;
 }
 
 .grid__header {
@@ -22,5 +21,4 @@
 .grid__main-content {
   grid-area: main-content;
   text-align: center;
-  overflow-y: scroll;
 }

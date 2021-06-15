@@ -7,9 +7,7 @@ function HomePage() {
     <div className="home__page">
       <div className="home__container">
         <section className="home__title-section">
-          <div className="home__title-background">
-            <h1 className="home__title">about me</h1>
-          </div>
+          <h1 className="home__title">about me</h1>
         </section>
         <section className="home__content-section">
           <Carousel />

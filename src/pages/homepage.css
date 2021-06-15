@@ -4,9 +4,9 @@
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background-color: var(--comment-page-background-color);
-  height: 100vh;
+  height: 100%;
   margin: 0;
-  padding: 10px;
+  padding: 0 10px;
   display: flex;
   justify-content: center;
 }
@@ -17,12 +17,12 @@
   width: 980px;
 }
 
-.home__title-background {
+.home__title-section {
   padding: 10px;
   background-color: var(--sidebar-background-color);
   display: inline-block;
   border-radius: 8px;
-  margin-bottom: 5px;
+  margin: 15px 0;
   box-shadow: 8px 8px 8px 0px rgba(7, 24, 9, 0.5);
 }
 
