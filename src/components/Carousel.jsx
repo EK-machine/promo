@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './carousel.css';
 import {
   faArrowCircleLeft,
@@ -65,8 +65,27 @@ const RIGHT_KEY_CODE = 39;
 
 const LEFT_KEY_CODE = 37;
 
+const SECONDS_TO_NEXT_SLIDE = 3;
+
 function Carousel() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+  const autoPlayRef = useRef(null);
+
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    autoPlayRef.current = nextSlide;
+  });
+
+  useEffect(() => {
+    const play = () => {
+      autoPlayRef.current();
+    };
+
+    timerRef.current = setInterval(play, SECONDS_TO_NEXT_SLIDE * 1000);
+    return () => clearInterval(timerRef.current);
+  }, []);
 
   useEffect(() => {
     window.addEventListener('keydown', nextSlideOnKey);
@@ -85,6 +104,7 @@ function Carousel() {
       }
       return previousSlideIndex + 1;
     });
+    return () => clearInterval(timerRef.current);
   };
 
   const previousSlide = () => {
@@ -94,6 +114,7 @@ function Carousel() {
       }
       return previousSlideIndex - 1;
     });
+    return () => clearInterval(timerRef.current);
   };
 
   const nextSlideOnKey = (e) => {
