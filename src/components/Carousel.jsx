@@ -74,20 +74,19 @@ function Carousel() {
 
   const autoPlayRef = useRef(null);
 
-  const timerRef = useRef(null);
+  const counterRef = useRef(null);
 
   useEffect(() => {
     autoPlayRef.current = nextSlide;
   });
 
   useEffect(() => {
-    const play = () => {
-      autoPlayRef.current();
-    };
-
-    timerRef.current = setInterval(play, SECONDS_TO_NEXT_SLIDE * 1000);
-    return () => clearInterval(timerRef.current);
-  }, []);
+    counterRef.current = setInterval(
+      () => autoPlayRef.current(),
+      SECONDS_TO_NEXT_SLIDE * 1000,
+    );
+    return () => clearInterval(counterRef.current);
+  }, [currentSlideIndex]);
 
   useEffect(() => {
     window.addEventListener('keydown', nextSlideOnKey);
@@ -106,7 +105,6 @@ function Carousel() {
       }
       return previousSlideIndex + 1;
     });
-    return () => clearInterval(timerRef.current);
   };
 
   const previousSlide = () => {
@@ -116,7 +114,6 @@ function Carousel() {
       }
       return previousSlideIndex - 1;
     });
-    return () => clearInterval(timerRef.current);
   };
 
   const nextSlideOnKey = (e) => {
@@ -131,8 +128,8 @@ function Carousel() {
     }
   };
 
-  const onDotClick = (index) => {
-    setCurrentSlideIndex(index);
+  const onDotClick = (dotIndex) => {
+    setCurrentSlideIndex(dotIndex);
   };
 
   return (
