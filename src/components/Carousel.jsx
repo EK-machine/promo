@@ -61,6 +61,8 @@ const carouselArr = [
   },
 ];
 
+const carouselDotsArr = [1, 2, 3, 4, 5];
+
 const RIGHT_KEY_CODE = 39;
 
 const LEFT_KEY_CODE = 37;
@@ -129,6 +131,10 @@ function Carousel() {
     }
   };
 
+  const onDotClick = (index) => {
+    setCurrentSlideIndex(index);
+  };
+
   return (
     <div className="carousel__container">
       {carouselArr.map((slide, index) => (
@@ -181,6 +187,20 @@ function Carousel() {
         onKeyDown={nextSlide}
       >
         <FontAwesomeIcon icon={faArrowCircleRight} />
+      </div>
+      <div className="carousel__dots-container">
+        {carouselDotsArr.map((dotData, dotIndex) => (
+          <div
+            className={
+              currentSlideIndex === dotIndex
+                ? 'carousel__dot-active'
+                : 'carousel__dot'
+            }
+            key={dotData}
+            onKeyDown={() => onDotClick(dotIndex)}
+            onClick={() => onDotClick(dotIndex)}
+          />
+        ))}
       </div>
     </div>
   );

@@ -145,6 +145,43 @@
   opacity: 1;
 }
 
+.carousel__dots-container {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.carousel__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--active-text-color);
+  margin-right: 3px;
+  transform: scale(0.7);
+  transition: transform 0.2s ease-in-out;
+}
+
+.carousel__dot-active {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--active-text-color);
+  background-color: var(--active-text-color);
+  margin-right: 3px;
+  transform: scale(0.7);
+  transition: transform 0.2s ease-in-out;
+}
+
+.carousel__dot:hover,
+.carousel__dot-active:hover {
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
 @media only screen and (max-width: 480px) {
   .carousel__item {
     display: flex;
