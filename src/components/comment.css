@@ -38,9 +38,6 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
-
-  /* white-space: nowrap;
-  text-overflow: ellipsis; */
 }
 
 .comment__text_is-shown {

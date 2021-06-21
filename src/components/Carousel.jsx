@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './carousel.css';
 import {
   faArrowCircleLeft,
@@ -67,36 +67,23 @@ const RIGHT_KEY_CODE = 39;
 
 const LEFT_KEY_CODE = 37;
 
-const SECONDS_TO_NEXT_SLIDE = 3;
+const SECONDS_TO_NEXT_SLIDE = 5;
 
 function Carousel() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  const autoPlayRef = useRef(null);
-
-  const counterRef = useRef(null);
-
   useEffect(() => {
-    autoPlayRef.current = nextSlide;
-  });
-
-  useEffect(() => {
-    counterRef.current = setInterval(
-      () => autoPlayRef.current(),
+    const sliderInterval = setInterval(
+      () => nextSlide(),
       SECONDS_TO_NEXT_SLIDE * 1000,
     );
-    return () => clearInterval(counterRef.current);
+    return () => clearInterval(sliderInterval);
   }, [currentSlideIndex]);
 
   useEffect(() => {
-    window.addEventListener('keydown', nextSlideOnKey);
-    return () => window.removeEventListener('keydown', nextSlideOnKey);
-  }, [currentSlideIndex]);
-
-  useEffect(() => {
-    window.addEventListener('keydown', previousSlideOnKey);
-    return () => window.removeEventListener('keydown', previousSlideOnKey);
-  }, [currentSlideIndex]);
+    window.addEventListener('keydown', handleKeySliding);
+    return () => window.removeEventListener('keydown', handleKeySliding);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlideIndex((previousSlideIndex) => {
@@ -116,14 +103,10 @@ function Carousel() {
     });
   };
 
-  const nextSlideOnKey = (e) => {
+  const handleKeySliding = (e) => {
     if (e.keyCode === RIGHT_KEY_CODE) {
       nextSlide();
-    }
-  };
-
-  const previousSlideOnKey = (e) => {
-    if (e.keyCode === LEFT_KEY_CODE) {
+    } else if (e.keyCode === LEFT_KEY_CODE) {
       previousSlide();
     }
   };
