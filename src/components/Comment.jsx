@@ -15,11 +15,11 @@ function Comment({ summary, text, rating, viewOnly = true, username }) {
 
   return (
     <div className="comment__item-container">
-      <div className="comment__item_title-container">
-        <TruncatedText text={summary} />
-      </div>
       <div className="comment__item_name-container">
         <p className="comment__item_name">{username}</p>
+      </div>
+      <div className="comment__item_title-container">
+        <TruncatedText summary={summary} lettersOverrun={8} />
       </div>
       <div className="comment__item_text-container">
         <p className={textClasses}>{text}</p>
