@@ -1,0 +1,23 @@
+.star__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.star__item {
+  cursor: pointer;
+  transition: 200ms;
+  margin-right: 2px;
+}
+
+.star__item-grey {
+  color: #a9a9a9;
+}
+
+.star__item-gold {
+  color: #ffd700;
+}
+
+.star__rating-disabled {
+  pointer-events: none;
+}

@@ -17,15 +17,13 @@ const carouselArr = [
       'Qualifications: Economist-manager (full-time education, budget).',
     ],
   },
-
   {
     class: 'carousel__item carousel__summary-container',
     title: 'summary',
     text: [
-      `More than 9 years of developing and managing complex 
-    transport and logistics projects.`,
-      `Implementation of project solutions in the field of 
-    oversized cargo transportation.`,
+      `More than 9 years of developing and managing logistics projects.`,
+      `Implementation of project solutions to 
+    oversized cargo transportations.`,
       '6 years of sales and purchasing experience.',
       `Interested in frontend engineering, started to study 
     frontend software development.`,
@@ -61,23 +59,26 @@ const carouselArr = [
     text: ['HTML.', 'CSS.', 'JavaScript.', 'REACT.'],
   },
 ];
-
+const carouselDotsArr = [1, 2, 3, 4, 5];
 const RIGHT_KEY_CODE = 39;
-
 const LEFT_KEY_CODE = 37;
+const SECONDS_TO_NEXT_SLIDE = 5;
 
 function Carousel() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
   useEffect(() => {
-    window.addEventListener('keydown', nextSlideOnKey);
-    return () => window.removeEventListener('keydown', nextSlideOnKey);
+    const sliderInterval = setInterval(
+      () => nextSlide(),
+      SECONDS_TO_NEXT_SLIDE * 1000,
+    );
+    return () => clearInterval(sliderInterval);
   }, [currentSlideIndex]);
 
   useEffect(() => {
-    window.addEventListener('keydown', previousSlideOnKey);
-    return () => window.removeEventListener('keydown', previousSlideOnKey);
-  }, [currentSlideIndex]);
+    window.addEventListener('keydown', handleKeySliding);
+    return () => window.removeEventListener('keydown', handleKeySliding);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlideIndex((previousSlideIndex) => {
@@ -97,20 +98,20 @@ function Carousel() {
     });
   };
 
-  const nextSlideOnKey = (e) => {
+  const handleKeySliding = (e) => {
     if (e.keyCode === RIGHT_KEY_CODE) {
       nextSlide();
-    }
-  };
-
-  const previousSlideOnKey = (e) => {
-    if (e.keyCode === LEFT_KEY_CODE) {
+    } else if (e.keyCode === LEFT_KEY_CODE) {
       previousSlide();
     }
   };
 
+  const onDotClick = (dotIndex) => {
+    setCurrentSlideIndex(dotIndex);
+  };
+
   return (
-    <div className="carousel__container" onWheel={nextSlide}>
+    <div className="carousel__container">
       {carouselArr.map((slide, index) => (
         <div
           className={
@@ -161,6 +162,20 @@ function Carousel() {
         onKeyDown={nextSlide}
       >
         <FontAwesomeIcon icon={faArrowCircleRight} />
+      </div>
+      <div className="carousel__dots-container">
+        {carouselDotsArr.map((dotData, dotIndex) => (
+          <div
+            className={
+              currentSlideIndex === dotIndex
+                ? 'carousel__dot-active'
+                : 'carousel__dot'
+            }
+            key={dotData}
+            onKeyDown={() => onDotClick(dotIndex)}
+            onClick={() => onDotClick(dotIndex)}
+          />
+        ))}
       </div>
     </div>
   );

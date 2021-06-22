@@ -22,7 +22,6 @@ const startpageBackgroundParts = [
   'startpage__background startpage__background-6',
   'startpage__background startpage__background-7',
 ];
-
 const skillsChipsArr = [
   { icon: faHtml5, text: 'HTML' },
   { icon: faCss3Alt, text: 'CSS' },
