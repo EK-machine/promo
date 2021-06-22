@@ -41,21 +41,19 @@ function Sidebar() {
       </button>
       <ul className="sidebar__button-container">
         {sidebarButtonData.map(({ url, text, icon }) => (
-          <>
-            <li key={text} className="sidebar__button-item">
-              <NavLink
-                exact
-                to={url}
-                className="sidebar__button-link"
-                activeClassName="sidebar__active-link"
-              >
-                <div className="sidebar__icon">
-                  <FontAwesomeIcon icon={icon} />
-                </div>
-                <p>{text}</p>
-              </NavLink>
-            </li>
-          </>
+          <li key={text} className="sidebar__button-item">
+            <NavLink
+              exact
+              to={url}
+              className="sidebar__button-link"
+              activeClassName="sidebar__active-link"
+            >
+              <div className="sidebar__icon">
+                <FontAwesomeIcon icon={icon} />
+              </div>
+              <p>{text}</p>
+            </NavLink>
+          </li>
         ))}
       </ul>
     </div>
