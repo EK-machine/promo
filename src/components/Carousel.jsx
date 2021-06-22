@@ -17,7 +17,6 @@ const carouselArr = [
       'Qualifications: Economist-manager (full-time education, budget).',
     ],
   },
-
   {
     class: 'carousel__item carousel__summary-container',
     title: 'summary',
@@ -60,13 +59,9 @@ const carouselArr = [
     text: ['HTML.', 'CSS.', 'JavaScript.', 'REACT.'],
   },
 ];
-
 const carouselDotsArr = [1, 2, 3, 4, 5];
-
 const RIGHT_KEY_CODE = 39;
-
 const LEFT_KEY_CODE = 37;
-
 const SECONDS_TO_NEXT_SLIDE = 5;
 
 function Carousel() {

@@ -39,6 +39,25 @@
   margin-bottom: 0px;
 }
 
+.comment__fetch-error {
+  border-radius: 8px;
+  margin: 0;
+  padding: 10px;
+  background-image: linear-gradient(
+    to right,
+    #47775d,
+    #4f8066,
+    #578a6e,
+    #5f9377,
+    #689a7f,
+    #71a087,
+    #7ba78f,
+    #84ae97
+  );
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 480px) {
   .comment__title {
     padding: 0;

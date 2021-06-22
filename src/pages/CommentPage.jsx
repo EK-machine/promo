@@ -7,6 +7,7 @@ import reviewService from '../components/serverService.js';
 function CommentPage() {
   const [isCommentLoaded, setIsCommentLoaded] = useState(false);
   const [fetchedData, setFetchedData] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     reviewService
@@ -14,8 +15,12 @@ function CommentPage() {
       .then((result) => {
         setIsCommentLoaded(true);
         setFetchedData(result);
+        setError(null);
       })
-      .catch((error) => console.log(error));
+      .catch((err) => {
+        setIsCommentLoaded(false);
+        setError(err.message);
+      });
   }, []);
   return (
     <div className="comment__page">
@@ -46,6 +51,7 @@ function CommentPage() {
           ) : (
             <div className="comment__comments-section_is-loading">
               <BeatLoader loading />
+              {error && <div className="comment__fetch-error">{error}</div>}
             </div>
           )}
         </section>
