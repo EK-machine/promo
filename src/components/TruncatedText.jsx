@@ -1,12 +1,11 @@
 import React from 'react';
+import './truncatedtext.css';
 
-function TruncatedText({ summary, lettersOverrun }) {
-  const truncateText = (string) =>
-    `${string.substr(0, lettersOverrun - 1)} ...`;
-  return summary && summary.length > lettersOverrun ? (
-    <p className="text__container">{truncateText(summary)}</p>
+function TruncatedText({ summary, visible }) {
+  return visible ? (
+    <p className="text__container-visible">{summary}</p>
   ) : (
-    <p className="text__container">{summary}</p>
+    <p className="text__container-unvisible">{summary}</p>
   );
 }
 

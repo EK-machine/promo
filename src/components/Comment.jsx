@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import './comment.css';
-import classNames from 'classnames';
 import StarRate from './StarRate';
 import TruncatedText from './TruncatedText';
 
 function Comment({ summary, text, rating, viewOnly = true, username }) {
   const [isShown, setIsShown] = useState(false);
-
-  const textClasses = classNames('comment__text comment__text_is-hidden', {
-    'comment__text comment__text_is-shown': isShown,
-  });
 
   const toggleText = () => setIsShown(!isShown);
 
@@ -19,10 +14,10 @@ function Comment({ summary, text, rating, viewOnly = true, username }) {
         <p className="comment__item_name">{username}</p>
       </div>
       <div className="comment__item_title-container">
-        <TruncatedText summary={summary} lettersOverrun={8} />
+        <TruncatedText summary={summary} visible={isShown} />
       </div>
       <div className="comment__item_text-container">
-        <p className={textClasses}>{text}</p>
+        <TruncatedText summary={text} visible={isShown} />
       </div>
       <button
         className="comment__show-text_btn"
