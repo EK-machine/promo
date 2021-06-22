@@ -18,7 +18,6 @@ function CommentPage() {
         setError(null);
       })
       .catch((err) => {
-        setIsCommentLoaded(false);
         setError(err.message);
       });
   }, []);
