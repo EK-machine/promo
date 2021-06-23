@@ -21,3 +21,17 @@
   padding: 0;
   margin: 0 0 10px 0;
 }
+
+.career__content-section {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.career__scroll-section {
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}

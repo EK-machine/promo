@@ -1,0 +1,16 @@
+.bar__wrapper {
+  width: 100%;
+  height: 22px;
+  border-radius: 11px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+}
+
+.bar__stripe {
+  width: 15%;
+  height: 18px;
+  border-radius: 9px;
+  background-color: red;
+}
