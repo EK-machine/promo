@@ -1,6 +1,7 @@
 import React from 'react';
 import './careerpage.css';
 import ProgressScrollBar from '../components/ProgressScrollBar';
+import HireButton from '../components/HireButton';
 
 function CareerPage({ scroll }) {
   return (
@@ -187,18 +188,7 @@ function CareerPage({ scroll }) {
           </p>
         </section>
         <section className="career__button-section">
-          <div className="career__button-container">
-            <button
-              className={
-                scroll < 99
-                  ? 'career__button_visible_unvisible'
-                  : 'career__button_visible'
-              }
-              type="button"
-            >
-              HIRE
-            </button>
-          </div>
+          <HireButton scroll={scroll} />
         </section>
         <section className="career__scroll-section">
           <ProgressScrollBar scroll={scroll} />

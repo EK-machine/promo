@@ -1,0 +1,80 @@
+.hire__button-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.hire__button_visible {
+  font-size: 24px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--active-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    #528a6c,
+    #5d9477,
+    #699e81,
+    #74a98c,
+    #80b397
+  );
+  cursor: pointer;
+  outline: inherit;
+  transform: scale3d(0.8, 0.8, 0.8);
+  transition: transform 0.4s ease-in-out, box-shadow 0.2s ease-in-out,
+    font-weight 0.2s ease-in-out;
+}
+
+.hire__button_visible_unvisible {
+  font-size: 24px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--active-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    #528a6c,
+    #5d9477,
+    #699e81,
+    #74a98c,
+    #80b397
+  );
+  cursor: pointer;
+  outline: inherit;
+  transform: scale3d(0, 0, 0);
+  transition: transform 0.4s ease-in-out, box-shadow 0.2s ease-in-out,
+    font-weight 0.2s ease-in-out;
+}
+
+.hire__button_visible:hover,
+.hire__button_visible_unvisible:hover {
+  font-weight: bold;
+  animation: career-button-hover 1s ease-in-out infinite;
+  box-shadow: 8px 8px 8px 0px rgba(7, 24, 9, 0.5);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    font-weight 0.2s ease-in-out;
+}
+
+@keyframes career-button-hover {
+  0% {
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+  25% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50% {
+    transform: scale3d(1, 1, 1);
+  }
+  75% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  100% {
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+}
