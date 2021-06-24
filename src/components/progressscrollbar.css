@@ -9,8 +9,21 @@
 }
 
 .bar__stripe {
-  /* width: 15%; */
   height: 18px;
   border-radius: 9px;
-  background-color: red;
+  background-image: linear-gradient(
+    to bottom,
+    #264032,
+    #2e4d3c,
+    #365b47,
+    #3e6952,
+    #47775d,
+    #4f8066,
+    #578a6e,
+    #5f9377,
+    #689a7f,
+    #71a087,
+    #7ba78f,
+    #84ae97
+  );
 }

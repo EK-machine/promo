@@ -1,32 +1,11 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './careerpage.css';
 import ProgressScrollBar from '../components/ProgressScrollBar';
 
-function CareerPage() {
-  const heightRef = useRef();
-
-  const scrollHandler = () => {
-    const one = document.documentElement.scrollTop;
-    const two = document.scrollingElement.scrollTop;
-    const three = document.body.scrollTop;
-    const four = window.scrollY;
-    const five = window.pageYOffset;
-    const six = heightRef.current.scrollTop;
-    console.log(one);
-    console.log(two);
-    console.log(three);
-    console.log(four);
-    console.log(five);
-    console.log(six);
-  };
-
+function CareerPage({ scroll }) {
   return (
-    <div className="career__page" onClick={scrollHandler}>
-      <div
-        className="career__container"
-        ref={heightRef}
-        onScroll={scrollHandler}
-      >
+    <div className="career__page">
+      <div className="career__container">
         <h1 className="career__title">My career</h1>
         <section className="career__content-section">
           <p>
@@ -208,7 +187,7 @@ function CareerPage() {
           </p>
         </section>
         <section className="career__scroll-section">
-          <ProgressScrollBar />
+          <ProgressScrollBar scroll={scroll} />
         </section>
       </div>
     </div>
