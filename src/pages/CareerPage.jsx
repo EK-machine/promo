@@ -1,25 +1,33 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import './careerpage.css';
 import ProgressScrollBar from '../components/ProgressScrollBar';
 
 function CareerPage() {
-  const [height, setHeight] = useState(0);
-
   const heightRef = useRef();
 
-  const eventHandler = () => {
-    setHeight(heightRef.current.scrollTop);
-    console.log(document.documentElement.scrollTop);
-    console.log(heightRef.current.scrollTop);
+  const scrollHandler = () => {
+    const one = document.documentElement.scrollTop;
+    const two = document.scrollingElement.scrollTop;
+    const three = document.body.scrollTop;
+    const four = window.scrollY;
+    const five = window.pageYOffset;
+    const six = heightRef.current.scrollTop;
+    console.log(one);
+    console.log(two);
+    console.log(three);
+    console.log(four);
+    console.log(five);
+    console.log(six);
   };
 
   return (
-    <div className="career__page">
-      <div className="career__container" ref={heightRef}>
+    <div className="career__page" onClick={scrollHandler}>
+      <div
+        className="career__container"
+        ref={heightRef}
+        onScroll={scrollHandler}
+      >
         <h1 className="career__title">My career</h1>
-        <button type="button" onClick={eventHandler}>
-          click
-        </button>
         <section className="career__content-section">
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
@@ -199,7 +207,6 @@ function CareerPage() {
             deleniti. Perspiciatis, ipsam.
           </p>
         </section>
-        <button onClick={eventHandler}>click</button>
         <section className="career__scroll-section">
           <ProgressScrollBar />
         </section>
