@@ -30,7 +30,14 @@
   justify-content: center;
   flex-direction: column;
   flex-grow: 1;
-  background: linear-gradient(-45deg, #3b4e2f, #419656, #29ad4b, #10e4b2);
+  background: linear-gradient(
+    -45deg,
+    #528a6c,
+    #5d9477,
+    #699e81,
+    #74a98c,
+    #80b397
+  );
   box-shadow: 0 0 15px 15px var(--comment-page-background-color) inset;
   background-size: 400% 400%;
   animation: background-animation 4s ease-in-out infinite;
@@ -82,6 +89,8 @@
   position: sticky;
   bottom: 0;
   z-index: 100;
+  display: flex;
+  justify-content: center;
 }
 
 .career__button-section {

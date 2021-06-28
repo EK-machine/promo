@@ -25,17 +25,25 @@
   box-sizing: border-box;
   background-image: linear-gradient(
     to bottom,
-    #528a6c,
-    #5d9477,
-    #699e81,
-    #74a98c,
-    #80b397
+    #264032,
+    #2e4d3c,
+    #365b47,
+    #3e6952,
+    #47775d,
+    #4f8066,
+    #578a6e,
+    #5f9377,
+    #689a7f,
+    #71a087,
+    #7ba78f,
+    #84ae97
   );
   cursor: pointer;
   outline: inherit;
+  opacity: 1;
   transform: scale3d(0.8, 0.8, 0.8) translateY(0);
   transition: transform 0.4s ease-in-out, box-shadow 0.2s ease-in-out,
-    font-weight 0.2s ease-in-out;
+    font-weight 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 .hire__button_visible_unvisible {
@@ -64,9 +72,10 @@
   );
   cursor: pointer;
   outline: inherit;
-  transform: scale3d(0, 0, 0) translateY(100vh);
+  opacity: 0;
+  transform: scale3d(0, 0, 0) translateY(300vh);
   transition: transform 0.4s ease-in-out, box-shadow 0.2s ease-in-out,
-    font-weight 0.2s ease-in-out;
+    font-weight 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 .hire__button_visible:hover,
