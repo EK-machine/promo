@@ -1,19 +1,22 @@
 import React from 'react';
 import './hirebutton.css';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function HireButton({ scroll }) {
   return (
     <div className="hire__button-container">
-      <button
+      <a
         className={
           scroll < 99
             ? 'hire__button_visible_unvisible'
             : 'hire__button_visible'
         }
-        type="button"
+        href="mailto:coocooroozza@gmail.com"
       >
-        HIRE
-      </button>
+        <p className="hire__button_text">HIRE</p>
+        <FontAwesomeIcon className="hire__button_icon" icon={faEnvelope} />
+      </a>
     </div>
   );
 }
