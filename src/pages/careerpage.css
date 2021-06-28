@@ -111,3 +111,19 @@
     background-position: 0 50%;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .career__text-date,
+  .career__text-company,
+  .career__text-position {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .career__text-date,
+  .career__text-company,
+  .career__text-position {
+    font-size: 10px;
+  }
+}

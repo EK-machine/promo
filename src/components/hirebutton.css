@@ -73,7 +73,7 @@
   cursor: pointer;
   outline: inherit;
   opacity: 0;
-  transform: scale3d(0, 0, 0) translateY(300vh);
+  transform: scale3d(0, 0, 0) translateY(100vh);
   transition: transform 0.4s ease-in-out, box-shadow 0.2s ease-in-out,
     font-weight 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
