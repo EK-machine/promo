@@ -9,7 +9,7 @@ import CareerPage from './CareerPage';
 import NotFoundPage from './NotFoundPage';
 
 function MainContentContainer() {
-  const [scroll, setScroll] = useState(0);
+  const [scrolling, setScrolling] = useState(0);
   const heightRef = useRef();
 
   const scrollHandler = () => {
@@ -17,7 +17,7 @@ function MainContentContainer() {
     const height =
       heightRef.current.scrollHeight - heightRef.current.clientHeight;
     const scrolled = (pageScroll / height) * 100;
-    setScroll((prevState) => {
+    setScrolling((prevState) => {
       if (prevState === scrolled) {
         return prevState;
       }
@@ -42,7 +42,7 @@ function MainContentContainer() {
           <Route path="/main/home" component={HomePage} />
           <Route path="/main/comment" component={CommentPage} />
           <Route path="/main/career">
-            <CareerPage scroll={scroll} />
+            <CareerPage scrolling={scrolling} />
           </Route>
           <Route path="/main/*" component={NotFoundPage} />
         </Switch>

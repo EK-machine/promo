@@ -3,12 +3,12 @@ import './hirebutton.css';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function HireButton({ scroll }) {
+function HireButton({ scrolling }) {
   return (
     <div className="hire__button-container">
       <a
         className={
-          scroll < 99
+          scrolling < 99
             ? 'hire__button_visible_unvisible'
             : 'hire__button_visible'
         }
