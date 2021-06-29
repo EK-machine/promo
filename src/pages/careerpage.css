@@ -167,6 +167,38 @@
   z-index: 3;
 }
 
+.career__ost1-company4 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 90%;
+  z-index: 3;
+}
+
+.career__hellm1-company5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  z-index: 3;
+}
+
+.career__hellm2-company5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  z-index: 3;
+}
+
+.career__rwd-company6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 40%;
+  z-index: 3;
+}
+
 .career__scroll-section {
   width: 100%;
   position: sticky;
@@ -174,6 +206,7 @@
   z-index: 100;
   display: flex;
   justify-content: center;
+  z-index: 4;
 }
 
 .career__button-section {
@@ -181,6 +214,7 @@
   bottom: 22px;
   height: 75vh;
   width: 100%;
+  z-index: 4;
 }
 
 @keyframes background-animation {

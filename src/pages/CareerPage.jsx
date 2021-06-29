@@ -11,6 +11,10 @@ import glass3 from './Glass3.png';
 import pillBG1 from './pillBG1.png';
 import pillBG2 from './pillBG2.png';
 import pillBG3 from './pillBG3.png';
+import ost from './OST.png';
+import hellm1 from './hellm1.png';
+import hellm2 from './hellm2.png';
+import rwd from './RWD.png';
 
 function CareerPage({ scrolling }) {
   const careerArr = [
@@ -56,13 +60,11 @@ function CareerPage({ scrolling }) {
       img1Style: {
         transform: `translateX(${-scrolling * 5}%)`,
       },
-
       img2Src: glass2,
       img2Class: 'career__glass2-company2',
       img2Style: {
         left: `${-50 + scrolling * 3}%`,
       },
-
       img3Src: glass3,
       img3Class: 'career__glass3-company2',
       img3Style: {
@@ -85,13 +87,11 @@ function CareerPage({ scrolling }) {
       img1Style: {
         transform: `translateX(${80 - scrolling * 2}%) translateY(50%)`,
       },
-
       img2Src: pillBG2,
       img2Class: 'career__pillBG2-company3',
       img2Style: {
         transform: `translateX(${-80 + scrolling * 2}%) translateY(50%)`,
       },
-
       img3Src: pillBG3,
       img3Class: 'career__pillBG3-company3',
       img3Style: {
@@ -111,6 +111,11 @@ function CareerPage({ scrolling }) {
       positionStyle: { top: `${-50 + scrolling * 1.6}%` },
       positionClass: 'career__text-position career__text-position4',
       positionText: ' Position: Oversized cargo transportation manager.',
+      img1Src: ost,
+      img1Class: 'career__ost1-company4',
+      img1Style: {
+        transform: `translateX(${-115 + scrolling * 2}%) translateY(-50%)`,
+      },
     },
 
     {
@@ -129,6 +134,20 @@ function CareerPage({ scrolling }) {
       },
       positionClass: 'career__text-position career__text-position5',
       positionText: ' Position: Client manager.',
+      img1Src: hellm1,
+      img1Class: 'career__hellm1-company5',
+      img1Style: {
+        transform: `translateX(${-360 + scrolling * 5}%) translateY(${
+          170 - scrolling * 4
+        }%)`,
+      },
+      img2Src: hellm2,
+      img2Class: 'career__hellm2-company5',
+      img2Style: {
+        transform: `translateX(${360 - scrolling * 5}%) translateY(${
+          170 - scrolling * 4
+        }%)`,
+      },
     },
 
     {
@@ -147,6 +166,14 @@ function CareerPage({ scrolling }) {
       },
       positionClass: 'career__text-position career__text-position6',
       positionText: 'Position: Project transportation manager.',
+
+      img1Src: rwd,
+      img1Class: 'career__rwd-company6',
+      img1Style: {
+        transform: `translateX(-50%) scale3d(${scrolling * 0.0095}, ${
+          scrolling * 0.0095
+        }, ${scrolling * 0.0095})`,
+      },
     },
   ];
 
