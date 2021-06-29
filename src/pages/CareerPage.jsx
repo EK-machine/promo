@@ -2,12 +2,15 @@ import React from 'react';
 import './careerpage.css';
 import ProgressScrollBar from '../components/ProgressScrollBar';
 import HireButton from '../components/HireButton';
-import pillBG1 from './pillBG1.png';
-import pillBG2 from './pillBG2.png';
-import pillBG3 from './pillBG3.png';
 import ag1 from './AG1.png';
 import ag2 from './AG2.png';
 import ag3 from './AG3.png';
+import glass1 from './Glass1.png';
+import glass2 from './Glass2.png';
+import glass3 from './Glass3.png';
+import pillBG1 from './pillBG1.png';
+import pillBG2 from './pillBG2.png';
+import pillBG3 from './pillBG3.png';
 
 function CareerPage({ scrolling }) {
   const careerArr = [
@@ -48,6 +51,23 @@ function CareerPage({ scrolling }) {
       positionStyle: { top: `${-12 + scrolling * 2.5}%` },
       positionClass: ' career__text-position career__text-position2',
       positionText: ' Position: Marketing manager.',
+      img1Src: glass1,
+      img1Class: 'career__glass1-company2',
+      img1Style: {
+        transform: `translateX(${-scrolling * 5}%)`,
+      },
+
+      img2Src: glass2,
+      img2Class: 'career__glass2-company2',
+      img2Style: {
+        left: `${-50 + scrolling * 3}%`,
+      },
+
+      img3Src: glass3,
+      img3Class: 'career__glass3-company2',
+      img3Style: {
+        right: `${scrolling}%`,
+      },
     },
 
     {

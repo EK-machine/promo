@@ -121,6 +121,28 @@
   z-index: 1;
 }
 
+.career__glass1-company2 {
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 33%;
+  z-index: 1;
+}
+.career__glass2-company2 {
+  position: absolute;
+  top: 25%;
+  width: 33%;
+  z-index: 1;
+  animation: horse-animation 2s ease-in-out infinite;
+}
+.career__glass3-company2 {
+  position: absolute;
+  top: 55%;
+  width: 20%;
+  z-index: 1;
+  animation: glass-animation 4s ease-in-out infinite;
+}
+
 .career__pillBG1-company3 {
   position: absolute;
   left: 0;
@@ -170,6 +192,42 @@
   }
   100% {
     background-position: 0 50%;
+  }
+}
+
+@keyframes horse-animation {
+  0% {
+    transform: rotate(-0.03turn);
+  }
+  25% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(0.03turn);
+  }
+  75% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(-0.03turn);
+  }
+}
+
+@keyframes glass-animation {
+  0% {
+    transform: rotate(0.05turn);
+  }
+  25% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(-0.05turn);
+  }
+  75% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(0.05turn);
   }
 }
 
