@@ -95,10 +95,30 @@
   color: var(--active-text-color);
   padding: 0;
   margin: 0;
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4; */
+}
+
+.career__ag1-company1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+  z-index: 1;
+}
+
+.career__ag2-company1 {
+  position: absolute;
+  right: 0;
+  top: 33%;
+  width: 40%;
+  z-index: 1;
+}
+
+.career__ag3-company1 {
+  position: absolute;
+  left: 0;
+  top: 52%;
+  width: 40%;
+  z-index: 1;
 }
 
 .career__pillBG1-company3 {
@@ -117,7 +137,7 @@
   z-index: 1;
 }
 
-.career__pillRT-company3 {
+.career__pillBG3-company3 {
   position: absolute;
   top: 0;
   left: 0;
