@@ -51,6 +51,9 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
+  position: relative;
+  border: 1px solid red;
+  box-sizing: border-box;
 }
 
 .career__item-date-container,
@@ -75,13 +78,51 @@
   flex-shrink: 1;
 }
 
+.career__text-position_background,
+.career__text-company_background,
+.career__text-date_background {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
 .career__text-date,
 .career__text-company,
 .career__text-position {
   color: var(--active-text-color);
-  position: absolute;
+  padding: 0;
+  margin: 0;
+  /* position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 4; */
+}
+
+.career__pillBG1-company3 {
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  width: 60%;
+  z-index: 2;
+}
+
+.career__pillBG2-company3 {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  width: 60%;
+  z-index: 1;
+}
+
+.career__pillRT-company3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  z-index: 3;
 }
 
 .career__scroll-section {

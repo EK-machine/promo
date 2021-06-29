@@ -2,6 +2,9 @@ import React from 'react';
 import './careerpage.css';
 import ProgressScrollBar from '../components/ProgressScrollBar';
 import HireButton from '../components/HireButton';
+import pillBG1 from './pillBG1.png';
+import pillBG2 from './pillBG2.png';
+import pillRT from './pillRT.png';
 
 function CareerPage({ scroll }) {
   return (
@@ -65,29 +68,61 @@ function CareerPage({ scroll }) {
 
           <div className="career__item">
             <div className="career__item-date-container">
-              <p
-                className="career__text-date career__text-date3"
+              <div
+                className="career__text-date_background"
                 style={{ bottom: `${-35 + scroll * 2}%` }}
               >
-                2010 November – 2011 December
-              </p>
+                <p className="career__text-date career__text-date3">
+                  2010 November – 2011 December
+                </p>
+              </div>
             </div>
             <div className="career__item-company-container">
-              <p
-                className="career__text-company career__text-company3"
+              <div
+                className="career__text-company_background"
                 style={{ top: `${-35 + scroll * 2}%` }}
               >
-                «Belmedpreparaty» RUE.
-              </p>
+                <p className="career__text-company career__text-company3">
+                  «Belmedpreparaty» RUE.
+                </p>
+              </div>
             </div>
             <div className="career__item-position-container">
-              <p
-                className="career__text-position career__text-position3"
+              <div
+                className="career__text-position_background"
                 style={{ bottom: `${-35 + scroll * 2}%` }}
               >
-                Position: Purchase manager.
-              </p>
+                <p className="career__text-position career__text-position3">
+                  Position: Purchase manager.
+                </p>
+              </div>
             </div>
+            <img
+              src={pillBG1}
+              alt="pillBG1"
+              className="career__pillBG1-company3"
+              style={{
+                transform: `translateX(${80 - scroll * 2}%) translateY(50%)`,
+              }}
+            />
+            <img
+              src={pillBG2}
+              alt="pillBG2"
+              className="career__pillBG2-company3"
+              style={{
+                transform: `translateX(${-80 + scroll * 2}%) translateY(50%)`,
+              }}
+            />
+            <img
+              src={pillRT}
+              alt="pillRT"
+              className="career__pillRT-company3"
+              style={{
+                transform: `translateX(${-350 + scroll * 10}%) translateY(${
+                  -400 + scroll * 10
+                }%) rotate(${scroll * 0.2}turn)`,
+              }}
+            />
           </div>
 
           <div className="career__item">
