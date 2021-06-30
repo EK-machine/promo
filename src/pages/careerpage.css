@@ -53,8 +53,6 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  /* border: 1px solid red;
-  box-sizing: border-box; */
 }
 
 .career__item-date-container,
@@ -102,7 +100,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 30%;
+  width: 30vh;
   z-index: 1;
 }
 
@@ -110,7 +108,7 @@
   position: absolute;
   right: 0;
   top: 33%;
-  width: 40%;
+  width: 40vh;
   z-index: 1;
 }
 
@@ -118,7 +116,7 @@
   position: absolute;
   left: 0;
   top: 52%;
-  width: 40%;
+  width: 40vh;
   z-index: 1;
 }
 
@@ -126,20 +124,20 @@
   position: absolute;
   top: -15%;
   right: -10%;
-  width: 33%;
+  width: 33vh;
   z-index: 1;
 }
 .career__glass2-company2 {
   position: absolute;
   top: 25%;
-  width: 33%;
+  width: 33vh;
   z-index: 1;
   animation: horse-animation 2s ease-in-out infinite;
 }
 .career__glass3-company2 {
   position: absolute;
-  top: 55%;
-  width: 20%;
+  top: 60%;
+  width: 20vh;
   z-index: 1;
   animation: glass-animation 4s ease-in-out infinite;
 }
@@ -148,7 +146,7 @@
   position: absolute;
   left: 0;
   bottom: 50%;
-  width: 60%;
+  width: 60vh;
   z-index: 2;
 }
 
@@ -156,7 +154,7 @@
   position: absolute;
   right: 0;
   bottom: 50%;
-  width: 60%;
+  width: 60vh;
   z-index: 1;
 }
 
@@ -164,7 +162,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 30vh;
   z-index: 3;
 }
 
@@ -196,7 +194,7 @@
   position: absolute;
   top: 5%;
   left: 50%;
-  width: 40%;
+  width: 40vh;
   z-index: 3;
 }
 
@@ -216,18 +214,6 @@
   height: 75vh;
   width: 100%;
   z-index: 4;
-}
-
-@keyframes background-animation {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
 }
 
 @keyframes horse-animation {
@@ -266,11 +252,56 @@
   }
 }
 
+@media only screen and (max-width: 760px) {
+  .career__hellm1-company5 {
+    bottom: 10%;
+    left: -5%;
+  }
+  .career__hellm2-company5 {
+    bottom: 10%;
+    right: -5%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .career__pillBG3-company3 {
+    top: 20%;
+  }
+  .career__hellm1-company5 {
+    bottom: 20%;
+    left: -10%;
+  }
+  .career__hellm2-company5 {
+    bottom: 20%;
+    right: -10%;
+  }
+  .career__rwd-company6 {
+    top: 10%;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .career__text-date,
   .career__text-company,
   .career__text-position {
     font-size: 12px;
+  }
+  .career__pillBG1-company3 {
+    width: 30vh;
+  }
+  .career__pillBG2-company3 {
+    width: 30vh;
+  }
+  .career__pillBG3-company3 {
+    top: 30%;
+  }
+  .career__hellm1-company5 {
+    bottom: 25%;
+    left: -10%;
+  }
+  .career__hellm2-company5 {
+    bottom: 25%;
+    right: -10%;
   }
 }
 
@@ -279,5 +310,35 @@
   .career__text-company,
   .career__text-position {
     font-size: 10px;
+  }
+  .career__ag1-company1 {
+    left: -20%;
+  }
+  .career__ag2-company1 {
+    right: -20%;
+  }
+  .career__ag3-company1 {
+    left: -20%;
+  }
+  .career__glass1-company2 {
+    right: -50%;
+  }
+  .career__glass2-company2 {
+    position: absolute;
+    top: 25%;
+    width: 33vh;
+    z-index: 1;
+    animation: horse-animation 2s ease-in-out infinite;
+  }
+  .career__hellm1-company5 {
+    bottom: 35%;
+    left: -10%;
+  }
+  .career__hellm2-company5 {
+    bottom: 35%;
+    right: -10%;
+  }
+  .career__rwd-company6 {
+    top: 15%;
   }
 }
