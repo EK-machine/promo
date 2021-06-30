@@ -24,26 +24,27 @@
 }
 
 .career__content-section {
+  position: relative;
   flex-basis: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-grow: 1;
-  background: linear-gradient(
-    -45deg,
-    #528a6c,
-    #5d9477,
-    #699e81,
-    #74a98c,
-    #80b397
-  );
-  box-shadow: 0 0 15px 15px var(--comment-page-background-color) inset;
-  background-size: 400% 400%;
-  animation: background-animation 4s ease-in-out infinite;
   overflow: hidden;
   border-radius: 8px;
   padding: 18px;
+}
+
+.career__content-section_background {
+  position: absolute;
+  top: -400%;
+  left: 0;
+  width: 100%;
+  height: 1600%;
+  background-image: url(./BGL.png);
+  background-repeat: repeat;
+  box-shadow: 0 0 15px 15px var(--comment-page-background-color) inset;
 }
 
 .career__item {

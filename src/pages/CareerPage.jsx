@@ -182,6 +182,10 @@ function CareerPage({ scrolling }) {
       <div className="career__container">
         <h1 className="career__title">My career</h1>
         <section className="career__content-section">
+          <div
+            className="career__content-section_background"
+            style={{ transform: `translateY(${scrolling * 0.2}%)` }}
+          />
           {careerArr.map(
             ({
               dateStyle,
