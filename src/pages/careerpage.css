@@ -18,11 +18,6 @@
   width: 980px;
 }
 
-.career__title {
-  padding: 0;
-  margin: 0 0 10px 0;
-}
-
 .career__content-section {
   position: relative;
   flex-basis: 100%;
@@ -33,18 +28,28 @@
   flex-grow: 1;
   overflow: hidden;
   border-radius: 8px;
-  padding: 18px;
+  padding: 0 18px 18px 18px;
+}
+
+.career__content-section_title {
+  padding: 0;
+  margin: 0 0 10px 0;
+  z-index: 1;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .career__content-section_background {
   position: absolute;
-  top: -400%;
+  top: -100%;
   left: 0;
   width: 100%;
-  height: 1600%;
+  height: 200%;
   background-image: url(./BGL.png);
   background-repeat: repeat;
   box-shadow: 0 0 15px 15px var(--comment-page-background-color) inset;
+  filter: blur(12px);
 }
 
 .career__item {
@@ -84,8 +89,9 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 8px;
+  padding: 5px;
 }
 
 .career__text-date,
@@ -198,6 +204,16 @@
   z-index: 3;
 }
 
+.career__img {
+  filter: brightness(80%);
+  transition: filter 0.2s ease-in-out;
+}
+
+.career__img:hover {
+  filter: brightness(95%);
+  transition: filter 0.2s ease-in-out;
+}
+
 .career__scroll-section {
   width: 100%;
   position: sticky;
@@ -211,7 +227,7 @@
 .career__button-section {
   position: absolute;
   bottom: 22px;
-  height: 75vh;
+  height: 40vh;
   width: 100%;
   z-index: 4;
 }
