@@ -33,7 +33,7 @@
 .startpage__background {
   height: 100%;
   width: 100%;
-  background-image: url('../components/preheader_back.jpg');
+  background-image: url('../components/startpageBackground.jpg');
   background-size: cover;
   background-position: center;
   position: absolute;
