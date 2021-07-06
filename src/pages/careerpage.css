@@ -228,12 +228,30 @@
   transition: filter 0.2s ease-in-out;
 }
 
-.career__button-section {
+.career__hire-section_visible {
   position: absolute;
   bottom: 0px;
-  height: 40vh;
+  height: 85vh;
   width: 100%;
   z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale3d(1, 1, 1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.career__hire-section_unvisible {
+  position: absolute;
+  bottom: 0px;
+  height: 85vh;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale3d(0, 0, 0);
+  transition: transform 0.4s ease-in-out;
 }
 
 @keyframes horse-animation {

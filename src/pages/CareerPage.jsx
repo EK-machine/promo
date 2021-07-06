@@ -1,7 +1,7 @@
 import React from 'react';
 import './careerpage.css';
 import ProgressScrollBar from '../components/ProgressScrollBar';
-import HireButton from '../components/HireButton';
+import Hire from '../components/Hire';
 
 function CareerPage({ scrolling }) {
   const careerArr = [
@@ -248,8 +248,14 @@ function CareerPage({ scrolling }) {
               ),
             )}
           </section>
-          <section className="career__button-section">
-            {scrolling < 99 ? null : <HireButton />}
+          <section
+            className={
+              scrolling < 99
+                ? 'career__hire-section_unvisible'
+                : 'career__hire-section_visible'
+            }
+          >
+            <Hire />
           </section>
         </div>
       </section>
