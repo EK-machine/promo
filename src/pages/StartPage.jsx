@@ -35,7 +35,13 @@ function StartPage() {
       <StartPopUp />
       <section className="startpage__content-container">
         {startpageBackgroundParts.map((classes) => (
-          <div key={classes} className={classes} />
+          <div
+            key={classes}
+            className={classes}
+            style={{
+              backgroundImage: `url('/images/startpageBackground.jpg')`,
+            }}
+          />
         ))}
         <div className="startpage__contacts-container">
           <ContactButtons />

@@ -43,26 +43,6 @@
   filter: brightness(80%);
 }
 
-.carousel__education-container {
-  background-image: url('../backgroundImages/EDU.jpg');
-}
-
-.carousel__summary-container {
-  background-image: url('../backgroundImages/SUMM.jpg');
-}
-
-.carousel__languages-container {
-  background-image: url('../backgroundImages/LANG.jpg');
-}
-
-.carousel__qualities-container {
-  background-image: url('../backgroundImages/QUAL.jpg');
-}
-
-.carousel__skills-container {
-  background-image: url('../backgroundImages/SKILLS.jpg');
-}
-
 .carousel__item_content-left {
   flex-basis: 30%;
   padding: 5px;

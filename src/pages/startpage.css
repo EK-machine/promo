@@ -33,7 +33,6 @@
 .startpage__background {
   height: 100%;
   width: 100%;
-  background-image: url('../backgroundImages/startpageBackground.jpg');
   background-size: cover;
   background-position: center;
   position: absolute;

@@ -8,8 +8,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const carouselArr = [
   {
-    class: 'carousel__item carousel__education-container',
+    class: 'carousel__item',
     title: 'education',
+    style: {
+      backgroundImage: `url('/images/EDU.jpg')`,
+    },
     text: [
       `Academy of Public Administration under the Aegis of the 
     President of the Republic of Belarus.`,
@@ -18,8 +21,11 @@ const carouselArr = [
     ],
   },
   {
-    class: 'carousel__item carousel__summary-container',
+    class: 'carousel__item',
     title: 'summary',
+    style: {
+      backgroundImage: `url('/images/SUMM.jpg')`,
+    },
     text: [
       `More than 9 years of developing and managing logistics projects.`,
       `Implementation of project solutions to 
@@ -30,8 +36,11 @@ const carouselArr = [
     ],
   },
   {
-    class: 'carousel__item carousel__languages-container',
+    class: 'carousel__item',
     title: 'languages',
+    style: {
+      backgroundImage: `url('/images/LANG.jpg')`,
+    },
     text: [
       'Belarusian - Native.',
       'Russian - Native.',
@@ -40,8 +49,11 @@ const carouselArr = [
     ],
   },
   {
-    class: 'carousel__item carousel__qualities-container',
+    class: 'carousel__item',
     title: 'personal qualities',
+    style: {
+      backgroundImage: `url('/images/QUAL.jpg')`,
+    },
     text: [
       'Responsible.',
       'Curious and quick-learning.',
@@ -54,8 +66,11 @@ const carouselArr = [
     ],
   },
   {
-    class: 'carousel__item carousel__skills-container',
+    class: 'carousel__item',
     title: 'skills',
+    style: {
+      backgroundImage: `url('/images/SKILLS.jpg')`,
+    },
     text: ['HTML.', 'CSS.', 'JavaScript.', 'REACT.'],
   },
 ];
@@ -119,7 +134,7 @@ function Carousel() {
           }
           key={slide.title}
         >
-          <div className={slide.class}>
+          <div className={slide.class} style={slide.style}>
             <div className="carousel__item_content-left">
               <div
                 className={
