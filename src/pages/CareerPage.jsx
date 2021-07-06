@@ -166,88 +166,90 @@ function CareerPage({ scrolling }) {
 
   return (
     <div className="career__page">
-      <div className="career__container">
-        <section className="career__content-section">
-          <h1 className="career__content-section_title">My career</h1>
-          <div
-            className="career__content-section_background"
-            style={{ transform: `translateY(${scrolling * 0.009}%)` }}
-          />
-          {careerArr.map(
-            ({
-              dateStyle,
-              dateClass,
-              dateText,
-              companyStyle,
-              companyClass,
-              companyText,
-              positionStyle,
-              positionClass,
-              positionText,
-              img1Src,
-              img1Class,
-              img1Style,
-              img2Src,
-              img2Class,
-              img2Style,
-              img3Src,
-              img3Class,
-              img3Style,
-            }) => (
-              <div className="career__item">
-                <div className="career__item-date-container">
-                  <div
-                    className="career__text-date_background"
-                    style={dateStyle}
-                  >
-                    <p className={dateClass}>{dateText}</p>
+      <section className="career__scroll-section">
+        <ProgressScrollBar scrolling={scrolling} />
+      </section>
+      <section className="career__page-content_conteiner">
+        <div className="career__container">
+          <section className="career__content-section">
+            <h1 className="career__content-section_title">My career</h1>
+            <div
+              className="career__content-section_background"
+              style={{ transform: `translateY(${scrolling * 0.009}%)` }}
+            />
+            {careerArr.map(
+              ({
+                dateStyle,
+                dateClass,
+                dateText,
+                companyStyle,
+                companyClass,
+                companyText,
+                positionStyle,
+                positionClass,
+                positionText,
+                img1Src,
+                img1Class,
+                img1Style,
+                img2Src,
+                img2Class,
+                img2Style,
+                img3Src,
+                img3Class,
+                img3Style,
+              }) => (
+                <div className="career__item">
+                  <div className="career__item-date-container">
+                    <div
+                      className="career__text-date_background"
+                      style={dateStyle}
+                    >
+                      <p className={dateClass}>{dateText}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="career__item-company-container">
-                  <div
-                    className="career__text-company_background"
-                    style={companyStyle}
-                  >
-                    <p className={companyClass}>{companyText}</p>
+                  <div className="career__item-company-container">
+                    <div
+                      className="career__text-company_background"
+                      style={companyStyle}
+                    >
+                      <p className={companyClass}>{companyText}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="career__item-position-container">
-                  <div
-                    className="career__text-position_background"
-                    style={positionStyle}
-                  >
-                    <p className={positionClass}>{positionText}</p>
+                  <div className="career__item-position-container">
+                    <div
+                      className="career__text-position_background"
+                      style={positionStyle}
+                    >
+                      <p className={positionClass}>{positionText}</p>
+                    </div>
                   </div>
+                  <img
+                    src={img1Src}
+                    alt={img1Src}
+                    className={img1Class}
+                    style={img1Style}
+                  />
+                  <img
+                    src={img2Src}
+                    alt={img2Src}
+                    className={img2Class}
+                    style={img2Style}
+                  />
+                  <img
+                    src={img3Src}
+                    alt={img3Src}
+                    className={img3Class}
+                    style={img3Style}
+                  />
                 </div>
-                <img
-                  src={img1Src}
-                  alt={img1Src}
-                  className={img1Class}
-                  style={img1Style}
-                />
-                <img
-                  src={img2Src}
-                  alt={img2Src}
-                  className={img2Class}
-                  style={img2Style}
-                />
-                <img
-                  src={img3Src}
-                  alt={img3Src}
-                  className={img3Class}
-                  style={img3Style}
-                />
-              </div>
-            ),
-          )}
-        </section>
-        <section className="career__button-section">
-          <HireButton scrolling={scrolling} />
-        </section>
-        <section className="career__scroll-section">
-          <ProgressScrollBar scrolling={scrolling} />
-        </section>
-      </div>
+              ),
+            )}
+          </section>
+          <section className="career__button-section">
+            {scrolling < 99 ? null : <HireButton />}
+          </section>
+        </div>
+      </section>
     </div>
   );
 }
