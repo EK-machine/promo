@@ -43,24 +43,24 @@
   filter: brightness(80%);
 }
 
-.carousel__summary-container {
-  background-image: url('../components/SUMM.jpg');
+.carousel__education-container {
+  background-image: url('../backgroundImages/EDU.jpg');
 }
 
-.carousel__education-container {
-  background-image: url('../components/EDU.jpg');
+.carousel__summary-container {
+  background-image: url('../backgroundImages/SUMM.jpg');
 }
 
 .carousel__languages-container {
-  background-image: url('../components/LANG.jpg');
+  background-image: url('../backgroundImages/LANG.jpg');
 }
 
 .carousel__qualities-container {
-  background-image: url('../components/QUAL.jpg');
+  background-image: url('../backgroundImages/QUAL.jpg');
 }
 
 .carousel__skills-container {
-  background-image: url('../components/SKILLS.jpg');
+  background-image: url('../backgroundImages/SKILLS.jpg');
 }
 
 .carousel__item_content-left {
