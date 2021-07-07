@@ -35,7 +35,7 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-color: var(--preheader-btn-border-color);
+  background-color: var(--preheader-backggound-color);
   padding: 5px 35px;
   display: flex;
   flex-direction: row;
