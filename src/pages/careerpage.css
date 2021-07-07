@@ -72,8 +72,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  border: 1px solid red;
-  box-sizing: border-box;
 }
 
 .career__item:last-child {
@@ -88,8 +86,19 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border: 1px solid blue;
-  box-sizing: border-box;
+}
+
+.career__item-represent_text-background {
+  background-color: var(--sidebar-background-color-opacity);
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0px 0px 25px 5px rgba(255, 255, 255, 0.6);
+}
+
+.career__item-represent_text-background2,
+.career__item-represent_text-background5,
+.career__item-represent_text-background6 {
+  display: none;
 }
 
 .career__item-represent_text {
@@ -104,12 +113,13 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  padding-top: 5px;
+  padding: 5px 0;
 }
 
 .career__item-date-container,
 .career__item-company-container,
 .career__item-position-container {
+  display: flex;
   flex-basis: 32%;
   flex-grow: 1;
   flex-shrink: 1;
@@ -138,6 +148,12 @@
   z-index: 4;
   border-radius: 8px;
   padding: 5px;
+  box-shadow: 0px 0px 25px 5px rgba(255, 255, 255, 0.6);
+}
+
+.career__text-position_background8,
+.career__text-company_background8 {
+  box-shadow: none;
 }
 
 .career__text-date,
@@ -250,6 +266,47 @@
   z-index: 3;
 }
 
+.career__item-company-container7 {
+  align-items: center;
+}
+
+.career__item-position-container7 {
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.career__code1-company7 {
+  position: absolute;
+  bottom: 5px;
+  left: 10%;
+  width: 15%;
+  animation: code-animation1 4s infinite;
+}
+
+.career__code2-company7 {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 15%;
+  animation: code-animation2 4s infinite;
+}
+
+.career__code3-company7 {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 15%;
+  animation: code-animation3 4s infinite;
+}
+
+.career__code4-company7 {
+  position: absolute;
+  top: 5px;
+  right: 10%;
+  width: 15%;
+  animation: code-animation4 4s infinite;
+}
+
 .career__img {
   filter: brightness(80%);
   transition: filter 0.2s ease-in-out;
@@ -263,7 +320,7 @@
 .career__hire-section_visible {
   position: absolute;
   bottom: 0px;
-  height: 85vh;
+  height: 80vh;
   width: 100%;
   z-index: 4;
   display: flex;
@@ -276,7 +333,7 @@
 .career__hire-section_unvisible {
   position: absolute;
   bottom: 0px;
-  height: 85vh;
+  height: 80vh;
   width: 100%;
   z-index: 4;
   display: flex;
@@ -322,31 +379,124 @@
   }
 }
 
+@keyframes code-animation1 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30vh) rotate(-0.5turn);
+  }
+  50% {
+    transform: translateY(-60vh);
+  }
+  75% {
+    transform: translateY(-30vh) rotate(0.5turn);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes code-animation2 {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-1turn);
+  }
+  25% {
+    transform: translateX(-50%) translateY(10vh);
+  }
+  50% {
+    transform: translateX(-50%) translateY(20vh) rotate(1turn);
+  }
+  75% {
+    transform: translateX(-50%) translateY(10vh);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-1turn);
+  }
+}
+
+@keyframes code-animation3 {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(-1turn);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-10vh);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20vh) rotate(1turn);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-10vh);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-1turn);
+  }
+}
+
+@keyframes code-animation4 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(30vh) rotate(-0.5turn);
+  }
+  50% {
+    transform: translateY(60vh);
+  }
+  75% {
+    transform: translateY(30vh) rotate(0.5turn);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* респонзив респонзив респонзив респонзив респонзив респонзив респонзив респонзив респонзив */
+
 @media only screen and (max-width: 760px) {
+  .career__pillBG1-company3 {
+    left: -25%;
+  }
+  .career__pillBG2-company3 {
+    right: -25%;
+  }
+  .career__pillBG3-company3 {
+    left: -20%;
+  }
   .career__hellm1-company5 {
-    bottom: 10%;
+    bottom: 20%;
     left: -5%;
   }
   .career__hellm2-company5 {
-    bottom: 10%;
+    bottom: 20%;
     right: -5%;
   }
 }
 
 @media only screen and (max-width: 580px) {
+  .career__pillBG1-company3 {
+    left: -35%;
+  }
+  .career__pillBG2-company3 {
+    right: -35%;
+  }
   .career__pillBG3-company3 {
-    top: 20%;
+    left: -40%;
+    top: 10%;
   }
   .career__hellm1-company5 {
-    bottom: 20%;
-    left: -10%;
+    bottom: 30%;
+    left: -5%;
   }
   .career__hellm2-company5 {
-    bottom: 20%;
-    right: -10%;
+    bottom: 30%;
+    right: -5%;
   }
   .career__rwd-company6 {
     top: 10%;
+  }
+  .career__item-represent_text {
+    font-size: 1.5em;
   }
 }
 
@@ -355,31 +505,6 @@
   .career__text-company,
   .career__text-position {
     font-size: 12px;
-  }
-  .career__pillBG1-company3 {
-    width: 30vh;
-  }
-  .career__pillBG2-company3 {
-    width: 30vh;
-  }
-  .career__pillBG3-company3 {
-    top: 30%;
-  }
-  .career__hellm1-company5 {
-    bottom: 25%;
-    left: -10%;
-  }
-  .career__hellm2-company5 {
-    bottom: 25%;
-    right: -10%;
-  }
-}
-
-@media only screen and (max-width: 340px) {
-  .career__text-date,
-  .career__text-company,
-  .career__text-position {
-    font-size: 10px;
   }
   .career__ag1-company1 {
     left: -20%;
@@ -391,24 +516,61 @@
     left: -20%;
   }
   .career__glass1-company2 {
+    right: -40%;
+  }
+
+  .career__pillBG1-company3 {
+    width: 30vh;
+    left: -15%;
+  }
+  .career__pillBG2-company3 {
+    width: 30vh;
+    right: -15%;
+  }
+  .career__pillBG3-company3 {
+    width: 20vh;
+    top: 20%;
+    left: -30%;
+  }
+  .career__hellm1-company5 {
+    bottom: 40%;
+    left: 0;
+  }
+  .career__hellm2-company5 {
+    bottom: 40%;
+    right: 0;
+  }
+  .career__item-represent_text {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .career__text-date,
+  .career__text-company,
+  .career__text-position {
+    font-size: 10px;
+  }
+  .career__glass1-company2 {
     right: -50%;
   }
   .career__glass2-company2 {
-    position: absolute;
     top: 25%;
     width: 33vh;
-    z-index: 1;
-    animation: horse-animation 2s ease-in-out infinite;
+  }
+  .career__pillBG3-company3 {
+    top: 15%;
   }
   .career__hellm1-company5 {
-    bottom: 35%;
     left: -10%;
   }
   .career__hellm2-company5 {
-    bottom: 35%;
     right: -10%;
   }
   .career__rwd-company6 {
     top: 15%;
+  }
+  .career__item-represent_text {
+    font-size: 1.1em;
   }
 }
