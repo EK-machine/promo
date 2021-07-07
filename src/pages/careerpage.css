@@ -196,7 +196,7 @@
 
 .career__pillBG1-company3 {
   position: absolute;
-  left: 0;
+  left: -5%;
   bottom: 50%;
   width: 60vh;
   z-index: 2;
@@ -204,7 +204,7 @@
 
 .career__pillBG2-company3 {
   position: absolute;
-  right: 0;
+  right: -5%;
   bottom: 50%;
   width: 60vh;
   z-index: 1;
@@ -244,7 +244,7 @@
 
 .career__rwd-company6 {
   position: absolute;
-  top: 5%;
+  top: 20%;
   left: 50%;
   width: 40vh;
   z-index: 3;

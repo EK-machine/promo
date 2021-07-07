@@ -75,7 +75,7 @@ function CareerPage({ scrolling }) {
       img3Src: '/images/Glass3.png',
       img3Class: 'career__glass3-company2 career__img',
       img3Style: {
-        right: `${scrolling * 1.2}%`,
+        right: `${scrolling * 1.8}%`,
       },
     },
 
@@ -83,19 +83,19 @@ function CareerPage({ scrolling }) {
       representText: `... after then I decided to improve my 
       knowledge and set upon international purchasing sphere ...`,
       dateStyle: {
-        bottom: `${-35 + scrolling * 2}%`,
+        bottom: `${-35 + scrolling * 3}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       dateClass: ' career__text-date career__text-date3',
       dateText: '2010 November – 2011 December ',
       companyStyle: {
-        top: `${-35 + scrolling * 2}%`,
+        top: `${-35 + scrolling * 2.4}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       companyClass: ' career__text-company career__text-company3',
       companyText: '«Belmed Preparaty» RUE.',
       positionStyle: {
-        bottom: `${-35 + scrolling * 2}%`,
+        bottom: `${-35 + scrolling * 3}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       positionClass: ' career__text-position career__text-position3',
@@ -113,8 +113,8 @@ function CareerPage({ scrolling }) {
       img3Src: '/images/pillBG3.png',
       img3Class: 'career__pillBG3-company3 career__img',
       img3Style: {
-        transform: `translateX(${-350 + scrolling * 10}%) translateY(${
-          -400 + scrolling * 10
+        transform: `translateX(${-150 + scrolling * 10}%) translateY(${
+          -230 + scrolling * 10
         }%) rotate(${scrolling * 0.2}turn)`,
       },
     },
@@ -123,19 +123,19 @@ function CareerPage({ scrolling }) {
       representText: `... but it was still not enough, 
       so my career turned into logistics for 9 years!`,
       dateStyle: {
-        top: `${-50 + scrolling * 1.6}%`,
+        top: `${-50 + scrolling * 2.2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       dateClass: ' career__text-date career__text-date4',
       dateText: '2012 January – 2015 July ',
       companyStyle: {
-        bottom: `${-50 + scrolling * 1.6}%`,
+        bottom: `${-50 + scrolling * 2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       companyClass: 'career__text-company career__text-company4',
       companyText: '«Jenty-Spedition» JV.',
       positionStyle: {
-        top: `${-50 + scrolling * 1.6}%`,
+        top: `${-50 + scrolling * 2.2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       positionClass: 'career__text-position career__text-position4',
@@ -143,27 +143,27 @@ function CareerPage({ scrolling }) {
       img1Src: '/images/OST.png',
       img1Class: 'career__ost1-company4 career__img',
       img1Style: {
-        transform: `translateX(${-115 + scrolling * 2}%) translateY(-50%)`,
+        transform: `translateX(${-115 + scrolling * 2.7}%) translateY(-50%)`,
       },
     },
 
     {
       dateStyle: {
-        top: `${-50 + scrolling * 1.2}%`,
-        left: `${-80 + scrolling * 1.6}%`,
+        top: `${-50 + scrolling * 1.6}%`,
+        left: `${-80 + scrolling * 2.2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       dateClass: 'career__text-date career__text-date5',
       dateText: '2015 September – 2017 October ',
       companyStyle: {
-        bottom: `${-85 + scrolling * 1.6}%`,
+        bottom: `${-85 + scrolling * 2.3}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       companyClass: 'career__text-company career__text-company5',
       companyText: '«Hellmann East Europe» JLLC.',
       positionStyle: {
-        top: `${-50 + scrolling * 1.2}%`,
-        left: `${-80 + scrolling * 1.6}%`,
+        top: `${-50 + scrolling * 1.6}%`,
+        left: `${-80 + scrolling * 2.2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       positionClass: 'career__text-position career__text-position5',
@@ -171,36 +171,36 @@ function CareerPage({ scrolling }) {
       img1Src: '/images/hellm1.png',
       img1Class: 'career__hellm1-company5 career__img',
       img1Style: {
-        transform: `translateX(${-360 + scrolling * 5}%) translateY(${
-          170 - scrolling * 4
+        transform: `translateX(${-360 + scrolling * 6.8}%) translateY(${
+          170 - scrolling * 5.9
         }%)`,
       },
       img2Src: '/images/hellm2.png',
       img2Class: 'career__hellm2-company5 career__img',
       img2Style: {
-        transform: `translateX(${360 - scrolling * 5}%) translateY(${
-          170 - scrolling * 4
+        transform: `translateX(${360 - scrolling * 6.8}%) translateY(${
+          170 - scrolling * 6
         }%)`,
       },
     },
 
     {
       dateStyle: {
-        bottom: `${-70 + scrolling * 1.2}%`,
-        left: `${-110 + scrolling * 1.6}%`,
+        bottom: `${-70 + scrolling * 1.45}%`,
+        left: `${-110 + scrolling * 2.2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       dateClass: ' career__text-date career__text-date6',
       dateText: 'October 2017 – present',
       companyStyle: {
-        top: `${-80 + scrolling * 1.2}%`,
+        top: `${-110 + scrolling * 2.2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       companyClass: 'career__text-company career__text-company6',
       companyText: '«RWD» LLC.',
       positionStyle: {
-        bottom: `${-70 + scrolling * 1.2}%`,
-        left: `${-110 + scrolling * 1.6}%`,
+        bottom: `${-70 + scrolling * 1.45}%`,
+        left: `${-110 + scrolling * 2.2}%`,
         backgroundColor: `rgba(0, 0, 0, 0.8)`,
       },
       positionClass: 'career__text-position career__text-position6',
@@ -209,9 +209,9 @@ function CareerPage({ scrolling }) {
       img1Src: '/images/RWD.png',
       img1Class: 'career__rwd-company6 career__img',
       img1Style: {
-        transform: `translateX(-50%) scale3d(${scrolling * 0.0095}, ${
-          scrolling * 0.0095
-        }, ${scrolling * 0.0095})`,
+        transform: `translateX(-50%) scale3d(${scrolling * 0.019}, ${
+          scrolling * 0.019
+        }, ${scrolling * 0.019})`,
       },
     },
 
