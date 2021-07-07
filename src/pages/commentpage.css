@@ -39,6 +39,11 @@
   margin-bottom: 0px;
 }
 
+.comment__comments-section_is-loading {
+  min-height: 100%;
+  width: 100%;
+}
+
 .comment__fetch-error {
   border-radius: 8px;
   margin: 0;
