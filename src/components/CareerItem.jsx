@@ -2,7 +2,7 @@ import React from 'react';
 import './careeritem.css';
 
 function CareerItem({ scrolling }) {
-  const careerArr = [
+  const careerItemArr = [
     {
       representTextBackground: `career__item-represent_text-background 
             career__item-represent_text-background1`,
@@ -339,7 +339,7 @@ function CareerItem({ scrolling }) {
   ];
   return (
     <>
-      {careerArr.map(
+      {careerItemArr.map(
         ({
           representTextBackground,
           representText,
