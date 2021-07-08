@@ -1,13 +1,17 @@
 import React, { useState, useRef } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import './scrollhandlerpage.css';
+import CareerPage from './CareerPage';
+import NotFoundPage from './NotFoundPage';
 
 function ScrollHandlerPage() {
   const [scrolling, setScrolling] = useState(0);
-  const heightRef = useRef();
+  const scrollRef = useRef();
 
   const scrollHandler = () => {
-    const pageScroll = heightRef.current.scrollTop;
+    const pageScroll = scrollRef.current.scrollTop;
     const height =
-      heightRef.current.scrollHeight - heightRef.current.clientHeight;
+      scrollRef.current.scrollHeight - scrollRef.current.clientHeight;
     const scrolled = (pageScroll / height) * 100;
     setScrolling((prevState) => {
       if (prevState === scrolled) {
@@ -17,8 +21,13 @@ function ScrollHandlerPage() {
     });
   };
   return (
-    <div onScroll={scrollHandler} ref={heightRef}>
-      1
+    <div className="scroll__container" onScroll={scrollHandler} ref={scrollRef}>
+      <Switch>
+        <Route path="/main/scroll/career">
+          <CareerPage scrolling={scrolling} />
+        </Route>
+        <Route path="/main/scroll/*" component={NotFoundPage} />
+      </Switch>
     </div>
   );
 }

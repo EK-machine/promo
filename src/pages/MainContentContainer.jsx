@@ -1,30 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import './maincontentcontainer.css';
 import HomePage from './HomePage';
 import CommentPage from './CommentPage';
-import CareerPage from './CareerPage';
+import ScrollHandlerPage from './ScrollHandlerPage';
 import NotFoundPage from './NotFoundPage';
 
 function MainContentContainer() {
-  const [scrolling, setScrolling] = useState(0);
-  const heightRef = useRef();
-
-  const scrollHandler = () => {
-    const pageScroll = heightRef.current.scrollTop;
-    const height =
-      heightRef.current.scrollHeight - heightRef.current.clientHeight;
-    const scrolled = (pageScroll / height) * 100;
-    setScrolling((prevState) => {
-      if (prevState === scrolled) {
-        return prevState;
-      }
-      return scrolled;
-    });
-  };
-
   return (
     <div className="grid__main-container">
       <div className="grid__header">
@@ -33,17 +17,11 @@ function MainContentContainer() {
       <div className="grid__sidebar">
         <Sidebar />
       </div>
-      <div
-        className="grid__main-content"
-        onScroll={scrollHandler}
-        ref={heightRef}
-      >
+      <div className="grid__main-content">
         <Switch>
           <Route path="/main/home" component={HomePage} />
           <Route path="/main/comment" component={CommentPage} />
-          <Route path="/main/career">
-            <CareerPage scrolling={scrolling} />
-          </Route>
+          <Route path="/main/scroll" component={ScrollHandlerPage} />
           <Route path="/main/*" component={NotFoundPage} />
         </Switch>
       </div>
