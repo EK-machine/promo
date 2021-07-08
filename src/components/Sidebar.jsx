@@ -23,7 +23,7 @@ const sidebarButtonData = [
     icon: faCommentAlt,
   },
   {
-    url: '/main/scroll/career',
+    url: '/main/career',
     text: 'Career',
     icon: faListAlt,
   },

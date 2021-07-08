@@ -21,7 +21,7 @@ function MainContentContainer() {
         <Switch>
           <Route path="/main/home" component={HomePage} />
           <Route path="/main/comment" component={CommentPage} />
-          <Route path="/main/scroll" component={ScrollHandlerPage} />
+          <Route path="/main/career" component={ScrollHandlerPage} />
           <Route path="/main/*" component={NotFoundPage} />
         </Switch>
       </div>
