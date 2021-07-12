@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import './maincontentcontainer.css';
 import HomePage from './HomePage';
 import CommentPage from './CommentPage';
+import ScrollHandlerPage from './ScrollHandlerPage';
 import NotFoundPage from './NotFoundPage';
 
 function MainContentContainer() {
@@ -20,6 +21,7 @@ function MainContentContainer() {
         <Switch>
           <Route path="/main/home" component={HomePage} />
           <Route path="/main/comment" component={CommentPage} />
+          <Route path="/main/career" component={ScrollHandlerPage} />
           <Route path="/main/*" component={NotFoundPage} />
         </Switch>
       </div>

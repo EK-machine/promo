@@ -35,31 +35,12 @@
   width: 100%;
   background-size: cover;
   background-position: center;
+  background-color: var(--preheader-backggound-color);
   padding: 5px 35px;
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
   filter: brightness(80%);
-}
-
-.carousel__summary-container {
-  background-image: url('../components/SUMM.jpg');
-}
-
-.carousel__education-container {
-  background-image: url('../components/EDU.jpg');
-}
-
-.carousel__languages-container {
-  background-image: url('../components/LANG.jpg');
-}
-
-.carousel__qualities-container {
-  background-image: url('../components/QUAL.jpg');
-}
-
-.carousel__skills-container {
-  background-image: url('../components/SKILLS.jpg');
 }
 
 .carousel__item_content-left {

@@ -5,6 +5,7 @@ import './sidebar.css';
 import {
   faBars,
   faTimes,
+  faListAlt,
   faHome,
   faCommentAlt,
 } from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +21,11 @@ const sidebarButtonData = [
     url: '/main/comment',
     text: 'Comment',
     icon: faCommentAlt,
+  },
+  {
+    url: '/main/career',
+    text: 'Career',
+    icon: faListAlt,
   },
 ];
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './commentpage.css';
-import BeatLoader from 'react-spinners/BeatLoader';
+import SkeletonLoader from '../components/SkeletonLoader';
 import Comment from '../components/Comment';
 import reviewService from '../components/serverService.js';
 
@@ -49,7 +49,7 @@ function CommentPage() {
             </div>
           ) : (
             <div className="comment__comments-section_is-loading">
-              <BeatLoader loading />
+              <SkeletonLoader />
               {error && <div className="comment__fetch-error">{error}</div>}
             </div>
           )}
