@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const contactButtonsArr = [
   { href: 'tel:+37529-28-22-532', icon: faPhoneAlt },
-  { href: 'mailto:evgenij.kalabukhin@gmail.com', icon: faEnvelope },
+  { href: 'mailto:eeevgenij.kalabukhin@gmail.com', icon: faEnvelope },
   { href: 'callto:evgenij.kalabukhin', icon: faSkype },
   { href: 'https://telegram.me/EK_machine', icon: faTelegramPlane },
   { href: 'https://github.com/EK-machine', icon: faGithub },
